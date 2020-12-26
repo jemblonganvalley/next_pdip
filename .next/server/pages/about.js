@@ -155,6 +155,10 @@ function About({
       })]
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("h1", {
       children: ["Hello ", name]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("img", {
+      src: `https://data.pdiperjuangan.id/public/${data.path}`,
+      alt: data.title,
+      width: "500px"
     })]
   });
 }

@@ -1,6 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/about": "pages/about.js",
+  "/berita/[query]": "pages/berita/[query].js",
+  "/": "pages/index.html",
+  "/test/[query]": "pages/test/[query].js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.js"
+  "/404": "pages/404.html"
 }

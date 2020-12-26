@@ -19,6 +19,11 @@ export default function About({ name, data }) {
         <meta content="image/*" property="og:image:type" />
       </Head>
       <h1>Hello {name}</h1>
+      <img
+        src={`https://data.pdiperjuangan.id/public/${data.path}`}
+        alt={data.title}
+        width="500px"
+      />
     </div>
   );
 }
