@@ -11,9 +11,9 @@ const Test = ({ posts }) => {
   );
 };
 
-Test.getInitialProps = async ({ query }) => {
+Test.getInitialProps = async (context) => {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${query}`,
+    `https://jsonplaceholder.typicode.com/posts/${context.params.query}`,
     {
       method: "GET",
       headers: {

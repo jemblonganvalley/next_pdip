@@ -5,7 +5,8 @@ module.exports = {
   ) {
     return {
       "/": { page: "/" },
-      "/berita": { page: "/berita" },
+      "/berita": { page: "/berita/[query].jsx" },
+      "/about": { page: "/about/About.jsx" },
     };
   },
 };

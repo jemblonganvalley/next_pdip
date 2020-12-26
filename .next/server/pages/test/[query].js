@@ -88,12 +88,12 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 3:
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("HvdG");
@@ -133,10 +133,8 @@ const Test = ({
   });
 };
 
-Test.getInitialProps = async ({
-  query
-}) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${query}`, {
+Test.getInitialProps = async context => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.query}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json"
