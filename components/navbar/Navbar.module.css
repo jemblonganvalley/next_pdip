@@ -1,0 +1,61 @@
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 5%;
+  background-color: whitesmoke;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.auth {
+  position: fixed;
+  right: 5%;
+  z-index: 5;
+  transition-duration: 1s;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.menu li:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background-color: orange;
+  padding: 5px 10px;
+  border-radius: 20px 0 0 0;
+  cursor: pointer;
+}
+
+@keyframes up {
+  from {
+    transform: translateY(10vh);
+  }
+  to {
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes down {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(10vh);
+  }
+}
