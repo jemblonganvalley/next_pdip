@@ -11,19 +11,22 @@ const Test = ({ posts }) => {
   );
 };
 
-Test.getInitialProps = ({query})=> {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${query}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+Test.getInitialProps = async ({ query }) => {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${query}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
   const posts = await res.json();
   return {
     props: {
       posts,
     },
   };
-}
+};
 
 export default Test;
