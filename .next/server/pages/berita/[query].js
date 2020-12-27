@@ -242,8 +242,19 @@ function Index({
   });
 }
 async function getServerSideProps(context) {
-  console.log(context.params.query);
-  const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9kYXRhLnBkaXBlcmp1YW5nYW4uaWRcL2FwaVwvYXV0aFwvYXBwIiwiaWF0IjoxNjA4OTYzNzkyLCJleHAiOjE2MDkwNTAxOTIsIm5iZiI6MTYwODk2Mzc5MiwianRpIjoiTGFubkRsZzFEUEFIUHA3VCIsInN1YiI6MTQsInBydiI6IjhmZjYzMGEwMGNhNGEzZWFmNmYyNTRmNWFiZTVhYjFiZWVkMjcyNDkifQ.3pbcm4_HqwTmDFkDNL8HYtXbffKgR5v-fcAzn06CmJU";
+  // const resToken = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({
+  //     app_id: "1555309664580",
+  //     api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
+  //   }),
+  // });
+  // const token = await resToken.json();
+  // console.log(context.params.query);
+  const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9kYXRhLnBkaXBlcmp1YW5nYW4uaWRcL2FwaVwvYXV0aFwvYXBwIiwiaWF0IjoxNjA5MDYyNzI1LCJleHAiOjE2MDkxNDkxMjUsIm5iZiI6MTYwOTA2MjcyNSwianRpIjoiSzg2aUR4WERrQ2ZuOTF1cCIsInN1YiI6MTQsInBydiI6IjhmZjYzMGEwMGNhNGEzZWFmNmYyNTRmNWFiZTVhYjFiZWVkMjcyNDkifQ.9u8Leq5GboMw8j3VDMT6oUvrqa0maF8Hnmhh14Ssz48";
   const res = await fetch(`https://data.pdiperjuangan.id/api/blog/find/?id=${context.params.query}`, {
     method: "post",
     mode: "cors",

@@ -1,6 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/about": "pages/about.js",
+  "/about/[id]": "pages/about/[id].js",
   "/berita/[query]": "pages/berita/[query].js",
   "/": "pages/index.html",
   "/test/[query]": "pages/test/[query].js",
