@@ -42,7 +42,7 @@ export default function Index({ data, name }) {
               <meta property="og:title" content={data.title} />
               <meta property="og:description" content={data.title} />
 
-              <meta property="og:type" content="video" />
+              <meta property="og:type" content="website" />
               <meta
                 property="og:video"
                 content={`https://www.youtube.com/v/${data.path}`}
