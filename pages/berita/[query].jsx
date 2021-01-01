@@ -37,7 +37,7 @@ export default function Index({ data, name }) {
               <meta name="description" content={data.title} />
               <meta
                 property="og:url"
-                content={`https://www.youtube.com/v/${data.path}`}
+                content={`https://youtu.be/${data.path}`}
               />
               <meta property="og:title" content={data.title} />
               <meta property="og:description" content={data.title} />
@@ -45,7 +45,7 @@ export default function Index({ data, name }) {
               <meta property="og:type" content="website" />
               <meta
                 property="og:video"
-                content={`https://www.youtube.com/v/${data.path}`}
+                content={`https://youtu.be/${data.path}`}
               />
               <meta property="og:video:width" content="500px" />
             </Head>

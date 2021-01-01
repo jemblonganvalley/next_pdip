@@ -192,7 +192,7 @@ function Index({
           content: data.title
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:url",
-          content: `https://www.youtube.com/v/${data.path}`
+          content: `https://youtu.be/${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:title",
           content: data.title
@@ -204,7 +204,7 @@ function Index({
           content: "website"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:video",
-          content: `https://www.youtube.com/v/${data.path}`
+          content: `https://youtu.be/${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:video:width",
           content: "500px"
