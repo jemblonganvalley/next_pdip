@@ -168,7 +168,7 @@ function Index({
           content: `900px`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:type",
-          content: "website"
+          content: "article"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           content: "og:image:type",
           property: "image/*"
