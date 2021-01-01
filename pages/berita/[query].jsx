@@ -27,6 +27,8 @@ export default function Index({ data, name }) {
 
             <meta property="og:type" content="article" />
             <meta content="og:image:type" property="image/*" />
+            <meta property="og:video" content={data.path} />
+            <meta property="og:video:width" content="500px" />
           </Head>
           <div className="wrapperBeritaPage1">
             <div className="linkedBeritaPage1">
