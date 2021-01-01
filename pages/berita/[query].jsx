@@ -37,7 +37,7 @@ export default function Index({ data, name }) {
               <meta name="description" content={data.title} />
               <meta
                 property="og:url"
-                content={`https://data.pdiperjuangan.id`}
+                content={`https://www.youtube.com/v/${data.path}`}
               />
               <meta property="og:title" content={data.title} />
               <meta property="og:description" content={data.title} />
