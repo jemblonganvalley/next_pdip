@@ -19,7 +19,7 @@ export default function Index({ data, name }) {
             <meta property="og:image:width" content={`900px`} />
 
             <meta property="og:type" content="website" />
-            <meta content="image/*" property="og:image:type" />
+            <meta content="og:image:type" property="image/*" />
           </Head>
           <div className="wrapperBeritaPage1">
             <div className="linkedBeritaPage1">
