@@ -29,7 +29,7 @@ export default function Index({ data, name }) {
             <meta content="og:image:type" property="image/*" />
             <meta
               property="og:video"
-              content={`https://youtu.be/${data.path}`}
+              content={`https://www.youtube.com/v/${data.path}`}
             />
             <meta property="og:video:width" content="500px" />
           </Head>

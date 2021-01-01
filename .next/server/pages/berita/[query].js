@@ -187,7 +187,7 @@ function Index({
           property: "image/*"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:video",
-          content: `https://youtu.be/${data.path}`
+          content: `https://www.youtube.com/v/${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:video:width",
           content: "500px"
