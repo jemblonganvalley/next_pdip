@@ -1,8 +1,15 @@
 import Head from "next/head";
 import parse from "html-react-parser";
+import { useEffect } from "react";
 
 export default function Index({ data, name }) {
   const desc = parse(data.description);
+
+  useEffect(() => {
+    window.location.href = `https://pdiperjuangan.id/detail-article/${
+      data.id
+    }/${data.title.split(" ", "-")}`;
+  }, []);
   return (
     <>
       {data && (
