@@ -14,25 +14,43 @@ export default function Index({ data, name }) {
     <>
       {data && (
         <>
-          <Head>
-            <meta name="description" content={data.title} />
-            <meta property="og:url" content={`https://data.pdiperjuangan.id`} />
-            <meta property="og:title" content={data.title} />
-            <meta property="og:description" content={data.title} />
-            <meta
-              property="og:image"
-              content={`https://data.pdiperjuangan.id/public${data.path}`}
-            />
-            <meta property="og:image:width" content={`900px`} />
+          {data.path.includes("uploads") ? (
+            <Head>
+              <meta name="description" content={data.title} />
+              <meta
+                property="og:url"
+                content={`https://data.pdiperjuangan.id`}
+              />
+              <meta property="og:title" content={data.title} />
+              <meta property="og:description" content={data.title} />
+              <meta
+                property="og:image"
+                content={`https://data.pdiperjuangan.id/public${data.path}`}
+              />
+              <meta property="og:image:width" content={`900px`} />
 
-            <meta property="og:type" content="article" />
-            <meta content="og:image:type" property="image/*" />
-            <meta
-              property="og:video"
-              content={`https://www.youtube.com/v/${data.path}`}
-            />
-            <meta property="og:video:width" content="500px" />
-          </Head>
+              <meta property="og:type" content="article" />
+              <meta content="og:image:type" property="image/*" />
+            </Head>
+          ) : (
+            <Head>
+              <meta name="description" content={data.title} />
+              <meta
+                property="og:url"
+                content={`https://data.pdiperjuangan.id`}
+              />
+              <meta property="og:title" content={data.title} />
+              <meta property="og:description" content={data.title} />
+
+              <meta property="og:type" content="video" />
+              <meta
+                property="og:video"
+                content={`https://www.youtube.com/v/${data.path}`}
+              />
+              <meta property="og:video:width" content="500px" />
+            </Head>
+          )}
+
           <div className="wrapperBeritaPage1">
             <div className="linkedBeritaPage1">
               {/* <BreadCrumbs
