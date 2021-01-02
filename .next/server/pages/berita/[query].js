@@ -181,7 +181,7 @@ function Index({
           content: `https://data.pdiperjuangan.id/public${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:image:width",
-          content: `900`
+          content: `200px`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:type",
           content: "website"
