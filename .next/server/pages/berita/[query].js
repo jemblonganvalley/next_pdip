@@ -187,7 +187,7 @@ function Index({
           content: "website"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           content: "og:image:type",
-          property: "image/jpg"
+          property: "image/*"
         })]
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
         className: "wrapperBeritaPage1",

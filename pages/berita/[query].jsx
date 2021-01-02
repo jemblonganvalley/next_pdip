@@ -30,7 +30,7 @@ export default function Index({ data, name }) {
             <meta property="og:image:width" content={`200px`} />
 
             <meta property="og:type" content="website" />
-            <meta content="og:image:type" property="image/jpg" />
+            <meta content="og:image:type" property="image/*" />
           </Head>
 
           {/* <Head>
