@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/hh_M_EYTr639oXPD8nL1r/_buildManifest.js",
-    "static/hh_M_EYTr639oXPD8nL1r/_ssgManifest.js"
+    "static/t4gr8YLaUJ-E2xzQc6MLL/_buildManifest.js",
+    "static/t4gr8YLaUJ-E2xzQc6MLL/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -42,7 +42,7 @@
       "static/chunks/main-d4878dfeede455515cd7.js",
       "static/chunks/webpack-95c2b224bccf352ee870.js",
       "static/chunks/framework.7e70a00882840d8b4939.js",
-      "static/chunks/pages/berita/[query]-4e355d1e9018e6666528.js"
+      "static/chunks/pages/berita/[query]-3bd85cbcd0f61a78b858.js"
     ],
     "/test/[query]": [
       "static/chunks/main-d4878dfeede455515cd7.js",

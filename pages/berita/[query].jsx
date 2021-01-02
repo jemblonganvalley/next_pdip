@@ -14,32 +14,28 @@ export default function Index({ data, name }) {
     <>
       {data && (
         <>
-          {data.path.includes("uploads") ? (
-            <Head>
-              <meta name="description" content={data.title} />
-              <meta
-                property="og:url"
-                content={`https://data.pdiperjuangan.id`}
-              />
-              <meta property="og:title" content={data.title} />
-              <meta property="og:description" content={data.title} />
-              <meta
-                property="og:image"
-                content={`https://data.pdiperjuangan.id/public${data.path}`}
-              />
-              <meta
-                property="og:image:url"
-                content={`https://data.pdiperjuangan.id/public${data.path}`}
-              />
-              <meta property="og:image:width" content={`900px`} />
+          <Head>
+            <meta name="description" content={data.title} />
+            <meta property="og:url" content={`https://data.pdiperjuangan.id`} />
+            <meta property="og:title" content={data.title} />
+            <meta property="og:description" content={data.title} />
+            <meta
+              property="og:image"
+              content={`https://data.pdiperjuangan.id/public${data.path}`}
+            />
+            <meta
+              property="og:image:url"
+              content={`https://data.pdiperjuangan.id/public${data.path}`}
+            />
+            <meta property="og:image:width" content={`900`} />
 
-              <meta property="og:type" content="website" />
-              <meta content="og:image:type" property="image/jpg" />
-            </Head>
-          ) : (
-            <Head>
-              <meta name="description" content={data.title} />
-              <meta
+            <meta property="og:type" content="website" />
+            <meta content="og:image:type" property="image/jpg" />
+          </Head>
+
+          {/* <Head>
+            <meta name="description" content={data.title} />
+            <meta
                 property="og:url"
                 content={`https://youtu.be/${data.path}`}
               />
@@ -52,8 +48,7 @@ export default function Index({ data, name }) {
                 content={`https://youtu.be/${data.path}`}
               />
               <meta property="og:video:width" content="500px" />
-            </Head>
-          )}
+            </Head> */}
 
           <div className="wrapperBeritaPage1">
             <div className="linkedBeritaPage1">
