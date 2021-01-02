@@ -27,6 +27,10 @@ export default function Index({ data, name }) {
                 property="og:image"
                 content={`https://data.pdiperjuangan.id/public${data.path}`}
               />
+              <meta
+                property="og:image:url"
+                content={`https://data.pdiperjuangan.id/public${data.path}`}
+              />
               <meta property="og:image:width" content={`900px`} />
 
               <meta property="og:type" content="website" />
