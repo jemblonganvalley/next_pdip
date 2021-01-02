@@ -180,14 +180,14 @@ function Index({
           property: "og:image:url",
           content: `https://data.pdiperjuangan.id/public${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
-          property: "og:image:width",
-          content: `200px`
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:type",
           content: "website"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           content: "og:image:type",
           property: "image/*"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+          content: "og:image:alt",
+          property: data.title
         })]
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
         className: "wrapperBeritaPage1",
