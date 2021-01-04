@@ -156,7 +156,7 @@ function Index({
 }) {
   const desc = html_react_parser__WEBPACK_IMPORTED_MODULE_2___default()(data.description);
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
-    window.location.href = `https://pdiperjuangan.id/detail-article/${data.id}/${data.title.split(" ", "-")}`;
+    window.location.href = `https://pdiperjuangan.id/detail-article/${data.id}/${data.title.replace(/\s/g, "-")}`;
   }, []);
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     children: data && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
@@ -175,6 +175,7 @@ function Index({
           content: data.title
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:image",
+          itemprop: "image",
           content: `https://data.pdiperjuangan.id/public${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:image:url",

@@ -1,8 +1,12 @@
+import { useEffect } from "react";
+
 const Index = ({ post }) => {
+  useEffect(() => {
+    window.location.href = "https://pdiperjuangan.id";
+  }, []);
   return (
     <div>
-      <h1>static pdip</h1>
-      <a href="/berita/1183">natal</a>
+      <h1>pdiperjuangan.id</h1>
     </div>
   );
 };

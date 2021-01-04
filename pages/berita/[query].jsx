@@ -8,7 +8,7 @@ export default function Index({ data, name }) {
   useEffect(() => {
     window.location.href = `https://pdiperjuangan.id/detail-article/${
       data.id
-    }/${data.title.split(" ", "-")}`;
+    }/${data.title.replace(/\s/g, "-")}`;
   }, []);
   return (
     <>
@@ -21,6 +21,7 @@ export default function Index({ data, name }) {
             <meta property="og:description" content={data.title} />
             <meta
               property="og:image"
+              itemprop="image"
               content={`https://data.pdiperjuangan.id/public${data.path}`}
             />
             <meta
