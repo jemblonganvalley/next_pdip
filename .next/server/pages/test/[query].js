@@ -113,42 +113,35 @@ module.exports = require("react/jsx-runtime");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Test; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 
-
-
-
-const Test = ({
-  posts
-}) => {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-    children: posts.map(e => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h3", {
-        children: e.title
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-        children: e.body
-      })]
-    }, e.id))
+function Test({
+  data
+}) {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("iframe", {
+    src: `https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fnext-pdip.vercel.app%2Fberita%2F${data}&layout=button&size=small&appId=799588884220574&width=67&height=20`,
+    width: 67,
+    height: 20,
+    style: {
+      border: "none",
+      overflow: "hidden"
+    },
+    scrolling: "no",
+    frameBorder: 0,
+    allowFullScreen: "true",
+    allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
   });
-};
-
-Test.getInitialProps = async context => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.query}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json"
-    }
-  });
-  const posts = await res.json();
+}
+async function getServerSideProps(contex) {
   return {
     props: {
-      posts
+      data: contex.params.query
     }
   };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Test);
+}
 
 /***/ })
 

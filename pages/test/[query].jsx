@@ -1,32 +1,22 @@
-const Test = ({ posts }) => {
+export default function Test({ data }) {
   return (
-    <>
-      {posts.map((e) => (
-        <div key={e.id}>
-          <h3>{e.title}</h3>
-          <p>{e.body}</p>
-        </div>
-      ))}
-    </>
+    <iframe
+      src={`https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fnext-pdip.vercel.app%2Fberita%2F${data}&layout=button&size=small&appId=799588884220574&width=67&height=20`}
+      width={67}
+      height={20}
+      style={{ border: "none", overflow: "hidden" }}
+      scrolling="no"
+      frameBorder={0}
+      allowFullScreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+    />
   );
-};
+}
 
-Test.getInitialProps = async (context) => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.query}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
-  const posts = await res.json();
+export async function getServerSideProps(contex) {
   return {
     props: {
-      posts,
+      data: contex.params.query,
     },
   };
-};
-
-export default Test;
+}
