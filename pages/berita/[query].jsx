@@ -16,7 +16,12 @@ export default function Index({ data, name }) {
         <>
           <Head>
             <meta name="description" content={data.title} />
-            <meta property="og:url" content={url} />
+            <meta
+              property="og:url"
+              content={`https://pdiperjuangan.id/detail-article/${
+                data.id
+              }/${data.title.replace(/\s/g, "-")}`}
+            />
             <meta property="og:title" content={data.title} />
             <meta property="og:description" content={data.title} />
             <meta
@@ -44,7 +49,7 @@ export default function Index({ data, name }) {
 
           <span
             itemprop="thumbnail"
-            itemscope
+            itemScope
             itemtype="http://schema.org/ImageObject"
           >
             <link

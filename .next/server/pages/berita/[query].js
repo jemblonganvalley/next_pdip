@@ -166,7 +166,7 @@ function Index({
           content: data.title
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:url",
-          content: url
+          content: `https://pdiperjuangan.id/detail-article/${data.id}/${data.title.replace(/\s/g, "-")}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:title",
           content: data.title
@@ -201,7 +201,7 @@ function Index({
         href: `https://data.pdiperjuangan.id/public/${data.path}`
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {
         itemprop: "thumbnail",
-        itemscope: true,
+        itemScope: true,
         itemtype: "http://schema.org/ImageObject",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
           itemprop: "url",
