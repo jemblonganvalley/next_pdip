@@ -178,7 +178,7 @@ function Index({
           itemprop: "image",
           content: `https://data.pdiperjuangan.id/public${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
-          property: "og:image:url",
+          property: "og:image:secure_url",
           content: `https://data.pdiperjuangan.id/public${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:image:alt",

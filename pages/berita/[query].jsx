@@ -29,8 +29,12 @@ export default function Index({ data, name }) {
               itemprop="image"
               content={`https://data.pdiperjuangan.id/public${data.path}`}
             />
-            <meta
+            {/* <meta
               property="og:image:url"
+              content={`https://data.pdiperjuangan.id/public${data.path}`}
+            /> */}
+            <meta
+              property="og:image:secure_url"
               content={`https://data.pdiperjuangan.id/public${data.path}`}
             />
             <meta property="og:image:alt" content={data.title} />
