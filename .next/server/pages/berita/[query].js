@@ -227,7 +227,7 @@ function Index({
             children: [data.path.includes("uploads") ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("img", {
               className: "img-beritaPage1",
               src: `https://data.pdiperjuangan.id/public/${data.path}`,
-              alt: `${data.path}`,
+              alt: `${data.title}`,
               style: {
                 // height: "40vh",
                 objectFit: "cover"

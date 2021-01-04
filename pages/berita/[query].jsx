@@ -95,7 +95,7 @@ export default function Index({ data, name }) {
                   <img
                     className="img-beritaPage1"
                     src={`https://data.pdiperjuangan.id/public/${data.path}`}
-                    alt={`${data.path}`}
+                    alt={`${data.title}`}
                     style={{
                       // height: "40vh",
                       objectFit: "cover",
