@@ -15,6 +15,11 @@ export default function Index({ data, name }) {
       {data && (
         <>
           <Head>
+            <link
+              rel="icon"
+              href={`https://data.pdiperjuangan.id/public${data.path}`}
+            />
+
             <meta name="description" content={data.title} />
             <meta
               property="og:url"
