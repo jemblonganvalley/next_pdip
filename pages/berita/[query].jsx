@@ -16,7 +16,7 @@ export default function Index({ data, name }) {
         <>
           <Head>
             <meta name="description" content={data.title} />
-            <meta property="og:url" content={`https://data.pdiperjuangan.id`} />
+            <meta property="og:url" content={url} />
             <meta property="og:title" content={data.title} />
             <meta property="og:description" content={data.title} />
             <meta
@@ -34,7 +34,24 @@ export default function Index({ data, name }) {
             <meta property="og:type" content="website" />
             <meta content="og:image:type" property="image/*" />
             <meta content="og:image:alt" property={data.title} />
+            <meta property="og:locale" content="id_ID" />
           </Head>
+
+          <link
+            itemprop="thumbnailUrl"
+            href={`https://data.pdiperjuangan.id/public/${data.path}`}
+          />
+
+          <span
+            itemprop="thumbnail"
+            itemscope
+            itemtype="http://schema.org/ImageObject"
+          >
+            <link
+              itemprop="url"
+              href={`https://data.pdiperjuangan.id/public/${data.path}`}
+            />
+          </span>
 
           {/* <Head>
             <meta name="description" content={data.title} />
