@@ -15,8 +15,8 @@ export default function Index({ data, name }) {
       {data && (
         <>
           <Head>
-            <link rel="icon" href="../../public/img/pdip.jpg" />
-
+            <link rel="icon" href="/pdip.jpg" />
+            <link rel="shortcut icon" href="/pdip.ico" />
             <meta name="description" content={data.title} />
             <meta
               property="og:url"
@@ -28,7 +28,7 @@ export default function Index({ data, name }) {
             <meta property="og:description" content={data.title} />
             <meta
               property="og:image"
-              itemprop="image"
+              itemProp="image"
               content={`https://data.pdiperjuangan.id/public${data.path}`}
             />
             {/* <meta
@@ -49,17 +49,17 @@ export default function Index({ data, name }) {
           </Head>
 
           <link
-            itemprop="thumbnailUrl"
+            itemProp="thumbnailUrl"
             href={`https://data.pdiperjuangan.id/public/${data.path}`}
           />
 
           <span
-            itemprop="thumbnail"
+            itemProp="thumbnail"
             itemScope
             itemtype="http://schema.org/ImageObject"
           >
             <link
-              itemprop="url"
+              itemProp="url"
               href={`https://data.pdiperjuangan.id/public/${data.path}`}
             />
           </span>

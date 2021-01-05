@@ -163,7 +163,10 @@ function Index({
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
         children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
           rel: "icon",
-          href: "../../public/img/pdip.jpg"
+          href: "/pdip.jpg"
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+          rel: "shortcut icon",
+          href: "/pdip.ico"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           name: "description",
           content: data.title
@@ -178,7 +181,7 @@ function Index({
           content: data.title
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:image",
-          itemprop: "image",
+          itemProp: "image",
           content: `https://data.pdiperjuangan.id/public${data.path}`
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
           property: "og:image:secure_url",
@@ -206,14 +209,14 @@ function Index({
           content: "id_ID"
         })]
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
-        itemprop: "thumbnailUrl",
+        itemProp: "thumbnailUrl",
         href: `https://data.pdiperjuangan.id/public/${data.path}`
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {
-        itemprop: "thumbnail",
+        itemProp: "thumbnail",
         itemScope: true,
         itemtype: "http://schema.org/ImageObject",
         children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
-          itemprop: "url",
+          itemProp: "url",
           href: `https://data.pdiperjuangan.id/public/${data.path}`
         })
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
