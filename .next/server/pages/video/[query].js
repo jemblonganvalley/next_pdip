@@ -147,12 +147,10 @@ function Index({
   data,
   name
 }) {
-  const desc = html_react_parser__WEBPACK_IMPORTED_MODULE_2___default()(data.description); // useEffect(() => {
-  //   window.location.href = `https://pdiperjuangan.id/detail-article/${
-  //     data.id
-  //   }/${data.title.replace(/\s/g, "-")}`;
-  // }, []);
-
+  const desc = html_react_parser__WEBPACK_IMPORTED_MODULE_2___default()(data.description);
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
+    window.location.href = `https://pdiperjuangan.id/detail-article/${data.id}/${data.title.replace(/\s/g, "-")}`;
+  }, []);
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     children: data && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {

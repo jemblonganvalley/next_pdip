@@ -5,11 +5,11 @@ import { useEffect } from "react";
 export default function Index({ data, name }) {
   const desc = parse(data.description);
 
-  // useEffect(() => {
-  //   window.location.href = `https://pdiperjuangan.id/detail-article/${
-  //     data.id
-  //   }/${data.title.replace(/\s/g, "-")}`;
-  // }, []);
+  useEffect(() => {
+    window.location.href = `https://pdiperjuangan.id/detail-article/${
+      data.id
+    }/${data.title.replace(/\s/g, "-")}`;
+  }, []);
   return (
     <>
       {data && (
