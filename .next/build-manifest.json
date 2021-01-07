@@ -24,6 +24,11 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/detail-multimedia/[query]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/detail-multimedia/[query].js"
+    ],
     "/multimedia/[query]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
