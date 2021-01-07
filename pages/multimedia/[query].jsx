@@ -4,7 +4,8 @@ import Head from "next/head";
 
 const MultimediaPage = ({ data, data2, videoPath }) => {
   useEffect(() => {
-    window.location.href = "https://pediperjuangan.id/multimedia";
+    // window.location.href = "https://pdiperjuangan.id/multimedia";
+    console.log(data2);
   }, []);
   return (
     <>
@@ -23,10 +24,7 @@ const MultimediaPage = ({ data, data2, videoPath }) => {
           itemProp="image"
           content={`https://i.ytimg.com/vi/${videoPath}/hqdefault.jpg`}
         />
-        {/* <meta
-              property="og:image:url"
-              content={`https://i.ytimg.com/vi/${data.path}/hqdefault.jpg`}
-            /> */}
+
         <meta
           property="og:image:secure_url"
           content={`https://i.ytimg.com/vi/${videoPath}/hqdefault.jpg`}
@@ -72,7 +70,7 @@ export async function getServerSideProps(context) {
   const data = await res.json();
 
   const res2 = await fetch(
-    `https://data.pdiperjuangan.id/api/web/config/multimedia`,
+    `https://data.pdiperjuangan.id/api/web/pages/multimedia`,
     {
       method: "post",
       mode: "cors",

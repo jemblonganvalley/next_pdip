@@ -1,13 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/about/[id]": "pages/about/[id].js",
-  "/berita/[query]": "pages/berita/[query].js",
-  "/": "pages/index.html",
-  "/mediavideo": "pages/mediavideo.html",
-  "/multimedia/[query]": "pages/multimedia/[query].js",
-  "/test/[query]": "pages/test/[query].js",
-  "/video/[query]": "pages/video/[query].js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/multimedia/[query]": "pages/multimedia/[query].js",
+  "/": "pages/index.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }
