@@ -2,19 +2,19 @@ import React, { useEffect, useState } from "react";
 import Wait from "../../components/wait/Wait";
 import Head from "next/head";
 
-const MultimediaPage = ({ data, videoPath }) => {
+const MultimediaPage = ({ data, data2, videoPath }) => {
   return (
     <>
       <Head>
         <link rel="icon" href="/pdip.jpg" />
         <link rel="shortcut icon" href="/pdip.ico" />
-        <meta name="description" content={data.meta_keyword} />
+        <meta name="description" content={data2[1].value.description} />
         <meta
           property="og:url"
           content={`https://pdiperjuangan.id/multimedia`}
         />
-        <meta property="og:title" content={data.page_title} />
-        <meta property="og:description" content={data.meta_keyword} />
+        <meta property="og:title" content={data2[1].value.title} />
+        <meta property="og:description" content={data2[1].value.description} />
         <meta
           property="og:image"
           itemProp="image"
@@ -30,7 +30,7 @@ const MultimediaPage = ({ data, videoPath }) => {
         />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
-        <meta property="og:image:alt" content={data.page_title} />
+        <meta property="og:image:alt" content={data2[1].value.title} />
         <meta property="og:type" content="website" />
         <meta content="og:image:type" property="image/*" />
         <meta property="og:locale" content="id_ID" />
@@ -67,9 +67,24 @@ export async function getServerSideProps(context) {
     }
   );
   const data = await res.json();
+
+  const res2 = await fetch(
+    `https://data.pdiperjuangan.id/api/web/config/multimedia`,
+    {
+      method: "post",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token.token}`,
+      },
+    }
+  );
+  const data2 = await res2.json();
+
   return {
     props: {
       data: data.query.set,
+      data2: data2.query,
       videoPath: context.params.query,
     },
   };
