@@ -3,6 +3,9 @@ import Wait from "../../components/wait/Wait";
 import Head from "next/head";
 
 const MultimediaPage = ({ data, data2, videoPath }) => {
+  useEffect(() => {
+    window.location.href = "https://pediperjuangan.id/multimedia";
+  }, []);
   return (
     <>
       <Head>
