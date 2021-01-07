@@ -12,13 +12,16 @@ const MultimediaPage = ({ data, data2, videoPath }) => {
       <Head>
         <link rel="icon" href="/pdip.jpg" />
         <link rel="shortcut icon" href="/pdip.ico" />
-        <meta name="description" content={data2[1].value.description} />
+        <meta name="description" content={data2[1].value[0].description} />
         <meta
           property="og:url"
           content={`https://pdiperjuangan.id/multimedia`}
         />
-        <meta property="og:title" content={data2[1].value.title} />
-        <meta property="og:description" content={data2[1].value.description} />
+        <meta property="og:title" content={data2[1].value[0].title} />
+        <meta
+          property="og:description"
+          content={data2[1].value[0].description}
+        />
         <meta
           property="og:image"
           itemProp="image"
@@ -31,7 +34,7 @@ const MultimediaPage = ({ data, data2, videoPath }) => {
         />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
-        <meta property="og:image:alt" content={data2[1].value.title} />
+        <meta property="og:image:alt" content={data2[1].value[0].title} />
         <meta property="og:type" content="website" />
         <meta content="og:image:type" property="image/*" />
         <meta property="og:locale" content="id_ID" />
