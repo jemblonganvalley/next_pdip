@@ -4,7 +4,7 @@ import Head from "next/head";
 
 const MultimediaPage = ({ data, data2, videoPath }) => {
   useEffect(() => {
-    // window.location.href = "https://pdiperjuangan.id/multimedia";
+    window.location.href = "https://pdiperjuangan.id/multimedia";
     console.log(data2);
   }, []);
   return (
