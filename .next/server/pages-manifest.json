@@ -2,6 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/multimedia/[query]": "pages/multimedia/[query].js",
-  "/detail-multimedia/[query]": "pages/detail-multimedia/[query].js"
+  "/berita/[query]": "pages/berita/[query].js"
 }

@@ -1,0 +1,727 @@
+.wrapperBeritaPage1 {
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 {
+    padding: 0 0 40px 0;
+  }
+}
+
+.wrapperBeritaPage1 .headers-BeritaPage1 {
+  background-size: cover;
+  height: 15vh;
+  background-position: center;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .headers-BeritaPage1 {
+    height: 15vh;
+    background-attachment: inherit;
+  }
+}
+
+.wrapperBeritaPage1 .headers-BeritaPage1 .backgrounds {
+  background-color: rgba(255, 0, 8, 0.1);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+
+.wrapperBeritaPage1 .headers-BeritaPage1 .backgrounds .textBackgroundBerita {
+  width: 30%;
+  height: auto;
+  margin-left: 13rem;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .headers-BeritaPage1 .backgrounds .textBackgroundBerita {
+    width: auto;
+    margin-left: 0;
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .headers-BeritaPage1 .backgrounds .textBackgroundBerita .txt-backg-beritaPage1 {
+    font-size: 12pt;
+  }
+}
+
+.wrapperBeritaPage1 .linkedBeritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px 10%;
+}
+
+@media (min-width: 951px) and (max-width: 1360px) {
+  .wrapperBeritaPage1 .linkedBeritaPage1 {
+    padding: 10px 5%;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 950px) {
+  .wrapperBeritaPage1 .linkedBeritaPage1 {
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .wrapperBeritaPage1 .linkedBeritaPage1 {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .linkedBeritaPage1 {
+    width: 100%;
+    padding: 0 2%;
+  }
+}
+
+.wrapperBeritaPage1 .linkedBeritaPage1 i span {
+  margin-left: 5px;
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.wrapperBeritaPage1 .containerPage1Article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 0 20% 20px 20%;
+  overflow: hidden;
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .wrapperBeritaPage1 .containerPage1Article {
+    padding: 0px 20%;
+  }
+}
+
+@media (min-width: 1361px) and (max-width: 1440px) {
+  .wrapperBeritaPage1 .containerPage1Article {
+    padding: 0px 20%;
+  }
+}
+
+@media (min-width: 951px) and (max-width: 1360px) {
+  .wrapperBeritaPage1 .containerPage1Article {
+    padding: 0px 20%;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 950px) {
+  .wrapperBeritaPage1 .containerPage1Article {
+    padding: 0px 2%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .wrapperBeritaPage1 .containerPage1Article {
+    padding: 0px 15%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article {
+    padding: 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0px 0 20px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 {
+    margin: 0px 0 20px 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section1-col1-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section1-col1-beritaPage1 {
+    height: auto;
+    padding: 0 10px;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section1-col1-beritaPage1 .txt-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin: 1px;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 10%;
+  background: none;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 {
+    height: auto;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 .box-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 0 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 .box-btn {
+    margin: 20px 0 0 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 .box-btn .btn-love {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  outline: none;
+  background: none;
+  margin: 0 5px 0 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 .box-btn .btn-love {
+    margin: 0 2px 0 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 .box-btn .btn-love i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  color: #d80010;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row1-beritaPage1 .box-btn .jm-fav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  color: #000;
+  margin: 1px;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 0px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 .btn-admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25px;
+  width: 100px;
+  background: #d80010;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  font-size: 14px;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d80010;
+  margin: 5px 0 0 0;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 .garis-panjang-tipis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1px;
+  width: 100%;
+  background: #aaa;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 .garis-panjang-tipis {
+    margin: 20px 0 10px 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 .garis-panjang-tipis .garis-merah-tebal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  height: 5px;
+  width: 50px;
+  background: #d80010;
+  margin: 4px 0 0 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col1-container-1-beritaPage1 .section2-col1-beritaPage1 .row2-beritaPage1 .garis-panjang-tipis .garis-merah-tebal {
+    margin: 2px 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .img-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .img-beritaPage1 {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section1-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section1-beritaPage1 {
+    margin: 0;
+    padding: 10px 20px 0 20px;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section1-beritaPage1 .txt-desk-section1-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section3-beritaPage1 {
+  height: auto;
+  width: 100%;
+  margin: 20px 0 20px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section3-beritaPage1 {
+    padding: 0 10px;
+    margin: 20px 0 0 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section3-beritaPage1 .txt-desk-section3-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #555;
+  text-align: start;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section3-beritaPage1 .txt-desk-section3-beritaPage1 {
+    padding: 0 5px;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section4-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 200px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section4-beritaPage1 {
+    padding: 0;
+    margin: 20px 0 0 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section4-beritaPage1 i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+  color: #d80010;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section4-beritaPage1 i {
+    font-size: 25px;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section4-beritaPage1 .txt-desk-section4-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section5-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%;
+  margin: 0px 0 10px 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section5-beritaPage1 {
+    padding: 0 10px;
+    margin: 0px 0 0 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section5-beritaPage1 .txt-desk-section5-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  color: #555;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section5-beritaPage1 .garis-panjang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2px;
+  width: 100%;
+  background: #555;
+  margin: 0px 0% 0px 0%;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section5-beritaPage1 .garis-panjang {
+    margin: 0px 0% 0 0%;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section5-beritaPage1 .box-medsos-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  height: auto;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 20px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section5-beritaPage1 .box-medsos-beritaPage1 {
+    padding: 15px 0;
+  }
+}
+
+.wrapperBeritaPage1 .containerPage1Article .col2-container-1-beritaPage1 .section6-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .col1-section6-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20vh;
+  width: 100%;
+  background: #f3f3f3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 20px 20% 0 20%;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .col1-section6-beritaPage1 {
+    height: auto;
+    padding: 30px 10px 20px 10px;
+  }
+}
+
+.wrapperBeritaPage1 .col1-section6-beritaPage1 .col-title-berita-terbaru-beritaPage1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .col1-section6-beritaPage1 .col-title-berita-terbaru-beritaPage1 .txt-berita-terbaru {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+  font-weight: bold;
+  color: #d80010;
+  margin: 1px;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .col1-section6-beritaPage1 .col-garis-lurus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0 0 0;
+  overflow: hidden;
+}
+
+.wrapperBeritaPage1 .col2-section6-beritaPage1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 0;
+  padding: 0 20% 20px 20%;
+}
+
+@media (max-width: 500px) {
+  .wrapperBeritaPage1 .col2-section6-beritaPage1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 0 10px 0px 10px;
+  }
+}
+/*# sourceMappingURL=Page1.css.map */

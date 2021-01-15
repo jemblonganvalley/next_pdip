@@ -1,0 +1,168 @@
+.backgroundRed {
+  background: url(../../img/pattern-01.svg);
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  padding: 0 20%;
+  background-size: 10rem;
+}
+
+@media (min-width: 1361px) and (max-width: 1440px) {
+  .backgroundRed {
+    padding: 0 20%;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1360px) {
+  .backgroundRed {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 990px) {
+  .backgroundRed {
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    padding: 20px 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .backgroundRed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .backgroundRed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 20px 20px;
+  }
+}
+
+.backgroundRed .holderFrame {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 40px 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  position: relative;
+}
+
+@media (min-width: 750px) and (max-width: 990px) {
+  .backgroundRed .holderFrame {
+    margin: 40px 0 0 0;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .backgroundRed .holderFrame {
+    margin: 40px 0 0 0;
+    width: 55%;
+  }
+}
+
+@media (max-width: 500px) {
+  .backgroundRed .holderFrame {
+    margin: 10px 0;
+  }
+}
+
+.backgroundRed .holderFrame .holderFrame_header {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(216, 0, 16, 0.5);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.backgroundRed .holderFrame .holderFrame_header #iconGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  margin: 0 20px 0 0;
+  left: 20px;
+}
+
+@media (max-width: 400px) {
+  .backgroundRed .holderFrame .holderFrame_header #iconGroup {
+    font-size: 25px;
+  }
+}
+
+.backgroundRed .holderFrame .holderFrame_header h5 {
+  margin: unset;
+}
+
+@media (max-width: 400px) {
+  .backgroundRed .holderFrame .holderFrame_header h5 {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 990px) {
+  .backgroundRed .holderFrame .holderFrame_header h5 {
+    margin: unset;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .backgroundRed .holderFrame .holderFrame_header h5 {
+    margin: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .backgroundRed .holderFrame .holderFrame_header h5 {
+    margin: unset;
+  }
+}
+
+.backgroundRed .insta-feed {
+  background-color: #ffffff;
+  border: none;
+}
+/*# sourceMappingURL=BgRed.css.map */

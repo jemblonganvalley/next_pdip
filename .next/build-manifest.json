@@ -24,15 +24,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/detail-multimedia/[query]": [
+    "/berita/[query]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/detail-multimedia/[query].js"
-    ],
-    "/multimedia/[query]": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/multimedia/[query].js"
+      "static/chunks/pages/berita/[query].js"
     ]
   },
   "ampFirstPages": []
