@@ -132,7 +132,7 @@ const HomePage = () => {
 
       <img src="pdip192.png" alt="" /> */}
 
-{configHome.length > 0 ? (
+      {configHome.length > 0 ? (
         <div
           className="homepage"
           style={{

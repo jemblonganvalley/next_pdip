@@ -2,8 +2,9 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/bung-karno-bapak-bangsa": "pages/bung-karno-bapak-bangsa.js",
   "/pemilu": "pages/pemilu.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+  "/bung-karno-bapak-bangsa": "pages/bung-karno-bapak-bangsa.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/ketua-umum": "pages/ketua-umum.js",
+  "/": "pages/index.js"
 }

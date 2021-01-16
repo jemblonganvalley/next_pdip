@@ -6,6 +6,8 @@ import { useState } from "react";
 // import { parse } from "dotenv/types";
 import parse from "html-react-parser";
 
+import Layouts from "../../components/Layouts";
+
 import Cards from "../../components/cards/MainCards";
 import MainButton from "../../components/buttons/MainButton";
 import MainDivider from "../../components/divider/MainDivider";
@@ -71,6 +73,8 @@ const BkbbPage = () => {
 
   return (
     <>
+    <Layouts>
+
       {showVid && (
         <>
           <span
@@ -236,6 +240,8 @@ const BkbbPage = () => {
           <Wait />
         </>
       )}
+    </Layouts>
+
     </>
   );
 };

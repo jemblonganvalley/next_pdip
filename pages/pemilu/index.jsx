@@ -4,6 +4,7 @@ import "./PemiluPage.scss";
 import { Link } from "next/link";
 
 // END Import to React
+import Layouts from "../../components/Layouts";
 
 import Wait from "../../components/wait/Wait";
 import CarouselPemilu1 from "../../components/carouselPemilu1/CarouselPemilu1";
@@ -52,6 +53,8 @@ const PemiluPage = () => {
 
   return (
     <>
+    <Layouts>
+
       {configHome.length > 0 ? (
         <div className="wrapperPemiluPage">
           {/* <div
@@ -214,6 +217,8 @@ const PemiluPage = () => {
       ) : (
         <Wait />
       )}
+    </Layouts>
+
     </>
   );
 };

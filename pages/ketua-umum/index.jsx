@@ -5,6 +5,9 @@ import React, { useEffect, useState } from "react";
 
 import "./KetuaUmumPage.scss";
 
+// import component
+import Layouts from "../../components/Layouts";
+
 // Import to CSS
 import MainDivider from "../../components/divider/MainDivider";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
@@ -88,6 +91,8 @@ const KetuaUmumPage = () => {
 
   return (
     <>
+    <Layouts>
+
       {configHome.length > 0 ? (
         <div className="wrapperKetuaUmum">
           {/* <div
@@ -224,6 +229,8 @@ const KetuaUmumPage = () => {
           <Wait />
         </>
       )}
+    </Layouts>
+
     </>
   );
 };

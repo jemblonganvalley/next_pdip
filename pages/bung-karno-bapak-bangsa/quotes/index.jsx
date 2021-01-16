@@ -4,6 +4,8 @@ import "./WejanganBungKarno.scss";
 import { useParams } from "react-router-dom";
 import { useStoreState } from "easy-peasy";
 
+import Layouts from "../../../components/Layouts";
+
 import BreadCrumbs from "../../../components/breadcrumbs/BreadCrumbs";
 import MainDivider from "../../../components/divider/MainDivider";
 import AngkaPaginationEvent from "../../../components/paginationevent/AngkaPaginationEvent";
@@ -85,6 +87,8 @@ const WejanganBungKarno = () => {
 
   return (
     <>
+    <Layouts>
+
       {cardWejanganBkItem.length > 0 ? (
         <>
           <div className="wrapperWejanganThumbnail">
@@ -157,6 +161,8 @@ const WejanganBungKarno = () => {
       ) : (
         <Wait />
       )}
+    </Layouts>
+
     </>
   );
 };
