@@ -14,6 +14,13 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
@@ -26,19 +33,24 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/berita": [
+    "/bung-karno-bapak-bangsa": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
-      "static/chunks/pages/berita.js"
+      "static/chunks/pages/bung-karno-bapak-bangsa.js"
     ],
-    "/berita/article/[query]": [
+    "/next/dist/pages/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/pemilu": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
-      "static/chunks/pages/berita/article/[query].js"
+      "static/chunks/pages/pemilu.js"
     ]
   },
   "ampFirstPages": []

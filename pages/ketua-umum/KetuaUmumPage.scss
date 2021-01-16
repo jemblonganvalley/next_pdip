@@ -1,0 +1,488 @@
+
+$secondary : #f3f3f3;
+@import "/styles/variables.scss";
+
+$smallPhoneSatu : 500px;
+$smallPhoneDua : 400px;
+@mixin smallPhone {
+    @media (max-width : #{$smallPhoneSatu}) {
+        @content;
+    }
+}
+@mixin smallPhoneDua {
+    @media (max-width : #{$smallPhoneDua}) {
+        @content;
+    }
+}
+
+// Min widht 500 and Max width 750
+$respon750 : 750px;
+$respon500: 500px;
+// END Min widht 500 and Max width 750
+
+// Min widht 500 and Max width 750
+@mixin respon750 {
+    @media (min-width : #{$respon500}) and (max-width: #{$respon750}) {
+        @content;
+    }
+}
+// END Min widht 500 and Max width 750
+
+// Min widht 750 and Max width 950
+$responMin750 : 750px;
+$responMax950: 950px;
+// END Min widht 750 and Max width 950
+
+// Min width 750 and max width 950
+@mixin respon950{
+    @media (min-width: #{$responMin750}) and (max-width: #{$responMax950}){
+        @content;
+    }
+}
+// END Min widht 750 and max width 950
+
+// min width 951 and max width 1360px
+$responMin951: 951px;
+$responMax1360: 1360px;
+
+@mixin respon1360{
+    @media (min-width: #{$responMin951}) and (max-width: #{$responMax1360}){
+        @content;
+    }
+}
+// end min width 951 and max width 1360px
+
+// min width 1361px and max width 1440px
+$responMin1361: 1361px;
+$responMax1440: 1440px;
+
+@mixin respon1440{
+    @media (min-width: #{$responMin1361}) and (max-width: #{$responMax1440}){
+        @content;
+    }
+}
+// end min width 1361px and max width 1440px
+
+.wrapperKetuaUmum{
+    width: 100%;
+    padding-bottom: 40px;
+
+    // .headers-ketuaumum {
+    //     display: flex;
+    //     height: 15vh;
+    //     width: auto;
+
+    //     @include smallPhone(){
+    //         height: 15vh;
+    //         width: 100%;
+    //     }
+
+    //     .backgrounds {
+    //         // background-color: rgba(255, 0, 8, 0.1);
+    //         width: 100%;
+    //         height: 100%;
+    //         display: flex;
+    //         // justify-content: center;
+    //         align-items: center;
+    //         color: #ffffff;
+
+    //         .textBackgroundBerita {
+    //             width: 30%;
+    //             height: 50%;
+    //             margin-left: 5rem;
+    //         }
+    //     }
+    // }
+    .linkedKetuaumum {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px 10%;
+
+        @include respon1360(){
+            padding: 10px 5%;
+        }
+
+        @include respon950(){
+            padding: 10px 5%;
+        }
+
+        @include respon750(){
+            padding: 10px 5%;
+        }
+
+        @include smallPhone(){
+            width: 100%;
+            padding: 0 2%;
+        }
+    }
+
+    // Container1
+    .container-1-ketuaUmum{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 0 20%;
+        overflow: hidden;
+
+        @include respon1440(){
+            padding: 0 20%;
+        }
+
+        @include respon1360(){
+            padding: 0 10%;
+        }
+
+        // min width 750px and max width 950px
+        @include respon950(){
+            padding: 0 2%;
+        }
+        // end min width 750px and max width 950px
+
+        // min width 500px and max width 750px
+        @include respon750(){
+            padding: 0 5%;
+        }
+        // end min width 500px and max width 750px
+
+        @include smallPhone(){
+            padding: 0;
+        }
+
+        .container-cardInfo-ketuaUmum{
+            display: flex;
+            height: auto;
+            
+            @include smallPhone(){
+                padding: 0 0 10px 0;
+            }
+            @include respon750() {
+                justify-content: center;
+            }
+        }
+
+        // Column1
+        .col1-container-1{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            background-image: url(/img//ketuaumum6.jpg);
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+
+            .cont-img-col1{
+                display: flex;
+                flex-direction: column;
+                height: 80vh;
+                width: 100%;
+                overflow: hidden;
+
+                .col1-img{
+                    display: flex;
+                    height: 70%;
+                    width: 100%;
+                    overflow: hidden;
+                    border-bottom: 1px solid #fff;
+
+                    .box-txt-title{
+                        display: flex;
+                        height: 100%;
+                        width: auto;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+
+                        h1{
+                            display: flex;
+                            font-size: 30px;
+                            color: #fff;
+                            padding: 25% 20% 20% 10%;
+                            overflow: hidden;
+                        }
+                    }  
+                }
+
+                .col2-img{
+                    display: flex;
+                    flex-direction: column;
+                    height: 30%;
+                    width: 100%;
+                    background-color: rgba(216, 0, 16, .8);
+                    overflow: hidden;
+
+                    .garis-strip-col2{
+                        display: flex;
+                        position: absolute;
+                        height: 2.5px;
+                        width: 230px;
+                        background: #fff;
+                        border-radius: 2px;
+                        margin: -2px 0 0 65px;
+                        overflow: hidden;
+                    }
+
+                    .box-txt-desk-col2{
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        width: 100%;
+                        padding: 20px 65px 0 65px;
+                        overflow: hidden;
+
+                        .txt-admin{
+                            display: flex;
+                            font-size: 12px;
+                            color: #fff;
+                            overflow: hidden;
+                        }
+
+                        .txt-desk-col2{
+                            display: flex;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #fff;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+        // END Column1
+
+        // Column3
+        .cardKetuaUmum {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 0px 0 0 0;
+
+            @include respon950(){
+                flex-direction: row;
+            }
+
+            // min width 500px and max widht 750px
+            @include respon750(){
+                flex-direction: column;
+            }
+            // end min width 500px and max width 750px
+
+            @include smallPhone(){
+                flex-direction: column;
+                padding: 0px 10px;
+                margin: 0;
+                // border: 1px solid blue;
+            }
+
+            .button1-cardBerita{
+                display: flex;
+                height: auto;
+                width: 100%;
+                padding: 20px 0;
+                justify-content: center;
+            }
+        }
+        // END Column3
+
+        // Column5
+        .col5-container-1-ketuaumum{
+            display: flex;
+            height: auto;
+            width: 100%;
+            margin: 30px 0 0px 0;
+            overflow: hidden;
+
+            @include smallPhone(){
+                height: auto;
+                flex-direction: column;
+                padding: 0 10px;
+            }
+
+            // Row1
+            .row1-video-youtube{
+                display: flex;
+                height: 40vh;
+                width: 70%;
+                margin: 0 30px 0px 0;
+                overflow: hidden;
+                
+                @include smallPhone(){
+                    height: 40vh;
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                }
+
+                iframe{
+                    height: auto;
+
+                    @include smallPhone(){
+                        height: auto;
+                    }
+                }
+            }
+            // END Row1
+
+            // Row2
+            .row2-img{
+                display: flex;
+                flex-direction: column-reverse;
+                height: 40vh;
+                width: 30%;
+                background-image: url(/img/img4.jpg);
+                background-position: center;
+                background-size: cover;
+                overflow: hidden;
+
+                @include smallPhone(){
+                    height: 40vh;
+                    width: 100%;
+                }
+
+                .col-txt{
+                    display: flex;
+                    height: 30%;
+                    width: 100%;
+                    align-items: center;
+                    padding: 5px 20px 5px 20px;
+                    overflow: hidden;
+
+                    @include smallPhone(){
+                        height: 50%;
+                    }
+
+                    .jdl{
+                        display: flex;
+                        font-size: 25px;
+                        font-weight: bold;
+                        color: #fff;
+                        margin: 1px;
+                        overflow: hidden;
+
+                        @include smallPhone(){
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            // END Row2
+        }
+        // END Column5
+    }
+    // END Container1
+
+    // Container2
+    .container-2-ketuaumum{
+        display: flex;
+        height: auto;
+        padding: 0 20% 0 20%;
+        margin: 40px 0;
+        justify-content: center;
+        align-items: center;
+
+        @include respon1440(){
+            padding: 0 20%;
+        }
+
+        @include respon1360(){
+            padding: 0 10%;
+        }
+
+        @include respon950(){
+            padding: 0 2%;
+        }
+
+        // min width 500px and max width 750px
+        @include respon750(){
+            padding: 0 15%;
+        }
+        // end min width 500px and max wdiht 750px
+
+        @include smallPhone(){
+            display: flex;
+            align-items: center;
+            height: auto;
+            width: 100%;
+            margin: 40px 0 40px 0;
+            padding: 0px 10px 0 10px;
+        }
+    }
+    // END Container
+
+    // Container3
+    .container-3-ketuaumum{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 0px 20% 0px 20%;
+
+        @include respon1440(){
+            padding: 0 20%;
+        }
+
+        @include respon1360(){
+            padding: 0 10%;
+        }
+
+        @include respon950(){
+            padding: 0 2%;
+        }
+
+        // min width 500px and max width 750px
+        @include respon750(){
+            padding: 0 5%;
+        }
+        // end min width 500px and max width 750px
+        
+        @include smallPhone(){
+            flex-direction: column;
+            padding: 0 0px;
+            margin: 0;
+        }
+
+        // Column4
+        .col4-cardContent-container-3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 0px 0 0 0;
+
+            // min width 750px and max width 950px
+            @include respon950(){
+                flex-direction: row;
+            }
+            // end min width 750px and max width 950px
+
+            // min width 500px and max width 750px
+            @include respon750(){
+                flex-direction: column;
+            }
+            // end min width 500px and max width 750px
+
+            @include smallPhone(){
+                flex-direction: column;
+                padding: 0 10px;
+            }
+
+            .button2-cardBerita{
+                display: flex;
+                height: auto;
+                width: 100%;
+                padding: 20px 0;
+                justify-content: center;
+
+                @include smallPhone(){
+                    padding: 20px 0 0 0;
+                }
+            }
+        }
+        // END Column4
+    }
+}

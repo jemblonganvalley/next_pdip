@@ -1,0 +1,86 @@
+$smallPhoneSatu : 500px;
+$smallPhoneDua : 400px;
+@mixin smallPhone {
+    @media (max-width : #{$smallPhoneSatu}) {
+        @content;
+    }
+}
+@mixin smallPhoneDua {
+    @media (max-width : #{$smallPhoneDua}) {
+        @content;
+    }
+}
+
+// Min widht 500 and Max width 750
+$respon750 : 750px;
+$respon500: 500px;
+// END Min widht 500 and Max width 750
+
+// Min widht 500 and Max width 750
+@mixin respon750 {
+    @media (min-width : #{$respon500}) and (max-width: #{$respon750}) {
+        @content;
+    }
+}
+// END Min widht 500 and Max width 750
+
+// Min widht 750 and Max width 950
+$responMin750 : 750px;
+$responMax950: 950px;
+// END Min widht 750 and Max width 950
+
+// Min width 750 and max width 950
+@mixin respon950{
+    @media (min-width: #{$responMin750}) and (max-width: #{$responMax950}){
+        @content;
+    }
+}
+// END Min widht 750 and max width 950
+
+$secondary : #f3f3f3;
+
+.socialMedia {
+    margin: 0px 0 0 0;
+    padding: 0 0px 0 0;
+    display: flex;
+    align-items: center;
+    
+    @include smallPhone() {
+        margin: 0 1rem;
+    }
+    // min width 750px and max width 950px
+    @include respon950(){
+        justify-content: center;
+    }
+    // end min width 750px and max width 950px
+
+    // min width 500px and max width 750px
+    @include respon750(){
+        justify-content: center;
+    }
+    // end min width 500px and max width 750px
+
+    .share-socialMedia {
+        margin-right: 10px;
+        margin-bottom: 0;
+
+        @include smallPhone(){
+            font-size: 14pt;
+            // border: 1px solid blue;
+        }
+    }
+
+    i {
+        margin: 0 10px;
+        transition: .3s;
+
+        @include smallPhone(){
+            font-size: 14pt;
+        }
+
+        // &:hover {
+        //     color: #c70000;
+        //     cursor: pointer;
+        // }
+    }
+}
