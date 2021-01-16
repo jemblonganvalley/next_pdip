@@ -1,11 +1,10 @@
 import Head from "next/head";
 import parse from "html-react-parser";
 import { useEffect } from "react";
-import NewNavbar from "../../components/newnavbar/NewNavbar";
-import Layouts from "../../components/Layouts";
+import Layouts from "../../../components/Layouts";
 
 export default function Index({ data, name }) {
-  const desc = parse(data.description);
+  // const desc = parse(data.description);
 
   // useEffect(() => {
   //   window.location.href = `https://pdiperjuangan.id/detail-article/${
@@ -13,12 +12,10 @@ export default function Index({ data, name }) {
   //   }/${data.title.replace(/\s/g, "-")}`;
   // }, []);
   return (
-    <>
+    <Layouts>
       {data && (
         <>
           <Head>
-            <link rel="icon" href="/pdip.jpg" />
-            <link rel="shortcut icon" href="/pdip.ico" />
             <meta name="description" content={data.title} />
             <meta
               property="og:url"
@@ -48,6 +45,7 @@ export default function Index({ data, name }) {
             <meta content="og:image:type" property="image/*" />
             <meta content="og:image:alt" property={data.title} />
             <meta property="og:locale" content="id_ID" />
+            <title>Berita</title>
           </Head>
 
           <link
@@ -58,7 +56,7 @@ export default function Index({ data, name }) {
           <span
             itemProp="thumbnail"
             itemScope
-            itemtype="http://schema.org/ImageObject"
+            itemType="http://schema.org/ImageObject"
           >
             <link
               itemProp="url"
@@ -143,7 +141,9 @@ export default function Index({ data, name }) {
                 )}
 
                 <div className="section3-beritaPage1">
-                  <p className="txt-desk-section3-beritaPage1">{desc}</p>
+                  <p className="txt-desk-section3-beritaPage1">
+                    {parse(data.description)}
+                  </p>
                 </div>
 
                 <div className="section5-beritaPage1">
@@ -163,7 +163,7 @@ export default function Index({ data, name }) {
           </div>
         </>
       )}
-    </>
+    </Layouts>
   );
 }
 

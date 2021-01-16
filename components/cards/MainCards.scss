@@ -1,0 +1,196 @@
+$smallPhoneSatu: 500px;
+$smallPhoneDua: 400px;
+
+@mixin smallPhone {
+  @media (max-width : #{$smallPhoneSatu}) {
+    @content;
+  }
+}
+
+@mixin smallPhoneDua {
+  @media (max-width : #{$smallPhoneDua}) {
+    @content;
+  }
+}
+
+// Min widht 500 and Max width 750
+$respon750: 750px;
+$respon500: 500px;
+// END Min widht 500 and Max width 750
+
+// Min widht 500 and Max width 750
+@mixin respon750 {
+  @media (min-width : #{$respon500}) and (max-width: #{$respon750}) {
+    @content;
+  }
+}
+// END Min widht 500 and Max width 750
+
+// Min widht 750 and Max width 950
+$responMin750: 750px;
+$responMax950: 950px;
+// END Min widht 750 and Max width 950
+
+// Min width 750 and max width 950
+@mixin respon950 {
+  @media (min-width: #{$responMin750}) and (max-width: #{$responMax950}) {
+    @content;
+  }
+}
+// END Min widht 750 and max width 950
+
+// min width 951 and max width 1360px
+$responMin951: 951px;
+$responMax1360: 1360px;
+
+@mixin respon1360 {
+  @media (min-width: #{$responMin951}) and (max-width: #{$responMax1360}) {
+    @content;
+  }
+}
+// end min width 951 and max width 1360px
+
+@import "/styles/variables.scss";
+
+.cardCustom {
+  width: calc(90% / 3);
+  background: #ffffff;
+  transition: 0.5s;
+  margin: 20px 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  // Min width 951px and max width 1360px
+  @include respon1360() {
+    margin: 20px 10px 0 10px;
+    width: calc(90% / 3);
+  }
+  // END Min width 951px and max width 1360px
+
+  // Min width 750px and max width 950px
+  @include respon950() {
+    width: calc(90% / 3);
+    height: 25vh;
+  }
+  // END Min width 750px and max width 950px
+
+  // Min width 500px and max width 750px
+  @include respon750() {
+    height: auto;
+    margin: 20px 0px 0 0px;
+    width: 100%;
+  }
+  // END Min width 500px and max width 750px
+
+  // Max width 500px
+  @include smallPhone() {
+    width: 100%;
+    margin: 1rem 0 0 0;
+
+    height: auto;
+  }
+  // END Max width 500px
+
+  &:hover {
+    box-shadow: 4px 17px 40px -30px rgba(0, 0, 0, 0.75);
+    background: $darkRedTwo;
+    color: #ffffff;
+  }
+
+  .imageCard {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    // min width 750px and max width 950px
+    @include respon950() {
+      // height: 250px;
+    }
+    // end min width 750px and max width 950px
+
+    // min width 500px and max width 750px
+    @include respon750() {
+      height: 200px;
+    }
+    // end min width 500px and max width 750px
+
+    @include smallPhone() {
+      border-radius: 10px;
+      height: 200px;
+      width: 100%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      background-position: center;
+      flex: 1;
+    }
+
+    .VBMusic {
+      width: 35px;
+      height: 35px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      font-size: 10pt;
+
+      &:hover {
+        background: #ffffff;
+        color: $colors;
+      }
+    }
+  }
+
+  .text {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    @include smallPhone() {
+      width: 100%;
+      // flex: 1;
+      // padding: 0px;
+    }
+
+    .txt-title-page-mainCard {
+      display: flex;
+      // font-size: 8pt;
+      // font-weight: normal;
+      color: $colors;
+
+      @include smallPhone() {
+        // font-size: 7pt;
+      }
+    }
+
+    .textSmall {
+      // font-size: 8pt;
+
+      @include smallPhone() {
+        // font-size: 5pt;
+      }
+    }
+
+    .textH5 {
+      margin-top: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @include smallPhone() {
+        // font-size: 12pt;
+        margin-top: 0.5rem;
+      }
+    }
+
+    // .textH6{
+    //     font-size: 12pt;
+    //     border: 1px solid blue;
+    // }
+  }
+}

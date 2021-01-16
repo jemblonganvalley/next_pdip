@@ -1,4 +1,4 @@
-@import "../../utils/variables.scss";
+@import "/styles/variables.scss";
 
 $smallPhoneSatu: 500px;
 $smallPhoneDua: 400px;
@@ -166,7 +166,7 @@ $responMax1440: 1440px;
     .wrapperSituation {
       display: flex;
       flex-direction: row;
-      
+
       @include respon950() {
         flex-direction: column;
         justify-content: center;
@@ -188,8 +188,6 @@ $responMax1440: 1440px;
         align-items: center;
         margin: 0 5px 0 0;
       }
-
-      
     }
 
     .textFooter {

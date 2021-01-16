@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../../img/pdiperjuangan02.svg";
 import "./Footer.module.scss";
 import Subscribe from "../subscribe/Subscribe";
 
@@ -8,7 +7,7 @@ const Footer = () => {
     <div className="wrapperFooter">
       <div className="wrapperContent">
         <img
-          src={Logo}
+          src="/img/pdiperjuangan02.svg"
           alt=""
           width="100"
           height="100"

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, NavLink, Redirect } from "react-router-dom";
+// import { Link, Link, Redirect } from "react-router-dom";
+import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
-import pdimobile from "/img/pdimobile.svg";
-import logo from "/img/pdiperjuangan02.svg";
+// import pdimobile from "/img/pdimobile.svg";
+// import logo from "/img/pdiperjuangan02.svg";
 // import DataNavbar from '../../data/index'
 import "./Navbar.module.scss";
 import Dropdown from "../dropdown/Dropdown";
@@ -212,15 +213,15 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/" activeClassName="brand">
+              <Link className="navbar-brand" href="/" activeClassName="brand">
                 <img
-                  src={logo}
+                  src="/img/pdiperjuangan02.svg"
                   alt=""
                   width="60"
                   className="d-inline-block align-center active"
                   loading="lazy"
                 />
-              </NavLink>
+              </Link>
               <button
                 name="btn_menu"
                 className="navbar-toggler"
@@ -236,7 +237,7 @@ const Navbar = () => {
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
               >
-                <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav mx-auto mb-2 mb-lg-0 navbar-nav-custom">
                   {Object.keys(menu).map((e, i) => (
                     <li
                       className="nav-item"
@@ -252,13 +253,13 @@ const Navbar = () => {
                         setShow("");
                       }}
                     >
-                      <NavLink
+                      <Link
                         className="nav-link"
-                        to={"/" + e.replace(/\s/g, "-").toLowerCase()}
+                        href={"/" + e.replace(/\s/g, "-").toLowerCase()}
                         activeClassName="active"
                       >
                         {e}
-                      </NavLink>
+                      </Link>
                       {console.log(e)}
                       {show === e && (
                         <Dropdown
@@ -288,11 +289,7 @@ const Navbar = () => {
                     // }}
                     type="text"
                   />
-                  <Link
-                    // to={`/search/${search}`}
-                    name="submit"
-                    className="btn-next"
-                  >
+                  <Link href={`/search`} name="submit" className="btn-next">
                     <i
                       className="fas fa-search"
                       aria-hidden="true"
@@ -318,7 +315,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/" activeClassName="brand">
+              <Link className="navbar-brand" href="/" activeClassName="brand">
                 <img
                   src="/img/pdimobile.svg"
                   alt=""
@@ -329,7 +326,7 @@ const Navbar = () => {
                     setCollapse1(false);
                   }}
                 />
-              </NavLink>
+              </Link>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -382,16 +379,16 @@ const Navbar = () => {
                             alignItems: "center",
                           }}
                         >
-                          <NavLink
+                          <Link
                             className="nav-link"
-                            to={"/" + e.replace(/\s/g, "-").toLowerCase()}
+                            href={"/" + e.replace(/\s/g, "-").toLowerCase()}
                             activeClassName="active"
                             onClick={() => {
                               setCollapse1(!collapse1);
                             }}
                           >
                             {e}
-                          </NavLink>
+                          </Link>
                           <i
                             className="fas fa-angle-down"
                             data-toggle="collapse"
@@ -446,7 +443,7 @@ const Navbar = () => {
                                 setCollapse1(!collapse1);
                                 // setRefresher();
                               }}
-                              to={
+                              href={
                                 e.params === "siaran_langsung"
                                   ? "/multimedia/siaran_langsung"
                                   : e.params === "dokumentasi"
@@ -535,7 +532,7 @@ const Navbar = () => {
                     placeholder="cari artikel"
                     name="search"
                   />
-                  <Link to="/search" name="submit" className="btn-next">
+                  <Link href="/search" name="submit" className="btn-next">
                     <i
                       className="fas fa-search"
                       aria-hidden="true"
@@ -565,7 +562,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/" activeClassName="brand">
+              <Link className="navbar-brand" href="/" activeClassName="brand">
                 <img
                   src="/img/pdimobile.svg"
                   alt=""
@@ -576,7 +573,7 @@ const Navbar = () => {
                     setCollapse1(false);
                   }}
                 />
-              </NavLink>
+              </Link>
               <button
                 name="btn_menu"
                 className="navbar-toggler"
@@ -636,16 +633,18 @@ const Navbar = () => {
                             alignItems: "center",
                           }}
                         >
-                          <NavLink
+                          <Link
                             className="nav-link"
-                            to={"/" + e.replace(/\s/g, "-").toLowerCase()}
+                            href={toString(
+                              "/" + e.replace(/\s/g, "-").toLowerCase()
+                            )}
                             activeClassName="active"
                             onClick={() => {
                               setCollapse1(!collapse1);
                             }}
                           >
                             {e}
-                          </NavLink>
+                          </Link>
                           <i
                             className="fas fa-angle-down"
                             data-toggle="collapse"
@@ -702,7 +701,7 @@ const Navbar = () => {
                                 setCollapse1(!collapse1);
                                 // setRefresher();
                               }}
-                              to={
+                              href={
                                 e.params === "siaran_langsung"
                                   ? "/multimedia/siaran_langsung"
                                   : e.params === "dokumentasi"
@@ -794,7 +793,7 @@ const Navbar = () => {
                     //   setSearch(e.target.value);
                     // }}
                   />
-                  <Link to="/search" name="submit" className="btn-next">
+                  <Link href="/search" name="submit" className="btn-next">
                     <i
                       className="fas fa-search"
                       aria-hidden="true"

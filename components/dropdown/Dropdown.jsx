@@ -1,15 +1,8 @@
 import React from "react";
 import "./Dropdown.module.scss";
-import { Link, NavLink } from "react-router-dom";
+import Link from "next/link";
 
 const Dropdown = ({ menuItem, listIndex }) => {
-  const refresh = (pg) => {
-    window.location.href = `${pg}`;
-  };
-
-  const refresh2 = () => {
-    window.location.reload();
-  };
   return (
     <div className="list-group dropdownMenu">
       {/* {console.log(menuItem)}
@@ -19,10 +12,10 @@ const Dropdown = ({ menuItem, listIndex }) => {
 
       <span></span>
       {menuItem[listIndex].map((e, i) => (
-        <NavLink
+        <Link
           className="list-group-item"
           key={i}
-          to={
+          href={
             e.params === "siaran_langsung"
               ? "/multimedia/siaran_langsung"
               : e.params === "dokumentasi"
@@ -95,7 +88,7 @@ const Dropdown = ({ menuItem, listIndex }) => {
           }
         >
           {e.title}
-        </NavLink>
+        </Link>
       ))}
 
       <div className="arrow"></div>

@@ -56,7 +56,7 @@ export default function Index({ data, name }) {
           <span
             itemProp="thumbnail"
             itemScope
-            itemtype="http://schema.org/ImageObject"
+            itemType="http://schema.org/ImageObject"
           >
             <link
               itemProp="url"

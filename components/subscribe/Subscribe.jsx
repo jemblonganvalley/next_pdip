@@ -1,9 +1,9 @@
-import React from 'react'
-import "./Subscribe.css";
-import { Link } from "react-router-dom";
+import React from "react";
+import "./Subscribe.module.scss";
+import Link from "next/link";
 const Subscribe = () => {
-    return (
-        <div className="wrapperSubscribe">
+  return (
+    <div className="wrapperSubscribe">
       <div className="berita ikutiBerita">
         <div className="wrapper">
           <p>Ikuti Berita Terbaru</p>
@@ -17,7 +17,7 @@ const Subscribe = () => {
                                 margin="1rem 0"
                                 btnIcons="fa fa-check"
                                 mr=".5rem" /> */}
-          <Link to="/">
+          <Link href="/">
             <button className="btn btn-danger w-100 mt-2" name="btn_subscribe">
               Subscribe
             </button>
@@ -25,7 +25,7 @@ const Subscribe = () => {
         </div>
       </div>
     </div>
-    )
-}
+  );
+};
 
-export default Subscribe
+export default Subscribe;

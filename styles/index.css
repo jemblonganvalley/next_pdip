@@ -1,0 +1,52 @@
+body {
+  /* margin: 0; */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f3f3;
+  /* user-select: none; */
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  font-display: swap;
+  /* margin-top: 117px; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+  /* overflow: hidden; */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* p{
+  font-size: 10pt;
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media only screen and (max-height: 720px) and (min-width: 1200px) {
+  body {
+    overflow-y: hidden;
+  }
+}

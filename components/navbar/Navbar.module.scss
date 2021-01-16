@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "./styles/variables.scss";
 
 $responsiveSatu: 1085px;
 $responsiveDua: 1000px;
@@ -220,11 +220,12 @@ $tabletWidthMax: 991px;
     }
   }
 
-  .navbar-nav {
+  .navbar-nav-custom {
     display: flex;
     position: relative;
     list-style: none;
     z-index: 111111;
+    gap: 20px;
 
     li {
       font-size: 12pt;
