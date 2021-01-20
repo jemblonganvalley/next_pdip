@@ -26,19 +26,19 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/berita": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/chunks/pages/berita.js"
-    ],
     "/berita/article/[query]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
       "static/chunks/pages/berita/article/[query].js"
+    ],
+    "/wejangan/[query]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/chunks/pages/wejangan/[query].js"
     ]
   },
   "ampFirstPages": []
