@@ -12,7 +12,7 @@ const Dropdown = ({ menuItem, listIndex }) => {
 
       <span></span>
       {menuItem[listIndex].map((e, i) => (
-        <Link
+        <a
           className="list-group-item"
           key={i}
           href={
@@ -88,7 +88,7 @@ const Dropdown = ({ menuItem, listIndex }) => {
           }
         >
           {e.title}
-        </Link>
+        </a>
       ))}
 
       <div className="arrow"></div>
