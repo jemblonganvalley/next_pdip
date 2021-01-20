@@ -1,15 +1,13 @@
 import Head from "next/head";
 import parse from "html-react-parser";
 import { useEffect } from "react";
-import Layouts from "../../../components/Layouts";
+import Layouts from "../../components/Layouts";
 
 export default function Index({ data, name }) {
-  const desc = parse(data.description);
+  // const desc = parse(data.description);
 
   useEffect(() => {
-    window.location.href = `https://pdiperjuangan.id/detail-article/${
-      data.id
-    }/${data.title.replace(/\s/g, "-")}`;
+    window.location.href = `https://pdiperjuangan.id/bung-karno-bapak-bangsa/quotes/${data.id}`;
   }, []);
   return (
     <Layouts>
@@ -19,9 +17,7 @@ export default function Index({ data, name }) {
             <meta name="description" content={data.title} />
             <meta
               property="og:url"
-              content={`https://pdiperjuangan.id/detail-article/${
-                data.id
-              }/${data.title.replace(/\s/g, "-")}`}
+              content={`https://pdiperjuangan.id/bung-karno-bapak-bangsa/quotes/${data.id}`}
             />
             <meta property="og:title" content={data.title} />
             <meta property="og:description" content={data.title} />
@@ -185,7 +181,7 @@ export async function getServerSideProps(context) {
   //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9kYXRhLnBkaXBlcmp1YW5nYW4uaWRcL2FwaVwvYXV0aFwvYXBwIiwiaWF0IjoxNjA5MDYyNzI1LCJleHAiOjE2MDkxNDkxMjUsIm5iZiI6MTYwOTA2MjcyNSwianRpIjoiSzg2aUR4WERrQ2ZuOTF1cCIsInN1YiI6MTQsInBydiI6IjhmZjYzMGEwMGNhNGEzZWFmNmYyNTRmNWFiZTVhYjFiZWVkMjcyNDkifQ.9u8Leq5GboMw8j3VDMT6oUvrqa0maF8Hnmhh14Ssz48";
 
   const res = await fetch(
-    `https://data.pdiperjuangan.id/api/blog/find/?id=${context.params.query}`,
+    `https://data.pdiperjuangan.id/api/quotes/find/?id=${context.params.query}`,
     {
       method: "post",
       mode: "cors",

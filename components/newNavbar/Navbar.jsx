@@ -191,10 +191,6 @@ const Navbar = () => {
     window.addEventListener("load", () => {
       //   getNavHeight();
     });
-
-    window.resize = () => {
-      //   getNavHeight();
-    };
   }, [isDesktop, isTablet, isMobile]);
 
   return (
