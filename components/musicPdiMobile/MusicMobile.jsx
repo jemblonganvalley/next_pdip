@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./MusicMobile.module.scss";
-// import downloadSatu from "../../img/lightDownSatu.png";
+// import"/img/lightDownSatu.png"from "../../img/lightDownSatu.png";
 // import laguPerjuangan from "../../img/laguperjuangan.png";
 // import downloadDua from "../../img/lightDownDua.png";
 // import downloadTiga from "../../img/lightDownTiga.png";
@@ -396,7 +396,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadSatu} alt="" width="50" />
+                <img src="/img/lightDownSatu.png" alt="" width="50" />
               </a>
               <a
                 as="a"
@@ -407,7 +407,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadDua} alt="" width="50" />
+                <img src="/img/lightDownDua.png" alt="" width="50" />
               </a>
               <a
                 as="a"
@@ -418,7 +418,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadTiga} alt="" width="50" />
+                <img src="/img/lightDownTiga.png" alt="" width="50" />
               </a>
             </div>
             {/* END Download Music */}
@@ -486,7 +486,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadSatu} alt="" width="50" />
+                <img src="/img/lightDownSatu.png" alt="" width="50" />
               </a>
               <a
                 as="a"
@@ -497,7 +497,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadDua} alt="" width="50" />
+                <img src="/img/lightDownDua.png" alt="" width="50" />
               </a>
               <a
                 as="a"
@@ -508,7 +508,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadTiga} alt="" width="50" />
+                <img src="/img/lightDownTiga.png" alt="" width="50" />
               </a>
             </div>
             {/* END Download Music */}
@@ -575,7 +575,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadSatu} alt="" width="50" />
+                <img src="/img/lightDownSatu.png" alt="" width="50" />
               </a>
               <a
                 as="a"
@@ -586,7 +586,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadDua} alt="" width="50" />
+                <img src="/img/lightDownDua.png" alt="" width="50" />
               </a>
               <a
                 as="a"
@@ -597,7 +597,7 @@ const MusicMobile = ({ data }) => {
                   textDecoration: "none",
                 }}
               >
-                <img src={downloadTiga} alt="" width="50" />
+                <img src="/img/lightDownTiga.png" alt="" width="50" />
               </a>
             </div>
             {/* END Download Music */}

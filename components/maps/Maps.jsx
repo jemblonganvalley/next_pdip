@@ -108,7 +108,7 @@ const Maps = () => {
 
           {/* 3 */}
           <CardProvinsi
-            img={bangkaBelitung}
+            img="/img/Bangka-Belitung.png"
             display={show3 ? "flex" : "none"}
           />
 

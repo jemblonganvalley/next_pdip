@@ -17,8 +17,8 @@ import Maps from "../../components/maps/Maps";
 import Wait from "../../components/wait/Wait";
 import { Helmet } from "react-helmet";
 
-const PartaiPage = ({ redirect }) => {
-  const [config, setConfig] = useState([]);
+const PartaiPage = ({ redirect, config }) => {
+  // const [config, setConfig] = useState([]);
   // const getConfigHome = async () => {
   //   const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
   //     method: "POST",
@@ -288,3 +288,38 @@ const PartaiPage = ({ redirect }) => {
 };
 
 export default PartaiPage;
+
+export async function getServerSideProps(context) {
+  const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      app_id: "1555309664580",
+      api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
+    }),
+  });
+  const data = await res.json();
+
+  const resConfigHome = await fetch(
+    "https://data.pdiperjuangan.id/api/web/pages/partai",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${data.token}`,
+      },
+    }
+  );
+
+  const dataConfigHome = await resConfigHome.json();
+  // console.log(dataConfigHome.query);
+  // setConfig(dataConfigHome.query)
+
+  return {
+    props: {
+      config: dataConfigHome.query,
+    },
+  };
+}
