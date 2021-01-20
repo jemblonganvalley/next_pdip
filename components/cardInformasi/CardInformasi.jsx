@@ -32,31 +32,39 @@ const CardInformasi = ({
       }}
     >
       <div className="box-cardMedia">
-        <Link href={to1} className="siaranLangsung mediaCard">
-          <img src={image} alt="" width={width1} className="imgCards" />
-          <h6 className="smallCard">{text}</h6>
-        </Link>
+        <a href={to1} className="siaranLangsung mediaCard">
+          <a>
+            <img src={image} alt="" width={width1} className="imgCards" />
+            <h6 className="smallCard">{text}</h6>
+          </a>
+        </a>
       </div>
 
       <div className="box-cardMedia">
-        <Link href={to2} className="videoDokumentasi mediaCard">
-          <img src={image2} alt="" width={width2} className="imgCards" />
-          <h6 className="smallCard">{text2}</h6>
-        </Link>
+        <a href={to2} className="videoDokumentasi mediaCard">
+          <a>
+            <img src={image2} alt="" width={width2} className="imgCards" />
+            <h6 className="smallCard">{text2}</h6>
+          </a>
+        </a>
       </div>
 
       <div className="box-cardMedia">
-        <Link href={to3} className="videoInteraktif mediaCard">
-          <img src={image3} alt="" width={width3} className="imgCards" />
-          <h6 className="smallCard">{text3}</h6>
-        </Link>
+        <a href={to3} className="videoInteraktif mediaCard">
+          <a>
+            <img src={image3} alt="" width={width3} className="imgCards" />
+            <h6 className="smallCard">{text3}</h6>
+          </a>
+        </a>
       </div>
 
       <div className="box-cardMedia">
-        <Link href={to4} className="siaranPers mediaCard">
-          <img src={image4} alt="" width={width4} className="imgCards" />
-          <h6 className="smallCard">{text4}</h6>
-        </Link>
+        <a href={to4} className="siaranPers mediaCard">
+          <a>
+            <img src={image4} alt="" width={width4} className="imgCards" />
+            <h6 className="smallCard">{text4}</h6>
+          </a>
+        </a>
       </div>
     </div>
   );

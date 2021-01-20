@@ -204,7 +204,7 @@ const MusicPdi = ({
                   </div>
 
                   <div className="download">
-                    <Link
+                    <a
                       as="a"
                       to={play[indexPlay].song}
                       download
@@ -215,8 +215,8 @@ const MusicPdi = ({
                         <img src="/img/downloadSatu.png" alt="" width="35" />
                         <span className="downloadSpan">Unduh Lagu</span>
                       </div>
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       as="a"
                       to={play[indexPlay].minusOne}
                       download
@@ -227,8 +227,8 @@ const MusicPdi = ({
                         <img src="/img/downloadDua.png" alt="" width="35" />
                         <span className="downloadSpan">Minus One</span>
                       </div>
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       as="a"
                       to={play[indexPlay].pdf}
                       download
@@ -239,7 +239,7 @@ const MusicPdi = ({
                         <img src="/img/downloadTiga.png" alt="" width="35" />
                         <span className="downloadSpan">Partitur</span>
                       </div>
-                    </Link>
+                    </a>
                   </div>
                 </div>
 

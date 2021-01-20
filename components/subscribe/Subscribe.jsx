@@ -17,11 +17,11 @@ const Subscribe = () => {
                                 margin="1rem 0"
                                 btnIcons="fa fa-check"
                                 mr=".5rem" /> */}
-          <Link href="/">
+          <a href="/">
             <button className="btn btn-danger w-100 mt-2" name="btn_subscribe">
               Subscribe
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

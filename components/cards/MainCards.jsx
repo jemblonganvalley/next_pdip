@@ -62,7 +62,7 @@ const Cards = ({
 
   return (
     <>
-      <Link
+      <a
         component="a"
         className="col-lg-3 cardCustom"
         id="cardCustom2"
@@ -72,7 +72,7 @@ const Cards = ({
         }}
         href={`${page}/${id}/${slug ? pageSLug() : null}`}
       >
-        <Link
+        <a
           href={`${page}/${id}/${slug ? pageSLug() : null}`}
           className="imageCard"
           style={{
@@ -85,7 +85,7 @@ const Cards = ({
           }}
         >
           {/* JIKA MAU DIPAKAI CLASS, PAKAI CLASS VBMusic */}
-          <Link
+          <a
             className={`${classIcon}`}
             href={href}
             style={{ textDecoration: "none" }}
@@ -96,8 +96,8 @@ const Cards = ({
                 textDecoration: "none",
               }}
             ></i>
-          </Link>
-        </Link>
+          </a>
+        </a>
         <div className="text">
           <small
             className="title-page-mainCards"
@@ -130,7 +130,7 @@ const Cards = ({
             {add3Dots(title, 70)}
           </p>
         </div>
-      </Link>
+      </a>
     </>
   );
 };

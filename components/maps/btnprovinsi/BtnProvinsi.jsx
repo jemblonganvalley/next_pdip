@@ -14,7 +14,7 @@ const BtnProvinsi = ({
   return (
     <>
       {/* For Botton Name Provinsi For on off Display Image Provinsi */}
-      <Link
+      <a
         to={`/dpd/${id}/${nameProv}`}
         className="btn-name-prov"
         onMouseEnter={mouseOver}
@@ -24,10 +24,8 @@ const BtnProvinsi = ({
           transition: `${transisi}`,
         }}
       >
-        <small className="DPDText">
-          DPD {nameProv}
-        </small>
-      </Link>
+        <small className="DPDText">DPD {nameProv}</small>
+      </a>
       {/* END For Botton Name Provinsi For on off Display Image Provinsi */}
     </>
   );

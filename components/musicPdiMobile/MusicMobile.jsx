@@ -293,7 +293,7 @@ const MusicMobile = ({ data }) => {
           >
             {/* Download Music */}
             <div className="wrapperDownload">
-              <Link
+              <a
                 as="a"
                 to={play[indexPlay1].song}
                 download
@@ -303,8 +303,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src="/img/lightDownSatu.png" alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay1].minusOne}
                 download
@@ -314,8 +314,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src="/img/lightDownDua.png" alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay1].pdf}
                 download
@@ -325,7 +325,7 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src="/img/lightDownTiga.png" alt="" width="50" />
-              </Link>
+              </a>
             </div>
             {/* END Download Music */}
 
@@ -387,7 +387,7 @@ const MusicMobile = ({ data }) => {
           >
             {/* Download Music */}
             <div className="wrapperDownload">
-              <Link
+              <a
                 as="a"
                 to={play[indexPlay2].song}
                 download
@@ -397,8 +397,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadSatu} alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay2].minusOne}
                 download
@@ -408,8 +408,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadDua} alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay2].pdf}
                 download
@@ -419,7 +419,7 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadTiga} alt="" width="50" />
-              </Link>
+              </a>
             </div>
             {/* END Download Music */}
 
@@ -477,7 +477,7 @@ const MusicMobile = ({ data }) => {
           >
             {/* Download Music */}
             <div className="wrapperDownload">
-              <Link
+              <a
                 as="a"
                 to={play[indexPlay3].song}
                 download
@@ -487,8 +487,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadSatu} alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay3].minusOne}
                 download
@@ -498,8 +498,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadDua} alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay3].pdf}
                 download
@@ -509,7 +509,7 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadTiga} alt="" width="50" />
-              </Link>
+              </a>
             </div>
             {/* END Download Music */}
 
@@ -566,7 +566,7 @@ const MusicMobile = ({ data }) => {
           >
             {/* Download Music */}
             <div className="wrapperDownload">
-              <Link
+              <a
                 as="a"
                 to={play[indexPlay4].song}
                 download
@@ -576,8 +576,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadSatu} alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay4].minusOne}
                 download
@@ -587,8 +587,8 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadDua} alt="" width="50" />
-              </Link>
-              <Link
+              </a>
+              <a
                 as="a"
                 to={play[indexPlay4].pdf}
                 download
@@ -598,7 +598,7 @@ const MusicMobile = ({ data }) => {
                 }}
               >
                 <img src={downloadTiga} alt="" width="50" />
-              </Link>
+              </a>
             </div>
             {/* END Download Music */}
 

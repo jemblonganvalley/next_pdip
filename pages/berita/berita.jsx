@@ -200,9 +200,9 @@ const BeritaPage = () => {
 
               {/* Column2 */}
               <div className="col2-container-2-beritaPage">
-                <Link href={configHome[6].value.link}>
+                <a href={configHome[6].value.link}>
                   <MainButton name="LIHAT" />
-                </Link>
+                </a>
               </div>
               {/* END Column2 */}
             </div>

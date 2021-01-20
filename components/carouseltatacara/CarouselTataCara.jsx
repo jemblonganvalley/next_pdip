@@ -15,7 +15,7 @@ const CarouselTataCara = ({ data }) => {
         >
           <div className="carousel-inner">
             {data.map((e, i) => (
-              <Link
+              <a
                 className={
                   i == 1
                     ? "carousel-item active carousel-item-tatacara"
@@ -30,7 +30,7 @@ const CarouselTataCara = ({ data }) => {
                   style={{
                     background: `url(https://data.pdiperjuangan.id/public/${e.image})`,
                     backgroundSize: "cover",
-                    backgroundPosition : 'center'
+                    backgroundPosition: "center",
                   }}
                 >
                   {/* <div className="container_text_carousel">
@@ -46,7 +46,7 @@ const CarouselTataCara = ({ data }) => {
                   <p className="pCarousel-for-mobile">{parse(e.paragraph)}</p>
                 </div> */}
                 {/* END For Mobile */}
-              </Link>
+              </a>
             ))}
           </div>
           <a

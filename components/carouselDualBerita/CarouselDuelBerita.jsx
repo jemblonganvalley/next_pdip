@@ -147,7 +147,7 @@ export const CarouselDuelBerita = ({
       >
         <div className="carousel-inner">
           {cat2.map((e, i) => (
-            <Link
+            <a
               className={`carousel-item ${i == 1 && "active"}`}
               href={"/gallery"}
               // onClick={() => {
@@ -212,7 +212,7 @@ export const CarouselDuelBerita = ({
                   objectPosition: "center",
                 }}
               />
-            </Link>
+            </a>
           ))}
         </div>
         <a

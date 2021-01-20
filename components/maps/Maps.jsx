@@ -101,7 +101,10 @@ const Maps = () => {
           <CardProvinsi img="/img/Aceh.png" display={show1 ? "flex" : "none"} />
 
           {/* 2 */}
-          <CardProvinsi img="/img/BaliMaps.png" display={show2 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/BaliMaps.png"
+            display={show2 ? "flex" : "none"}
+          />
 
           {/* 3 */}
           <CardProvinsi
@@ -110,28 +113,52 @@ const Maps = () => {
           />
 
           {/* 4 */}
-          <CardProvinsi img="/img/Banten.png" display={show4 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Banten.png"
+            display={show4 ? "flex" : "none"}
+          />
 
           {/* 5 */}
-          <CardProvinsi img="/img/Bengkulu.png" display={show5 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Bengkulu.png"
+            display={show5 ? "flex" : "none"}
+          />
 
           {/* 6 */}
-          <CardProvinsi img="/img/Gorontalo.png" display={show6 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Gorontalo.png"
+            display={show6 ? "flex" : "none"}
+          />
 
           {/* 7 */}
-          <CardProvinsi img="/img/Jakarta.png" display={show7 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Jakarta.png"
+            display={show7 ? "flex" : "none"}
+          />
 
           {/* 8 */}
-          <CardProvinsi img="/img/Jambi.png" display={show8 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Jambi.png"
+            display={show8 ? "flex" : "none"}
+          />
 
           {/* 9 */}
-          <CardProvinsi img="/img/Jawa-Barat.png" display={show9 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Jawa-Barat.png"
+            display={show9 ? "flex" : "none"}
+          />
 
           {/* 10 */}
-          <CardProvinsi img="/img/Jawa-Tengah.png" display={show10 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Jawa-Tengah.png"
+            display={show10 ? "flex" : "none"}
+          />
 
           {/* 11 */}
-          <CardProvinsi img="/img/Jawa-Timur.png" display={show11 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Jawa-Timur.png"
+            display={show11 ? "flex" : "none"}
+          />
 
           {/* 12 */}
           <CardProvinsi
@@ -170,13 +197,22 @@ const Maps = () => {
           />
 
           {/* 18 */}
-          <CardProvinsi img="/img/Lampung.png" display={show18 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Lampung.png"
+            display={show18 ? "flex" : "none"}
+          />
 
           {/* 19 */}
-          <CardProvinsi img="/img/Maluku.png" display={show19 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Maluku.png"
+            display={show19 ? "flex" : "none"}
+          />
 
           {/* 20 */}
-          <CardProvinsi img="/img/Maluku-Utara.png" display={show20 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Maluku-Utara.png"
+            display={show20 ? "flex" : "none"}
+          />
 
           {/* 21 */}
           <CardProvinsi
@@ -191,13 +227,22 @@ const Maps = () => {
           />
 
           {/* 23 */}
-          <CardProvinsi img="/img/Papua.png" display={show23 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Papua.png"
+            display={show23 ? "flex" : "none"}
+          />
 
           {/* 24 */}
-          <CardProvinsi img="/img/Papua-Barat.png" display={show24 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Papua-Barat.png"
+            display={show24 ? "flex" : "none"}
+          />
 
           {/* 25 */}
-          <CardProvinsi img="/img/Riau.png" display={show25 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Riau.png"
+            display={show25 ? "flex" : "none"}
+          />
 
           {/* 26 */}
           <CardProvinsi
@@ -248,11 +293,14 @@ const Maps = () => {
           />
 
           {/* 34 */}
-          <CardProvinsi img="/img/Yogyakarta.png" display={show34 ? "flex" : "none"} />
+          <CardProvinsi
+            img="/img/Yogyakarta.png"
+            display={show34 ? "flex" : "none"}
+          />
 
           {/* For Button Trigger onMouse And OnMouseLeave to Provinsi */}
           {/* Btn Aceh */}
-          <Link
+          <a
             className="target-mouse-1"
             id="btn-aceh"
             onMouseOver={() => {
@@ -261,11 +309,11 @@ const Maps = () => {
             onMouseLeave={() => {
               setShow1(false);
             }}
-          ></Link>
+          ></a>
           {/* END Bali */}
 
           {/* Btn Sumatera Utara */}
-          <Link
+          <a
             className="target-mouse-2"
             id="btn-sumateraUtara"
             onMouseOver={() => {
@@ -274,7 +322,7 @@ const Maps = () => {
             onMouseLeave={() => {
               setShow33(false);
             }}
-          ></Link>
+          ></a>
           {/* END Bali */}
           {/* For Button Trigger onMouse And OnMouseLeave to Provinsi */}
         </div>

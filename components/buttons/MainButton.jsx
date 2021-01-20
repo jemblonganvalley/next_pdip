@@ -16,7 +16,7 @@ const MainButton = ({
   let [hover, setHover] = useState(false);
 
   return (
-    <Link
+    <a
       className="btn px-5 btn2"
       style={{
         margin: margin,
@@ -31,14 +31,16 @@ const MainButton = ({
         setHover(!hover);
       }}
     >
-      <i
-        className={`${btnIcons}`}
-        style={{
-          marginRight: mr,
-        }}
-      ></i>
-      {name}
-    </Link>
+      <a>
+        <i
+          className={`${btnIcons}`}
+          style={{
+            marginRight: mr,
+          }}
+        ></i>
+        {name}
+      </a>
+    </a>
   );
 };
 
