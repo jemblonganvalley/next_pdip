@@ -1,0 +1,423 @@
+@import "/styles/variables.scss";
+
+$smallPhoneSatu: 500px;
+$smallPhoneDua: 400px;
+@mixin smallPhone {
+  @media (max-width : #{$smallPhoneSatu}) {
+    @content;
+  }
+}
+@mixin smallPhoneDua {
+  @media (max-width : #{$smallPhoneDua}) {
+    @content;
+  }
+}
+
+// Min widht 500 and Max width 750
+$respon750: 750px;
+$respon500: 500px;
+// END Min widht 500 and Max width 750
+
+// Min widht 500 and Max width 750
+@mixin respon750 {
+  @media (min-width : #{$respon500}) and (max-width: #{$respon750}) {
+    @content;
+  }
+}
+// END Min widht 500 and Max width 750
+
+// Min widht 750 and Max width 950
+$responMin750: 750px;
+$responMax950: 950px;
+// END Min widht 750 and Max width 950
+
+// Min width 750 and max width 950
+@mixin respon950 {
+  @media (min-width: #{$responMin750}) and (max-width: #{$responMax950}) {
+    @content;
+  }
+}
+// END Min widht 750 and max width 950
+
+// min width 951 and max width 1360px
+$responMin951: 951px;
+$responMax1360: 1360px;
+
+@mixin respon1360 {
+  @media (min-width: #{$responMin951}) and (max-width: #{$responMax1360}) {
+    @content;
+  }
+}
+// end min width 951 and max width 1360px
+
+// min width 1361px and max width 1440px
+$responMin1361: 1361px;
+$responMax1440: 1440px;
+
+@mixin respon1440 {
+  @media (min-width: #{$responMin1361}) and (max-width: #{$responMax1440}) {
+    @content;
+  }
+}
+// end min width 1361px and max width 1440px
+
+.wrapperMultimedia {
+  width: 100%;
+
+  // min width 500px and max width 750px
+  @include respon750() {
+    padding: 0 0 0px 0;
+  }
+  // end min width 500px and max width 750px
+
+  @include smallPhone() {
+    padding: 0 0 20px 0;
+  }
+
+  // .headerMedia {
+  //     background-size: cover;
+  //     height: 15vh;
+  //     background-position: bottom;
+
+  //     @include smallPhone() {
+  //         height: 15vh;
+  //     }
+
+  //     .textBannerMedia {
+  //             width: 30%;
+  //             height: 50%;
+  //             margin-left: 13rem;
+  //             color: #ffffff;
+  //             position: relative;
+  //             @include smallPhone() {
+  //                 width: auto;
+  //                 margin-left: 0;
+  //                 padding: 0 6%;
+  //             }
+  //             h2 {
+  //                 position: absolute;
+  //                 bottom: -70%;
+  //                 line-height: 1;
+  //                 text-transform: uppercase;
+  //                 font-family: 'Roboto';
+
+  //                 @include smallPhone() {
+  //                     font-size: 15pt;
+  //                 }
+
+  //                 @include smallPhoneDua() {
+  //                     font-size: 14pt;
+  //                     position: inherit;
+  //                 }
+  //             }
+  //     }
+  // }
+  .linkedMedia {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    // border: 1px solid blue;
+    margin-top: 15px;
+    padding: 10px 10%;
+
+    @include respon1360() {
+      padding: 10px 5%;
+    }
+
+    @include respon950() {
+      padding: 10px 5%;
+    }
+
+    @include respon750() {
+      padding: 10px 5%;
+    }
+
+    @include smallPhone() {
+      // border: 1px solid crimson;
+      width: 100%;
+      padding: $paddingMobile;
+    }
+  }
+
+  .pidatoKU {
+    padding: 0px 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    @include respon1440() {
+      padding: 0 20%;
+    }
+
+    @include respon1360() {
+      padding: 0 10%;
+    }
+
+    @include respon950() {
+      padding: 0 2%;
+    }
+
+    // min width 500px and max width 750px
+    @include respon750() {
+      padding: 0 5%;
+    }
+    // end min width 500px and max width 750px
+
+    @include smallPhone() {
+      padding: 0 10px;
+      height: auto;
+    }
+
+    .col-lg-9 {
+      // border: 1px solid blue;
+      height: 100%;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .col-lg-3 {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
+      // border: 1px solid pink;
+      position: relative;
+      // width: 100%;
+      height: 100%;
+      small {
+        font-size: 8pt;
+        color: $colors;
+      }
+      span {
+        margin-top: 1rem;
+        font-size: 15pt;
+        font-weight: 700;
+        width: 30vw;
+      }
+      p {
+        margin-top: 3rem;
+        font-size: 10pt;
+      }
+      .socialMedia {
+        margin-top: 8.5rem;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+
+        small {
+          color: #000000;
+          margin-right: 10px;
+        }
+        i {
+          margin: 0 10px;
+          transition: 0.3s;
+
+          &:hover {
+            color: $colors;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapperCardInfo {
+    padding: 0 20%;
+
+    @include respon1440() {
+      padding: 0 20%;
+    }
+
+    @include respon1360() {
+      padding: 0 10%;
+    }
+
+    @include respon950() {
+      padding: 0 5%;
+      justify-content: center;
+      display: flex;
+    }
+
+    // min width 500px and max width 750px
+    @include respon750() {
+      padding: 0 5%;
+    }
+    // end min width 500px and max width 750px
+
+    @include smallPhone() {
+      padding: 0;
+    }
+  }
+
+  .panggung {
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 40vh;
+    display: flex;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    // padding: $padding;
+
+    @include respon1360() {
+      background-attachment: inherit;
+    }
+
+    // min width 750px and max width 950px
+    @include respon950() {
+      background-position: center;
+      background-size: center;
+      justify-content: center;
+      align-items: center;
+    }
+    // end min width 750px and max width 950px
+
+    // min width 500px and max width 750px
+    @include respon750() {
+      background-attachment: inherit;
+      margin-top: 10px;
+    }
+    // end min width 500px and max width 750px
+
+    @include smallPhone() {
+      height: 40vh;
+      margin-top: 0;
+      background-attachment: inherit;
+    }
+
+    .textPanggung {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+
+  .divider-video-terbaru {
+    display: flex;
+    height: auto;
+    width: 100%;
+    padding: 40px 20% 20px 20%;
+    align-items: center;
+
+    @include respon1440() {
+      padding: 40px 20% 20px 20%;
+    }
+
+    @include respon1360() {
+      padding: 40px 10%;
+    }
+
+    @include respon950() {
+      padding: 40px 2% 20px 2%;
+    }
+
+    // min width 500px and max width 750px
+    @include respon750() {
+      padding: 40px 5% 20px 5%;
+    }
+    // end min width 500px and max width 750px
+
+    @include smallPhone() {
+      padding: 40px 10px 20px 10px;
+    }
+  }
+
+  .cardMediaDua {
+    padding: 0 20% 40px 20%;
+    display: flex;
+    flex-wrap: wrap;
+    @include smallPhone() {
+      padding: 10px 2%;
+      flex-direction: column;
+    }
+  }
+  .videoBaruPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20%;
+    width: 100%;
+    @include smallPhone() {
+      padding: 10px 2%;
+    }
+
+    .cardVideoBaru {
+      width: 100%;
+      // height: 50vh;
+      min-width: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+
+      // border: 1px solid pink;
+      // margin-top: 30px;
+      @include smallPhone() {
+        padding: 0 2%;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .button-cardBerita {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 0 40px 0;
+
+    @include smallPhone() {
+      padding: 20px 0 20px 0;
+    }
+  }
+
+  // card content
+  .cardContent {
+    display: flex;
+    height: auto;
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 20%;
+
+    @include respon1440() {
+      padding: 0 20%;
+      justify-content: space-between;
+    }
+
+    @include respon1360() {
+      padding: 0 10%;
+      justify-content: space-between;
+    }
+
+    @include respon950() {
+      padding: 0 2%;
+      justify-content: space-between;
+    }
+
+    @include respon750() {
+      flex-direction: column;
+      padding: 0 5%;
+    }
+
+    @include smallPhone() {
+      flex-direction: column;
+      padding: 0 10px;
+    }
+  }
+  // end card content
+}

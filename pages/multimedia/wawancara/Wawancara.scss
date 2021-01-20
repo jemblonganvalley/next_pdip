@@ -1,0 +1,67 @@
+@import "/styles/variables.scss";
+$smallPhoneSatu: 500px;
+$smallPhoneDua: 400px;
+@mixin smallPhone {
+  @media (max-width : #{$smallPhoneSatu}) {
+    @content;
+  }
+}
+
+@mixin smallPhoneDua {
+  @media (max-width : #{$smallPhoneDua}) {
+    @content;
+  }
+}
+.wrapperWW {
+  width: 100%;
+  padding: 10px 0 40px 0;
+  @include smallPhone() {
+    padding: 0 0 40px 0;
+  }
+
+  .linkedWW {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 40%;
+    margin-top: 20px;
+    padding: 0 10%;
+    @include smallPhone() {
+      // border: 1px solid crimson;
+      width: 100%;
+      padding: $paddingMobile;
+    }
+  }
+
+  .videoDokumen {
+    padding: 0 20%;
+
+    @include smallPhone() {
+      padding: 0 10px;
+    }
+  }
+
+  .dividerWW {
+    margin: 40px 0;
+    padding: 0 20%;
+
+    @include smallPhone() {
+      padding: 0 10px;
+    }
+  }
+
+  .cardWW {
+    max-width: 100%;
+    padding: 0 20%;
+
+    @include smallPhone() {
+      padding: 0;
+    }
+
+    .listWW {
+      flex-wrap: wrap;
+      width: 100%;
+      display: flex;
+    }
+  }
+}

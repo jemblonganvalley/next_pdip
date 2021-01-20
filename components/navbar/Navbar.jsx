@@ -459,7 +459,7 @@ const Navbar = () => {
                                   : e.title === "Lahirnya Pancasila 1 Juni 1945"
                                   ? "/detail-article/109/Lahirnya-Pancasila-1-Juni-1945"
                                   : e.title === "Foto/Gallery"
-                                  ? "/gallery"
+                                  ? "/berita/gallery"
                                   : e.params === "222"
                                   ? `/detail-article/656/${e.title
                                       .replace(/\s/g, "-")
@@ -717,7 +717,7 @@ const Navbar = () => {
                                   : e.title === "Lahirnya Pancasila 1 Juni 1945"
                                   ? "/detail-article/109/Lahirnya-Pancasila-1-Juni-1945"
                                   : e.title === "Foto/Gallery"
-                                  ? "/gallery"
+                                  ? "/berita/gallery"
                                   : e.params === "222"
                                   ? `/detail-article/656/${e.title
                                       .replace(/\s/g, "-")
