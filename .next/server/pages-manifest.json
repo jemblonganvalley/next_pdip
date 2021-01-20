@@ -2,9 +2,14 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
+<<<<<<< HEAD
   "/pemilu": "pages/pemilu.js",
   "/bung-karno-bapak-bangsa": "pages/bung-karno-bapak-bangsa.js",
   "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
   "/ketua-umum": "pages/ketua-umum.js",
   "/": "pages/index.js"
+=======
+  "/": "pages/index.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+>>>>>>> fa4edd3b569af0ddd0ca5c26bc0817a6a5d56b1b
 }

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 self.__BUILD_MANIFEST = {__rewrites:[],"/":["static\u002Fchunks\u002Fpages\u002Findex.js"],"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],"/bung-karno-bapak-bangsa":["static\u002Fchunks\u002Fpages\u002Fbung-karno-bapak-bangsa.js"],"/ketua-umum":["static\u002Fchunks\u002Fpages\u002Fketua-umum.js"],"/next/dist/pages/_error":["static\u002Fchunks\u002Fpages\u002Fnext\u002Fdist\u002Fpages\u002F_error.js"],"/pemilu":["static\u002Fchunks\u002Fpages\u002Fpemilu.js"],sortedPages:["\u002F","\u002F_app","\u002F_error","\u002Fbung-karno-bapak-bangsa","\u002Fketua-umum","\u002Fnext\u002Fdist\u002Fpages\u002F_error","\u002Fpemilu"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
+=======
+self.__BUILD_MANIFEST = {__rewrites:[],"/":["static\u002Fchunks\u002Fpages\u002Findex.js"],"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],"/next/dist/pages/_error":["static\u002Fchunks\u002Fpages\u002Fnext\u002Fdist\u002Fpages\u002F_error.js"],sortedPages:["\u002F","\u002F_app","\u002F_error","\u002Fnext\u002Fdist\u002Fpages\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
+>>>>>>> fa4edd3b569af0ddd0ca5c26bc0817a6a5d56b1b
