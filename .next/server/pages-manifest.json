@@ -3,5 +3,8 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/berita": "pages/berita.js",
-  "/": "pages/index.js"
+  "/partai": "pages/partai.js",
+  "/multimedia": "pages/multimedia.js",
+  "/informasi-publik": "pages/informasi-publik.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }
