@@ -1,7 +1,7 @@
 import { useStoreState } from "easy-peasy";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import "./carouselDualBerita.scss";
+import "./carouselDualBerita.module.scss";
 
 export const CarouselDuelBerita = ({
   cat1 = 45,

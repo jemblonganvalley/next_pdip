@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./containerCardGallery.scss";
+import "./containerCardGallery.module.scss";
 import { NavLink, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 

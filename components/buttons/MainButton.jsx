@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainButton.scss";
+import "./MainButton.module.scss";
 import Link from "next/link";
 import { useState } from "react";
 

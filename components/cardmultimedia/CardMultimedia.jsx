@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./CardMultimedia.scss";
+import "./CardMultimedia.module.scss";
 
 const CardMultimedia = ({ siaran }) => {
   return (

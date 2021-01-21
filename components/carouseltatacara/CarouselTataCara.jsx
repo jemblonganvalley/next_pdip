@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./CarouselTataCara.scss";
+import "./CarouselTataCara.module.scss";
 import parse from "html-react-parser";
 
 const CarouselTataCara = ({ data }) => {

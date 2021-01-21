@@ -2,3 +2,6 @@ node_modules
 restPdi.rest
 .next
 build
+yarn.lock
+yarn-error.log
+package-lock.json

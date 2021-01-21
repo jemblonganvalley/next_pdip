@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import "./CarouselBeritaPage2.scss";
+import "./CarouselBeritaPage2.module.scss";
 
 const CarouselBeritaPage2 = ({ id, data }) => {
   const [slideIndex, setSlideIndex] = useState(1);

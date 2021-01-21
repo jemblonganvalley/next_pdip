@@ -1,5 +1,5 @@
 import React from "react";
-import "./BreadCrumbs.scss";
+import "./BreadCrumbs.module.scss";
 import Link from "next/link";
 
 const BreadCrumbs = ({

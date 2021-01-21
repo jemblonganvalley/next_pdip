@@ -3,6 +3,7 @@ import "../styles/Page1.scss";
 import "../styles/NewNavbar.scss";
 import "../styles/dropDown.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/index.css";
 
 import Head from "next/head";
 

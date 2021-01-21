@@ -4,7 +4,7 @@
   "/_error": "pages/_error.js",
   "/berita": "pages/berita.js",
   "/partai": "pages/partai.js",
-  "/multimedia": "pages/multimedia.js",
+  "/": "pages/index.js",
   "/informasi-publik": "pages/informasi-publik.js",
   "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./CardInformasi.scss";
+import "./CardInformasi.module.scss";
 import Link from "next/link";
 
 const CardInformasi = ({

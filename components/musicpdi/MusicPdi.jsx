@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 // import downloadTiga from "../../img/downloadTiga.png";
 // import laguPerjuangan from "../../img/laguperjuangan.png";
 // import "react-jinke-music-player/assets/index.css";
-import "./MusicPdi.scss";
+import "./MusicPdi.module.scss";
 import AudioPlayer from "react-h5-audio-player";
-import "./styles.scss";
+import "./styles.module.scss";
 
 // // MUSIC 1
 // import hymne from "../../music/HymnePDIPerjuangan/hymne.mp3";

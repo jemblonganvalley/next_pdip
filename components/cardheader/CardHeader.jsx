@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./CardHeader.scss";
+import "./CardHeader.module.scss";
 
 const CardHeader = ({ image, title }) => {
   return (

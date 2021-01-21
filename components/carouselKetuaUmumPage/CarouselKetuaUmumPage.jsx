@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../carouselKetuaUmumPage/CarouselKetuaUmumPage.scss";
+import "./CarouselKetuaUmumPage.module.scss";
 
 const CarouselKetuaUmumPage = ({ data }) => {
   return (

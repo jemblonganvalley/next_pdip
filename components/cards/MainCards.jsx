@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainCards.scss";
+import "./MainCards.module.scss";
 import { Link, Redirect } from "react-router-dom";
 
 const Cards = ({
