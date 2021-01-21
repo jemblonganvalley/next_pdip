@@ -2,7 +2,7 @@ import "../styles/HomePage.module.scss";
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { CarouselDuelBerita } from "../components/carouselDualBerita/CarouselDuelBerita";
-
+import Head from "next/head";
 import MainSlider from "../components/slider/MainSlider";
 import MusicPdi from "../components/musicpdi/MusicPdi";
 import Cards from "../components/cards/MainCards";
@@ -34,7 +34,7 @@ export const LighBox = ({ source }) => {
   );
 };
 
-const HomePage = ({ configHome, gallery }) => {
+const HomePage = ({ configHome, gallery, meta }) => {
   // const [configHome, setConfigHome] = useState([]);
   // const [gallery, setGallery] = useState([]);
   const [showVid, setShowVid] = useState(false);
@@ -102,6 +102,37 @@ const HomePage = ({ configHome, gallery }) => {
         alignItems: "center",
       }}
     >
+      <Head>
+        <link rel="icon" href="/pdip.jpg" />
+        <link rel="shortcut icon" href="/pdip.ico" />
+        <meta name="description" content={meta.meta_description} />
+        <meta property="og:url" content={`https://pdiperjuangan.id/berita`} />
+        <meta property="og:title" content={meta.meta_keyword} />
+        <meta property="og:description" content={meta.meta_description} />
+        <meta
+          property="og:image"
+          itemProp="image"
+          content={`https://data.pdiperjuangan.id/public/${configHome[0].value[0].image}`}
+        />
+        {/* <meta
+          property="og:image:url"
+          content={`https://data.pdiperjuangan.id/public${data.path}`}
+        /> */}
+        <meta
+          property="og:image:secure_url"
+          content={`https://data.pdiperjuangan.id/public/${configHome[0].value[0].image}`}
+        />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+        <meta
+          property="og:image:alt"
+          content={`https://data.pdiperjuangan.id/public/${configHome[0].value[0].image}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta content="og:image:type" property="image/*" />
+        <meta content="og:image:alt" property={meta.meta_description} />
+        <meta property="og:locale" content="id_ID" />
+      </Head>
       {configHome.length > 0 && (
         <div>
           {/* 0 r-carousel */}
@@ -409,10 +440,24 @@ export async function getServerSideProps(context) {
   // console.log(dataGallery)
   // setGallery(dataGallery.query.data);
 
+  const resMeta = await fetch(
+    "https://data.pdiperjuangan.id/api/web/config/home",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${data.token}`,
+      },
+    }
+  );
+
+  const meta = await resMeta.json();
+
   return {
     props: {
       gallery: dataGallery.query.data,
       configHome: dataConfigHome.query,
+      meta: meta.query.set,
     },
   };
 }
