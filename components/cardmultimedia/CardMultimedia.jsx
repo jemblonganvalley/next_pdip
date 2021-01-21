@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./CardMultimedia.module.scss";
 
 const CardMultimedia = ({ siaran }) => {
@@ -16,7 +16,7 @@ const CardMultimedia = ({ siaran }) => {
                 textDecoration: "none",
               }}
             >
-              <Link
+              <a
                 className="VidPlay"
                 href="/videomedia"
                 style={{
@@ -29,7 +29,7 @@ const CardMultimedia = ({ siaran }) => {
                     textDecoration: "none",
                   }}
                 ></i>
-              </Link>
+              </a>
             </a>
 
             <div className="textMultimedia">

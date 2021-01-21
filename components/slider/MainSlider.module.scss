@@ -1,0 +1,391 @@
+@import "../../styles/variables.scss";
+
+$smallPhoneSatu: 500px;
+@mixin smallPhone {
+  @media (max-width : #{$smallPhoneSatu}) {
+    @content;
+  }
+}
+$smallPhoneDua: 400px;
+@mixin smallPhoneDua {
+  @media (max-width : #{$smallPhoneDua}) {
+    @content;
+  }
+}
+
+$res992: 992px;
+$res1240: 1350px;
+
+@mixin respon1240 {
+  @media (min-width : #{$res992}) and (max-width : #{$res1240}) {
+    @content;
+  }
+}
+
+$res1351: 1351px;
+$res1400: 1400px;
+
+@mixin respon1400 {
+  @media (min-width : #{$res1351}) and (max-width : #{$res1400}) {
+    @content;
+  }
+}
+
+.image1 {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0px 0 0px 0;
+  border-radius: 10px;
+
+  .bgRed-carousel-desktop {
+    display: flex;
+    position: absolute;
+    height: 1100px;
+    width: 1500px;
+    background-color: #000;
+    box-shadow: 0px -15px 10px 3px rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+    transform: rotate(120deg);
+    top: -230px;
+    left: -350px;
+  }
+  // END Tes BgRed Carousel
+
+  .text1 {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    color: #ffffff;
+    // border: 1px solid green;
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.6);
+    left: 0;
+
+    border-radius: 5px;
+
+    // Box Paragrap mainSlider
+    .box-paragrap-mainSlider {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      // background-color: #fff;
+      background-image: url(\/img/pattern-03.svg);
+      background-size: 10rem;
+      justify-content: center;
+      padding: 30px 40px;
+      // padding: 50px;
+      overflow: hidden;
+      border-radius: 5px 0px 0px 5px;
+      // box-shadow: 2px 0px 5px -2px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+    // END Box paragrap mainSlider
+
+    // Box Img
+    .box-img-mainSlider {
+      height: 100%;
+      width: 70%;
+      .img-home-mainSlider {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0 5px 5px 0px;
+        overflow: hidden;
+      }
+    }
+    // END Box Img
+
+    h3 {
+      width: 100%;
+      // font-size: 25pt;
+      // margin-bottom: 2em;
+      color: #fff;
+      font-weight: bold;
+
+      font-size: 17pt;
+
+      @include respon1240() {
+        font-size: 15pt;
+      }
+    }
+
+    // For min widht 500px and max width 750px
+    .title-maxWidth750 {
+      display: none;
+    }
+    // end for min width 500px and max width 750px
+
+    p {
+      // font-size: 13pt;
+      width: 100%;
+      color: #fff;
+      margin: 10px 0 0 0;
+      font-size: 10pt;
+      @include respon1240() {
+        font-size: 10pt;
+      }
+    }
+
+    // For Mobile
+    .box-paragrap-mobile-mainSlider {
+      display: none;
+      // Title For Mobile
+      .box-red-mobile-mainSlider {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: auto;
+        width: 100%;
+        background-image: linear-gradient(to top, black, #720000 60%, #aa0000);
+        color: #fff;
+        align-items: center;
+        padding: 0;
+        // END Logo apps store
+
+        // END Box iklan for mobile
+      }
+      // END Title For Mobile
+
+      // Paragrap For Mobile
+      .box-white-mobile-mainSlider {
+        display: none;
+        height: 100%;
+        width: 50%;
+        background-color: #fff;
+        color: #000;
+
+        p {
+          display: flex;
+        }
+      }
+      // END Paragrap For Mobile
+    }
+    // END For Mobile
+  }
+}
+
+.image2 {
+  height: 100vh;
+  width: 100%;
+  background-image: url(\/img/slider2.jpg);
+  background-size: cover;
+
+  .text1 {
+    height: 100%;
+
+    color: #ffffff;
+    // border: 1px solid green;
+    background: url(\/img/bgTextMobilez-01.svg);
+    background-size: cover;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      width: 50%;
+      font-size: 20pt;
+      text-transform: uppercase;
+      margin-bottom: 2em;
+    }
+    p {
+      font-size: 10pt;
+      width: 50%;
+    }
+  }
+}
+
+.carousel-mainSlider {
+  width: 100%;
+  display: flex;
+  height: 90vh;
+  background-image: linear-gradient(to top, black, #720000, #aa0000);
+  padding: 0 10%;
+  position: relative;
+
+  @include respon1240() {
+    padding: 0 5%;
+  }
+
+  .carousel-inner {
+    position: relative;
+
+    // Info Iklan
+    .box-info-iklan {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+
+      .box-paragrap-info-iklan {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        font-weight: normal;
+        color: #fff;
+        padding: 30px 0;
+
+        @include respon1240() {
+          padding: 10px 0;
+        }
+
+        @include respon1400() {
+          padding: 0;
+        }
+
+        .txt-info-iklan {
+          @include respon1240() {
+            font-size: 10pt;
+          }
+        }
+
+        // Box Logo
+        .box-logo-info-iklan {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          margin: 10px 0 0 0;
+
+          // Logo App store (GROUP)
+          .logoAppGroup {
+            display: flex;
+            height: 60px;
+            width: auto;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.7;
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+          // END logo app store (GROUP)
+
+          // app store
+          .logo-app-store {
+            margin: 0 0 0px 50px;
+          }
+          // END Play Store
+        }
+        // END Box Logo
+      }
+      // box-paragrap-info-iklan
+    }
+    // END Info Iklan
+
+    .carousel-item {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .carousel-indicators {
+    right: 0;
+    left: 0;
+    bottom: 27%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0;
+
+    .indikator {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      opacity: 0.5;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      vertical-align: middle;
+      margin: 1px;
+      padding: 15px;
+
+      .indicatorText {
+        cursor: pointer;
+        margin: 0 5px;
+        transition: opacity 0.6s ease;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Roboto";
+      }
+    }
+    .indikator.active {
+      opacity: 1;
+      background: #ffffff;
+      color: $darkRed;
+    }
+  }
+
+  .carousel-control-prev-desktop,
+  .carousel-control-next-desktop {
+    width: 7%;
+    text-decoration: none;
+    height: 0;
+  }
+
+  .control-desktop-prev,
+  .control-desktop-next {
+    top: -20%;
+  }
+
+  .control-desktop-prev {
+    @include respon1240() {
+      left: -5%;
+    }
+  }
+  .control-desktop-next {
+    @include respon1240() {
+      right: -5%;
+    }
+  }
+}
+
+.arrowsLeftDesktop {
+  position: absolute;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  border-radius: 500px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.7);
+  left: 100px;
+
+  i {
+    font-size: 25px;
+    color: #000;
+  }
+}
+
+.arrowsRightDesktop {
+  position: absolute;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  border-radius: 500px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px -1px rgba(0, 0, 0, 0.7);
+  right: 100px;
+
+  i {
+    font-size: 25px;
+    color: #000;
+  }
+}

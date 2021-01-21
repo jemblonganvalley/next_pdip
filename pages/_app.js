@@ -4,12 +4,12 @@ import "../styles/NewNavbar.scss";
 import "../styles/dropDown.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/index.css";
-
+import Layouts from "../components/Layouts";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <Layouts>
       <Head>
         <link
           rel="stylesheet"
@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
         <title>PDI Perjuangan</title>
       </Head>
       <Component {...pageProps} />
-    </>
+    </Layouts>
   );
 }
 
