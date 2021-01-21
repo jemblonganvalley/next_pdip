@@ -1,22 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/about/[id]": "pages/about/[id].html",
-  "/berita/article/[query]": "pages/berita/article/[query].js",
-  "/berita": "pages/berita.js",
-  "/detail-multimedia/[query]": "pages/detail-multimedia/[query].js",
-  "/": "pages/index.html",
-  "/informasi-publik": "pages/informasi-publik.js",
-  "/mediavideo": "pages/mediavideo.html",
-  "/multimedia/[query]": "pages/multimedia/[query].js",
-  "/multimedia": "pages/multimedia.html",
-  "/multimedia/wawancara": "pages/multimedia/wawancara.html",
-  "/multimedia/wawancara/pagination/WawancaraPagination": "pages/multimedia/wawancara/pagination/WawancaraPagination.html",
-  "/partai/dpd-dpc": "pages/partai/dpd-dpc.html",
-  "/partai": "pages/partai.js",
-  "/test/[query]": "pages/test/[query].js",
-  "/video/[query]": "pages/video/[query].js",
-  "/wejangan/[query]": "pages/wejangan/[query].js",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/berita": "pages/berita.js",
+  "/": "pages/index.js"
 }

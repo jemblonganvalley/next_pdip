@@ -20,9 +20,9 @@ import Head from "next/head";
 
 // Create Component
 export default function BeritaPage({ configHome, meta }) {
-  useEffect(() => {
-    window.location.href = "https://pdiperjuangan.id/beerita";
-  }, []);
+  // useEffect(() => {
+  //   window.location.href = "https://pdiperjuangan.id/berita";
+  // }, []);
   // console.log(configHome);
   // const [configHome, setConfigHome] = useState([]);
 

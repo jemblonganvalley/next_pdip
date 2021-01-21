@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Layouts from "../components/Layouts";
+import Wait from "../components/wait/Wait";
 
 const Index = ({ post }) => {
   // useEffect(() => {
@@ -7,9 +8,7 @@ const Index = ({ post }) => {
   // }, []);
   return (
     <Layouts>
-      <h1 style={{ marginTop: "10vh" }}>pdiperjuangan.id</h1>
-
-      <img src="pdip192.png" alt="" />
+      <Wait />
     </Layouts>
   );
 };
