@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layouts from "../../components/Layouts";
 
 // Import to React
@@ -20,6 +20,9 @@ import Head from "next/head";
 
 // Create Component
 export default function BeritaPage({ configHome, meta }) {
+  useEffect(() => {
+    window.location.href = "https://pdiperjuangan.id/beerita";
+  }, []);
   // console.log(configHome);
   // const [configHome, setConfigHome] = useState([]);
 
