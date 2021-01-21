@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import pdiLogo from "../../../img/logo-tatakelola.png";
 
 import Layouts from "../../components/Layouts";
-
+import Head from "next/head";
 import MusicPdi from "../../components/musicpdi/MusicPdi";
 import MainButton from "../../components/buttons/MainButton";
 import MainDivider from "../../components/divider/MainDivider";
@@ -17,7 +17,7 @@ import Maps from "../../components/maps/Maps";
 import Wait from "../../components/wait/Wait";
 import { Helmet } from "react-helmet";
 
-const PartaiPage = ({ redirect, config }) => {
+const PartaiPage = ({ redirect, config, meta }) => {
   // const [config, setConfig] = useState([]);
   // const getConfigHome = async () => {
   //   const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
@@ -59,6 +59,37 @@ const PartaiPage = ({ redirect, config }) => {
   return (
     // START PARTAI
     <>
+      <Head>
+        <link rel="icon" href="/pdip.jpg" />
+        <link rel="shortcut icon" href="/pdip.ico" />
+        <meta name="description" content={meta.meta_description} />
+        <meta property="og:url" content={`https://pdiperjuangan.id/berita`} />
+        <meta property="og:title" content={meta.meta_keyword} />
+        <meta property="og:description" content={meta.meta_description} />
+        <meta
+          property="og:image"
+          itemProp="image"
+          content={`https://data.pdiperjuangan.id/public/${config[2].value[0].image}`}
+        />
+        {/* <meta
+          property="og:image:url"
+          content={`https://data.pdiperjuangan.id/public${data.path}`}
+        /> */}
+        <meta
+          property="og:image:secure_url"
+          content={`https://data.pdiperjuangan.id/public/${config[2].value[0].image}`}
+        />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+        <meta
+          property="og:image:alt"
+          content={`https://data.pdiperjuangan.id/public/${config[2].value[0].image}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta content="og:image:type" property="image/*" />
+        <meta content="og:image:alt" property={meta.meta_description} />
+        <meta property="og:locale" content="id_ID" />
+      </Head>
       <Layouts>
         {config.length > 0 ? (
           <>
@@ -317,9 +348,23 @@ export async function getServerSideProps(context) {
   // console.log(dataConfigHome.query);
   // setConfig(dataConfigHome.query)
 
+  const resMeta = await fetch(
+    "https://data.pdiperjuangan.id/api/web/config/partai",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${data.token}`,
+      },
+    }
+  );
+
+  const meta = await resMeta.json();
+
   return {
     props: {
       config: dataConfigHome.query,
+      meta: meta.query.set,
     },
   };
 }
