@@ -2,15 +2,16 @@ import Head from "next/head";
 import parse from "html-react-parser";
 import { useEffect } from "react";
 import Layouts from "../../../components/Layouts";
+import CardSocialMedia from "../../../components/cardsocialmedia/CardSocialMedia";
 
-export default function Index({ data, name }) {
+export default function Index({ data, name, id }) {
   const desc = parse(data.description);
 
-  useEffect(() => {
-    window.location.href = `https://pdiperjuangan.id/detail-article/${
-      data.id
-    }/${data.title.replace(/\s/g, "-")}`;
-  }, []);
+  // useEffect(() => {
+  //   window.location.href = `https://pdiperjuangan.id/detail-article/${
+  //     data.id
+  //   }/${data.title.replace(/\s/g, "-")}`;
+  // }, []);
   return (
     <Layouts>
       {data && (
@@ -81,7 +82,7 @@ export default function Index({ data, name }) {
               <meta property="og:video:width" content="500px" />
             </Head> */}
           {/* <NewNavbar /> */}
-          <div className="wrapperBeritaPage1">
+          <div className="wrapperBeritaPage1" style={{ marginTop: "10vh" }}>
             <div className="linkedBeritaPage1">
               {/* <BreadCrumbs
             link1="Home"
@@ -109,6 +110,18 @@ export default function Index({ data, name }) {
                     <small className="date">
                       {data.author} | {data.created_at.split(" ")[0]}
                     </small>
+                    <div className="box-medsos-beritaPage1">
+                      <CardSocialMedia
+                        top
+                        imageUrl={data.path}
+                        title={data.title}
+                        url={
+                          data.path.includes("uploads")
+                            ? `https://article.pdiperjuangan.id/berita/${id}`
+                            : `https://article.pdiperjuangan.id/video/${id}`
+                        }
+                      />
+                    </div>
                     <div className="garis-panjang-tipis">
                       <div className="garis-merah-tebal"></div>
                     </div>
@@ -150,10 +163,15 @@ export default function Index({ data, name }) {
                   <div className="garis-panjang"></div>
 
                   <div className="box-medsos-beritaPage1">
-                    {/* <CardSocialMedia
-                  imageUrl={data.path}
-                  title={data.title}
-                /> */}
+                    <CardSocialMedia
+                      imageUrl={data.path}
+                      title={data.title}
+                      url={
+                        data.path.includes("uploads")
+                          ? `https://article.pdiperjuangan.id/berita/${id}`
+                          : `https://article.pdiperjuangan.id/video/${id}`
+                      }
+                    />
                   </div>
                 </div>
 
@@ -199,6 +217,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       data: data.query,
+      id: context.params.query,
     },
   };
 }

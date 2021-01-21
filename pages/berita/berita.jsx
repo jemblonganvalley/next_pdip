@@ -60,16 +60,13 @@ const BeritaPage = () => {
           <Head>
             <link rel="icon" href="/pdip.jpg" />
             <link rel="shortcut icon" href="/pdip.ico" />
-            <meta name="description" content={configHome[6].value.title} />
+            <meta name="description" content={meta.title} />
             <meta
               property="og:url"
               content={`https://pdiperjuangan.id/berita`}
             />
-            <meta property="og:title" content={configHome[6].value.title} />
-            <meta
-              property="og:description"
-              content={configHome[6].value.title}
-            />
+            <meta property="og:title" content={meta.title} />
+            <meta property="og:description" content={meta.title} />
             <meta
               property="og:image"
               itemProp="image"
@@ -91,7 +88,7 @@ const BeritaPage = () => {
             />
             <meta property="og:type" content="website" />
             <meta content="og:image:type" property="image/*" />
-            <meta content="og:image:alt" property={configHome[6].value.title} />
+            <meta content="og:image:alt" property={meta.title} />
             <meta property="og:locale" content="id_ID" />
           </Head>
           <div className="wrapperBerita">
@@ -194,7 +191,7 @@ const BeritaPage = () => {
                 <p className="txt-title-col1">
                   {configHome[6].value.description}
                 </p>
-                <h3 className="txt-title-col1">{configHome[6].value.title}</h3>
+                <h3 className="txt-title-col1">{meta.title}</h3>
               </div>
               {/* END Column1 */}
 

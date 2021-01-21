@@ -19,7 +19,7 @@ import CarouselKetuaUmumPage from "../../components/carouselKetuaUmumPage/Carous
 import Head from "next/head";
 
 // Create Component
-export default function BeritaPage({ configHome }) {
+export default function BeritaPage({ configHome, meta }) {
   // console.log(configHome);
   // const [configHome, setConfigHome] = useState([]);
 
@@ -61,10 +61,10 @@ export default function BeritaPage({ configHome }) {
       <Head>
         <link rel="icon" href="/pdip.jpg" />
         <link rel="shortcut icon" href="/pdip.ico" />
-        <meta name="description" content={configHome[6].value.title} />
+        <meta name="description" content={meta.meta_description} />
         <meta property="og:url" content={`https://pdiperjuangan.id/berita`} />
-        <meta property="og:title" content={configHome[6].value.title} />
-        <meta property="og:description" content={configHome[6].value.title} />
+        <meta property="og:title" content={meta.meta_keyword} />
+        <meta property="og:description" content={meta.meta_description} />
         <meta
           property="og:image"
           itemProp="image"
@@ -86,7 +86,7 @@ export default function BeritaPage({ configHome }) {
         />
         <meta property="og:type" content="website" />
         <meta content="og:image:type" property="image/*" />
-        <meta content="og:image:alt" property={configHome[6].value.title} />
+        <meta content="og:image:alt" property={meta.meta_description} />
         <meta property="og:locale" content="id_ID" />
       </Head>
 
@@ -191,7 +191,7 @@ export default function BeritaPage({ configHome }) {
               <p className="txt-title-col1">
                 {configHome[6].value.description}
               </p>
-              <h3 className="txt-title-col1">{configHome[6].value.title}</h3>
+              <h3 className="txt-title-col1">{meta.meta_description}</h3>
             </div>
             {/* END Column1 */}
 
@@ -305,10 +305,24 @@ export async function getServerSideProps(context) {
     }
   );
 
+  const resMeta = await fetch(
+    "https://data.pdiperjuangan.id/api/web/config/berita",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${data.token}`,
+      },
+    }
+  );
+
+  const meta = await resMeta.json();
+
   const dataConfigHome = await resConfigHome.json();
   return {
     props: {
       configHome: dataConfigHome.query,
+      meta: meta.query.set,
     },
   };
 }

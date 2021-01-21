@@ -10,6 +10,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        />
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
         <meta charset="utf-8" />
         <link rel="icon" href="pdip192.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
