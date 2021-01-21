@@ -82,7 +82,7 @@ const MultimediaPage = ({ configHome, meta }) => {
         <meta content="og:image:alt" property={meta.meta_description} />
         <meta property="og:locale" content="id_ID" />
       </Head>
-      <Layouts>
+      <>
         {configHome ? (
           <div className="wrapperMultimedia">
             {/* <div
@@ -185,7 +185,7 @@ const MultimediaPage = ({ configHome, meta }) => {
         ) : (
           <Wait />
         )}
-      </Layouts>
+      </>
     </>
   );
 };

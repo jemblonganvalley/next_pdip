@@ -39,6 +39,25 @@
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
       "static/chunks/pages/berita.js"
+    ],
+    "/multimedia": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/chunks/pages/multimedia.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/partai": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/chunks/pages/partai.js"
     ]
   },
   "ampFirstPages": []

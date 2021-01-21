@@ -209,7 +209,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <a className="navbar-brand" href="/" activeClassName="brand">
+              <Link className="navbar-brand" href="/" activeClassName="brand">
                 <img
                   src="/img/pdiperjuangan02.svg"
                   alt=""
@@ -217,7 +217,7 @@ const Navbar = () => {
                   className="d-inline-block align-center active"
                   loading="lazy"
                 />
-              </a>
+              </Link>
               <button
                 name="btn_menu"
                 className="navbar-toggler"
@@ -249,13 +249,13 @@ const Navbar = () => {
                         setShow("");
                       }}
                     >
-                      <a
+                      <Link
                         className="nav-link"
                         href={"/" + e.replace(/\s/g, "-").toLowerCase()}
                         activeClassName="active"
                       >
                         {e}
-                      </a>
+                      </Link>
                       {console.log(e)}
                       {show === e && (
                         <Dropdown
@@ -285,13 +285,13 @@ const Navbar = () => {
                     // }}
                     type="text"
                   />
-                  <a href={`/search`} name="submit" className="btn-next">
+                  <Link href={`/search`} name="submit" className="btn-next">
                     <i
                       className="fas fa-search"
                       aria-hidden="true"
                       name="icon"
                     ></i>
-                  </a>
+                  </Link>
                 </form>
               </div>
             </div>
@@ -311,7 +311,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <a className="navbar-brand" href="/" activeClassName="brand">
+              <Link className="navbar-brand" href="/" activeClassName="brand">
                 <img
                   src="/img/pdimobile.svg"
                   alt=""
@@ -322,7 +322,7 @@ const Navbar = () => {
                     setCollapse1(false);
                   }}
                 />
-              </a>
+              </Link>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -375,7 +375,7 @@ const Navbar = () => {
                             alignItems: "center",
                           }}
                         >
-                          <a
+                          <Link
                             className="nav-link"
                             href={"/" + e.replace(/\s/g, "-").toLowerCase()}
                             activeClassName="active"
@@ -384,7 +384,7 @@ const Navbar = () => {
                             }}
                           >
                             {e}
-                          </a>
+                          </Link>
                           <i
                             className="fas fa-angle-down"
                             data-toggle="collapse"
@@ -430,7 +430,7 @@ const Navbar = () => {
                               transition: "0.5s ease-in-out",
                             }}
                           >
-                            <a
+                            <Link
                               className="page-menu-drop-mobile"
                               style={{
                                 color: "#f3f3f3",
@@ -514,7 +514,7 @@ const Navbar = () => {
                               }
                             >
                               {e.title}
-                            </a>
+                            </Link>
                           </div>
                         ))}
                       </div>
@@ -528,7 +528,7 @@ const Navbar = () => {
                     placeholder="cari artikel"
                     name="search"
                   />
-                  <a href="/search" name="submit" className="btn-next">
+                  <Link href="/search" name="submit" className="btn-next">
                     <i
                       className="fas fa-search"
                       aria-hidden="true"
@@ -537,7 +537,7 @@ const Navbar = () => {
                         setCollapse1(!collapse1);
                       }}
                     ></i>
-                  </a>
+                  </Link>
                 </form>
               </div>
             </div>
@@ -558,7 +558,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <a className="navbar-brand" href="/" activeClassName="brand">
+              <Link className="navbar-brand" href="/" activeClassName="brand">
                 <img
                   src="/img/pdimobile.svg"
                   alt=""
@@ -569,7 +569,7 @@ const Navbar = () => {
                     setCollapse1(false);
                   }}
                 />
-              </a>
+              </Link>
               <button
                 name="btn_menu"
                 className="navbar-toggler"
@@ -629,7 +629,7 @@ const Navbar = () => {
                             alignItems: "center",
                           }}
                         >
-                          <a
+                          <Link
                             className="nav-link"
                             href={toString(
                               "/" + e.replace(/\s/g, "-").toLowerCase()
@@ -640,7 +640,7 @@ const Navbar = () => {
                             }}
                           >
                             {e}
-                          </a>
+                          </Link>
                           <i
                             className="fas fa-angle-down"
                             data-toggle="collapse"
@@ -688,7 +688,7 @@ const Navbar = () => {
                             }}
                             key={e.key}
                           >
-                            <a
+                            <Link
                               className="page-menu-drop-mobile"
                               style={{
                                 color: "#f3f3f3",
@@ -772,7 +772,7 @@ const Navbar = () => {
                               }
                             >
                               {e.title}
-                            </a>
+                            </Link>
                           </div>
                         ))}
                       </div>
@@ -789,7 +789,7 @@ const Navbar = () => {
                     //   setSearch(e.target.value);
                     // }}
                   />
-                  <a href="/search" name="submit" className="btn-next">
+                  <Link href="/search" name="submit" className="btn-next">
                     <i
                       className="fas fa-search"
                       aria-hidden="true"
@@ -798,7 +798,7 @@ const Navbar = () => {
                         setCollapse1(!collapse1);
                       }}
                     ></i>
-                  </a>
+                  </Link>
                 </form>
               </div>
             </div>

@@ -94,157 +94,153 @@ const HomePage = ({ configHome, gallery }) => {
   // }, []);
 
   return (
-    <>
+    <div
+      className="homepage"
+      style={{
+        overflowX: "hidden",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {configHome.length > 0 && (
+        <div>
+          {/* 0 r-carousel */}
+          <Desktop>
+            <MainSlider value={configHome[0].value} cls={configHome[0].class} />
+          </Desktop>
+          <Tablet>
+            <MainSliderTablet
+              value={configHome[0].value}
+              cls={configHome[0].class}
+            />
+          </Tablet>
+          <Mobile>
+            <MainSliderMobile
+              value={configHome[0].value}
+              cls={configHome[0].class}
+            />
+          </Mobile>
+          {/* LIGHTBOX */}
+          {showVid && (
+            <div>
+              <span
+                onClick={() => {
+                  setShowVid(false);
+                }}
+                className="fa fa-close"
+                id="btn-overlay-video-yt"
+              ></span>
+              <LighBox source={configHome[3].value[0].path} />
+            </div>
+          )}
+        </div>
+      )}
+      {/* STATISTIK INFO COVID */}
       <div
-        className="homepage"
+        className="statistik-covid"
         style={{
-          overflowX: "hidden",
-          justifyContent: "center",
-          alignItems: "center",
+          backgroundColor: "#000",
         }}
       >
-        {configHome.length > 0 && (
-          <>
-            {/* 0 r-carousel */}
-            <Desktop>
-              <MainSlider
-                value={configHome[0].value}
-                cls={configHome[0].class}
-              />
-            </Desktop>
-            <Tablet>
-              <MainSliderTablet
-                value={configHome[0].value}
-                cls={configHome[0].class}
-              />
-            </Tablet>
-            <Mobile>
-              <MainSliderMobile
-                value={configHome[0].value}
-                cls={configHome[0].class}
-              />
-            </Mobile>
-            {/* LIGHTBOX */}
-            {showVid && (
-              <>
-                <span
-                  onClick={() => {
-                    setShowVid(false);
-                  }}
-                  className="fa fa-close"
-                  id="btn-overlay-video-yt"
-                ></span>
-                <LighBox source={configHome[3].value[0].path} />
-              </>
-            )}
-          </>
-        )}
-        {/* STATISTIK INFO COVID */}
-        <div
-          className="statistik-covid"
+        <script
+          src="https://apps.elfsight.com/p/platform.js"
+          defer
           style={{
             backgroundColor: "#000",
           }}
-        >
-          <script
-            src="https://apps.elfsight.com/p/platform.js"
-            defer
-            style={{
-              backgroundColor: "#000",
-            }}
-          ></script>
-          <div
-            className="elfsight-app-b27c8ef3-b23c-490b-b273-df4e80eb8980"
-            style={{
-              backgroundColor: "#000",
-            }}
-          ></div>
-        </div>
-        {/* LOGO ICON COVID DAN LAIN LAIN */}
-        <div className="homePageTwo">
-          <div className="customRow">
-            {configHome.length > 0 &&
-              configHome[1].value.map((e, i) => (
-                <div className="groupArticleUtama" key={i}>
-                  <a
-                    href={
-                      i === 0
-                        ? "/article/247/covid-19"
-                        : i === 1
-                        ? "https://pdipkreatif.id/home"
-                        : "/event"
-                    }
-                    target={i == 1 ? "_blank" : ""}
-                  >
-                    <div className="customBorder">
-                      <div className="itemImageCovid">
-                        <img
-                          src={`https://data.pdiperjuangan.id/public/${e.image}`}
-                          alt=""
-                          className="imageCovid"
-                        />
-                      </div>
-                      <div className="itemTextCovid">
-                        <h5 style={{ color: "#fff" }}>{e.title}</h5>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              ))}
-            <div className="groupArticleUtama">
-              <a href="https://www.bmkg.go.id/" target="#blank">
-                <div className="customBorder">
-                  <div className="itemImageCovid">
-                    <img
-                      src="/img/replace_bmkg.png"
-                      alt="bmkg"
-                      className="imageCovid"
-                    />
-                  </div>
-                  <div className="itemTextCovid">
-                    <h5 style={{ color: "#fff" }}>Info BMKG</h5>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* SECTION VIDEO  */}
-          <div className="videoPage">
-            <div className="divider-video-home">
-              <MainDivider text="Video" />
-            </div>
-            {/* 2 r-text-html */}
-            {configHome.length > 0 && (
-              <div
-                className="paragrapVideo r-text-html"
-                dangerouslySetInnerHTML={{ __html: configHome[2].value }}
-              ></div>
-            )}
-
-            {/* 3 r-sync-video */}
-            {configHome.length > 0 &&
-              configHome[3].value.map((e, i) => (
-                <div
-                  // style={{
-                  //   backgroundImage: `url(https://i.ytimg.com/vi/${e.path}/hqdefault.jpg)`,
-                  // }}
-                  // key={i}
-                  // onClick={()=>{
-                  //             setShowVid(true)
-                  //           }}
-                  className="r-sync-video"
-                  key={i}
+        ></script>
+        <div
+          className="elfsight-app-b27c8ef3-b23c-490b-b273-df4e80eb8980"
+          style={{
+            backgroundColor: "#000",
+          }}
+        ></div>
+      </div>
+      {/* LOGO ICON COVID DAN LAIN LAIN */}
+      <div className="homePageTwo">
+        <div className="customRow">
+          {configHome.length > 0 &&
+            configHome[1].value.map((e, i) => (
+              <div className="groupArticleUtama" key={i}>
+                <a
+                  href={
+                    i === 0
+                      ? "/article/247/covid-19"
+                      : i === 1
+                      ? "https://pdipkreatif.id/home"
+                      : "/event"
+                  }
+                  target={i == 1 ? "_blank" : ""}
                 >
-                  {/* Card VMEDIA */}
-                  <VMedia
-                    headline={e.title}
-                    source={`https://www.youtube.com/embed/${e.path}`}
-                    desc={e.description}
+                  <div className="customBorder">
+                    <div className="itemImageCovid">
+                      <img
+                        src={`https://data.pdiperjuangan.id/public/${e.image}`}
+                        alt=""
+                        className="imageCovid"
+                      />
+                    </div>
+                    <div className="itemTextCovid">
+                      <h5 style={{ color: "#fff" }}>{e.title}</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))}
+          <div className="groupArticleUtama">
+            <a href="https://www.bmkg.go.id/" target="#blank">
+              <div className="customBorder">
+                <div className="itemImageCovid">
+                  <img
+                    src="/img/replace_bmkg.png"
+                    alt="bmkg"
+                    className="imageCovid"
                   />
-                  {/* end Card VMEDIA */}
+                </div>
+                <div className="itemTextCovid">
+                  <h5 style={{ color: "#fff" }}>Info BMKG</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
 
-                  {/* <div className="textYoutube">
+        {/* SECTION VIDEO  */}
+        <div className="videoPage">
+          <div className="divider-video-home">
+            <MainDivider text="Video" />
+          </div>
+          {/* 2 r-text-html */}
+          {configHome.length > 0 && (
+            <div
+              className="paragrapVideo r-text-html"
+              dangerouslySetInnerHTML={{ __html: configHome[2].value }}
+            ></div>
+          )}
+
+          {/* 3 r-sync-video */}
+          {configHome.length > 0 &&
+            configHome[3].value.map((e, i) => (
+              <div
+                // style={{
+                //   backgroundImage: `url(https://i.ytimg.com/vi/${e.path}/hqdefault.jpg)`,
+                // }}
+                // key={i}
+                // onClick={()=>{
+                //             setShowVid(true)
+                //           }}
+                className="r-sync-video"
+                key={i}
+              >
+                {/* Card VMEDIA */}
+                <VMedia
+                  headline={e.title}
+                  source={`https://www.youtube.com/embed/${e.path}`}
+                  desc={e.description}
+                />
+                {/* end Card VMEDIA */}
+
+                {/* <div className="textYoutube">
                     <div className="wrapperText">
                       <ul className="circleYoutube">
                         <li>
@@ -258,14 +254,15 @@ const HomePage = ({ configHome, gallery }) => {
                       </div>
                     </div>
                   </div> */}
-                </div>
-              ))}
-            {/* ONTAINER CARD VIDEO */}
-            <div className="cardContainer">
-              {/* 4 r-sync-video */}
-              {configHome.length > 0 &&
-                configHome[4].value.map((e, i) => {
-                  return (
+              </div>
+            ))}
+          {/* ONTAINER CARD VIDEO */}
+          <div className="cardContainer">
+            {/* 4 r-sync-video */}
+            {configHome.length > 0 &&
+              configHome[4].value.map((e, i) => {
+                return (
+                  <>
                     <Cards
                       imageCard={e.path}
                       cardType="youtube"
@@ -278,42 +275,44 @@ const HomePage = ({ configHome, gallery }) => {
                       slug={e.title}
                       category="Multimedia"
                     />
-                  );
-                })}
-            </div>
-            <div className="btn-lihatSemua-card">
-              <MainButton
-                name="lihat semua"
-                margin="0px 0 0 0"
-                pages="multimedia"
-              />
-            </div>
+                  </>
+                );
+              })}
           </div>
-
-          <div className="beritaPage">
-            <div className="divider-berita">
-              <MainDivider text="berita" mrgn="40px 0" />
-            </div>
-
-            {/* 5 r-text-html */}
-            {configHome.length > 0 && (
-              <div
-                className="paragrapBerita r-text-html"
-                dangerouslySetInnerHTML={{ __html: configHome[5].value }}
-              ></div>
-            )}
+          <div className="btn-lihatSemua-card">
+            <MainButton
+              name="lihat semua"
+              margin="0px 0 0 0"
+              pages="multimedia"
+            />
           </div>
         </div>
-        {/* 6 r-sync-blog */}
-        {configHome.length > 0 && <CarouselKM data={configHome[6].value} />}
-        {/* <KMobile /> */}
-        {configHome.length > 0 && <KMobile data={configHome[6].value} />}
-        <div className="cardContent">
-          {/* 7 r-sync-blog */}
+
+        <div className="beritaPage">
+          <div className="divider-berita">
+            <MainDivider text="berita" mrgn="40px 0" />
+          </div>
+
+          {/* 5 r-text-html */}
           {configHome.length > 0 && (
-            <>
-              {configHome[7].value.map((e, i) => {
-                return (
+            <div
+              className="paragrapBerita r-text-html"
+              dangerouslySetInnerHTML={{ __html: configHome[5].value }}
+            ></div>
+          )}
+        </div>
+      </div>
+      {/* 6 r-sync-blog */}
+      {configHome.length > 0 && <CarouselKM data={configHome[6].value} />}
+      {/* <KMobile /> */}
+      {configHome.length > 0 && <KMobile data={configHome[6].value} />}
+      <div className="cardContent">
+        {/* 7 r-sync-blog */}
+        {configHome.length > 0 && (
+          <>
+            {configHome[7].value.map((e, i) => {
+              return (
+                <>
                   <Cards
                     page="detail-article"
                     id={e.id}
@@ -326,44 +325,44 @@ const HomePage = ({ configHome, gallery }) => {
                     borderRadius="10px"
                     cardType={e.filetype}
                   />
-                );
-              })}
-            </>
-          )}
-        </div>
-        <span className="btnSize">
-          <MainButton name="lihat semua" margin="1rem 0 0 0" pages="/berita" />
-        </span>
-
-        {/* 8 r-sync-song */}
-        <div className="divider-laguPerjuangan r-sync-song">
-          <MainDivider text="Lagu Perjuangan" mrgn="0 0 40px 0" />
-        </div>
-        <MusicPdi />
-        <MusicMobile />
-        <div
-          className="beritaTerbaru"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <MainDivider text="Foto Gallery" mrgn="40px 0" />
-        </div>
-
-        {/* 9 and 10 */}
-        {configHome.length > 0 && (
-          <CarouselDuelBerita
-            cat1={configHome[9].value}
-            cat2={configHome[10].value}
-          />
+                </>
+              );
+            })}
+          </>
         )}
-        <div className="slidercom">
-          <Slidercom />
-        </div>
       </div>
-    </>
+      <span className="btnSize">
+        <MainButton name="lihat semua" margin="1rem 0 0 0" pages="/berita" />
+      </span>
+
+      {/* 8 r-sync-song */}
+      <div className="divider-laguPerjuangan r-sync-song">
+        <MainDivider text="Lagu Perjuangan" mrgn="0 0 40px 0" />
+      </div>
+      <MusicPdi />
+      <MusicMobile />
+      <div
+        className="beritaTerbaru"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <MainDivider text="Foto Gallery" mrgn="40px 0" />
+      </div>
+
+      {/* 9 and 10 */}
+      {configHome.length > 0 && (
+        <CarouselDuelBerita
+          cat1={configHome[9].value}
+          cat2={configHome[10].value}
+        />
+      )}
+      <div className="slidercom">
+        <Slidercom />
+      </div>
+    </div>
   );
 };
 

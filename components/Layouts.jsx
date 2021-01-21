@@ -3,10 +3,17 @@ import Navbar from "./newNavbar/Navbar";
 
 export default function Layouts({ children }) {
   return (
-    <main>
+    <>
       <Navbar />
-      {children}
+      <div
+        className="App"
+        style={{
+          marginTop: "9vh",
+        }}
+      >
+        {children}
+      </div>
       <Footer />
-    </main>
+    </>
   );
 }

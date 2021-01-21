@@ -181,86 +181,87 @@ const MusicPdi = ({
   const [musicData, setMusicData] = useState(data);
 
   return (
-    <div className="musiPdi">
-      {/* CONTAINER DUA */}
-      <div className="containerDua">
-        <div className="contentDua">
-          {/* MUSIC */}
-          <div className="col col-md-8 musicPlayer">
-            <div className="wrapperContentMusic">
-              <div className="contentMusic" style={{ height: "100%" }}>
-                <div className="col-sm-4">
-                  <div
-                    className="plyr"
-                    style={{
-                      background: `url()`,
-                    }}
-                  >
-                    <div className="backplyr">
-                      <div className="iconMusic">
-                        <i className="fa fa-play"></i>
+    <>
+      <div className="musiPdi">
+        {/* CONTAINER DUA */}
+        <div className="containerDua">
+          <div className="contentDua">
+            {/* MUSIC */}
+            <div className="col col-md-8 musicPlayer">
+              <div className="wrapperContentMusic">
+                <div className="contentMusic" style={{ height: "100%" }}>
+                  <div className="col-sm-4">
+                    <div
+                      className="plyr"
+                      style={{
+                        background: `url()`,
+                      }}
+                    >
+                      <div className="backplyr">
+                        <div className="iconMusic">
+                          <i className="fa fa-play"></i>
+                        </div>
                       </div>
+                    </div>
+
+                    <div className="download">
+                      <a
+                        as="a"
+                        to={play[indexPlay].song}
+                        download
+                        target="_blank"
+                        style={{ cursor: "pointer" }}
+                      >
+                        <div className="partitur downloadContent">
+                          <img src="/img/downloadSatu.png" alt="" width="35" />
+                          <span className="downloadSpan">Unduh Lagu</span>
+                        </div>
+                      </a>
+                      <a
+                        as="a"
+                        to={play[indexPlay].minusOne}
+                        download
+                        target="_blank"
+                        style={{ cursor: "pointer" }}
+                      >
+                        <div className="minusOn downloadContent">
+                          <img src="/img/downloadDua.png" alt="" width="35" />
+                          <span className="downloadSpan">Minus One</span>
+                        </div>
+                      </a>
+                      <a
+                        as="a"
+                        to={play[indexPlay].pdf}
+                        download
+                        target="_blank"
+                        style={{ cursor: "pointer" }}
+                      >
+                        <div className="minusOn downloadContent">
+                          <img src="/img/downloadTiga.png" alt="" width="35" />
+                          <span className="downloadSpan">Partitur</span>
+                        </div>
+                      </a>
                     </div>
                   </div>
 
-                  <div className="download">
-                    <a
-                      as="a"
-                      to={play[indexPlay].song}
-                      download
-                      target="_blank"
-                      style={{ cursor: "pointer" }}
-                    >
-                      <div className="partitur downloadContent">
-                        <img src="/img/downloadSatu.png" alt="" width="35" />
-                        <span className="downloadSpan">Unduh Lagu</span>
-                      </div>
-                    </a>
-                    <a
-                      as="a"
-                      to={play[indexPlay].minusOne}
-                      download
-                      target="_blank"
-                      style={{ cursor: "pointer" }}
-                    >
-                      <div className="minusOn downloadContent">
-                        <img src="/img/downloadDua.png" alt="" width="35" />
-                        <span className="downloadSpan">Minus One</span>
-                      </div>
-                    </a>
-                    <a
-                      as="a"
-                      to={play[indexPlay].pdf}
-                      download
-                      target="_blank"
-                      style={{ cursor: "pointer" }}
-                    >
-                      <div className="minusOn downloadContent">
-                        <img src="/img/downloadTiga.png" alt="" width="35" />
-                        <span className="downloadSpan">Partitur</span>
-                      </div>
-                    </a>
+                  <div className="col-sm-8">
+                    <div className="containerLirik">
+                      <small>lagu perjuangan</small>
+                      <span className="judulLagu" id="songTitle">
+                        {play[indexPlay].title}
+                      </span>
+                      <span className="lirik">lirik</span>
+                      <p
+                        className="isiLirik"
+                        dangerouslySetInnerHTML={{
+                          __html: play[indexPlay].lyric,
+                        }}
+                      ></p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="col-sm-8">
-                  <div className="containerLirik">
-                    <small>lagu perjuangan</small>
-                    <span className="judulLagu" id="songTitle">
-                      {play[indexPlay].title}
-                    </span>
-                    <span className="lirik">lirik</span>
-                    <p
-                      className="isiLirik"
-                      dangerouslySetInnerHTML={{
-                        __html: play[indexPlay].lyric,
-                      }}
-                    ></p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-12 playerMusic">
+                {/* <div className="col-md-12 playerMusic"> */}
                 <div className="wrapperPlayerMusic">
                   <AudioPlayer
                     src={play[indexPlay].song}
@@ -270,84 +271,85 @@ const MusicPdi = ({
                     customAdditionalControls={[]}
                   />
                 </div>
+                {/* </div> */}
               </div>
             </div>
+            {/* END */}
+
+            {/* PLAYLIST */}
+            <div className=" col-md-4 musicList">
+              <div className="headersList">
+                <img src="/img/laguperjuangan.png" alt="" width="50" />
+                <div className="textHeader">
+                  <h4>
+                    Lagu
+                    {/* <br /> */}
+                    Perjuangan
+                  </h4>
+                </div>
+              </div>
+              <div className="listMusic">
+                <div
+                  className="listSatu list"
+                  onClick={() => {
+                    setIndexPlay(0);
+                  }}
+                >
+                  <h6 className="judulList">Hymne PDI Perjuangan</h6>
+                  <small>
+                    Api perjuangan harus tetap dinyalakan dan selalu bangkit
+                    bergerak berjuang bersama, PDI Perjuangan selalu bersama
+                    rakyat dalam satu barisan.
+                  </small>
+                </div>
+
+                <div
+                  className="listSatu list"
+                  onClick={() => {
+                    setIndexPlay(1);
+                  }}
+                >
+                  <h6 className="judulList">Mars PDI Perjuangan</h6>
+                  <small>
+                    Tak ada yang tak mungkin jika Tuhan sudah berkehendak,
+                    Begitu pula dengan PDI Perjuangan.
+                  </small>
+                </div>
+
+                <div
+                  className="listSatu list"
+                  onClick={() => {
+                    setIndexPlay(2);
+                  }}
+                >
+                  <h6 className="judulList">One For All All For One</h6>
+                  <small>
+                    Dibalut dengan musik yang sangat enerjik memperkuat maksud
+                    dan tujuan dari terciptanya lagu ini untuk menggalang
+                    kebersamaan dalam menghadapi semua masalah yang terjadi.
+                  </small>
+                </div>
+
+                <div
+                  className="listSatu list"
+                  onClick={() => {
+                    setIndexPlay(3);
+                  }}
+                >
+                  <h6 className="judulList">Solid Bergerak</h6>
+                  <small>
+                    Satukan Misi, satukan Visi rapatkan barisan bergerak dengan
+                    satu semangat mengabdi kepada bangsa dan Negara.
+                  </small>
+                </div>
+              </div>
+            </div>
+            {/* END */}
           </div>
-          {/* END */}
-
-          {/* PLAYLIST */}
-          <div className=" col-md-4 musicList">
-            <div className="headersList">
-              <img src="/img/laguperjuangan.png" alt="" width="50" />
-              <div className="textHeader">
-                <h4>
-                  Lagu
-                  {/* <br /> */}
-                  Perjuangan
-                </h4>
-              </div>
-            </div>
-            <div className="listMusic">
-              <div
-                className="listSatu list"
-                onClick={() => {
-                  setIndexPlay(0);
-                }}
-              >
-                <h6 className="judulList">Hymne PDI Perjuangan</h6>
-                <small>
-                  Api perjuangan harus tetap dinyalakan dan selalu bangkit
-                  bergerak berjuang bersama, PDI Perjuangan selalu bersama
-                  rakyat dalam satu barisan.
-                </small>
-              </div>
-
-              <div
-                className="listSatu list"
-                onClick={() => {
-                  setIndexPlay(1);
-                }}
-              >
-                <h6 className="judulList">Mars PDI Perjuangan</h6>
-                <small>
-                  Tak ada yang tak mungkin jika Tuhan sudah berkehendak, Begitu
-                  pula dengan PDI Perjuangan.
-                </small>
-              </div>
-
-              <div
-                className="listSatu list"
-                onClick={() => {
-                  setIndexPlay(2);
-                }}
-              >
-                <h6 className="judulList">One For All All For One</h6>
-                <small>
-                  Dibalut dengan musik yang sangat enerjik memperkuat maksud dan
-                  tujuan dari terciptanya lagu ini untuk menggalang kebersamaan
-                  dalam menghadapi semua masalah yang terjadi.
-                </small>
-              </div>
-
-              <div
-                className="listSatu list"
-                onClick={() => {
-                  setIndexPlay(3);
-                }}
-              >
-                <h6 className="judulList">Solid Bergerak</h6>
-                <small>
-                  Satukan Misi, satukan Visi rapatkan barisan bergerak dengan
-                  satu semangat mengabdi kepada bangsa dan Negara.
-                </small>
-              </div>
-            </div>
-          </div>
-          {/* END */}
         </div>
+        {/* END */}
       </div>
-      {/* END */}
-    </div>
+    </>
   );
 };
 
