@@ -1,19 +1,19 @@
 import Head from "next/head";
 import parse from "html-react-parser";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Layouts from "../../../components/Layouts";
 import CardSocialMedia from "../../../components/cardsocialmedia/CardSocialMedia";
-
+import BreadCrumbs from "../../../components/breadcrumbs/BreadCrumbs";
 export default function Index({ data, name, id }) {
   const desc = parse(data.description);
-
+  const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id");
   // useEffect(() => {
   //   window.location.href = `https://pdiperjuangan.id/detail-article/${
   //     data.id
   //   }/${data.title.replace(/\s/g, "-")}`;
   // }, []);
   return (
-    <Layouts>
+    <>
       {data && (
         <>
           <Head>
@@ -84,19 +84,21 @@ export default function Index({ data, name, id }) {
           {/* <NewNavbar /> */}
           <div className="wrapperBeritaPage1" style={{ marginTop: "10vh" }}>
             <div className="linkedBeritaPage1">
-              {/* <BreadCrumbs
-            link1="Home"
-            to1="/"
-            link2={data.category_name}
-            to2={`/${data.category_name
-              .replace(/\s/g, "-")
-              .toLowerCase()}`}
-            page3={data.category_name}
-            link3={data.category_child_name}
-            to3={`/article/${
-              data.id_category_child
-            }/${data.category_name.replace(/\s/g, "-").toLowerCase()}`}
-          /> */}
+              <>
+                <BreadCrumbs
+                  link1="Home"
+                  to1={webUrl}
+                  link2={data.category_name}
+                  to2={`${webUrl}/${data.category_name
+                    .replace(/\s/g, "-")
+                    .toLowerCase()}`}
+                  page3={data.category_name}
+                  link3={data.category_child_name}
+                  to3={`${webUrl}/article/${
+                    data.id_category_child
+                  }/${data.category_name.replace(/\s/g, "-").toLowerCase()}`}
+                />
+              </>
             </div>
 
             <div className="containerPage1Article">
@@ -181,7 +183,7 @@ export default function Index({ data, name, id }) {
           </div>
         </>
       )}
-    </Layouts>
+    </>
   );
 }
 

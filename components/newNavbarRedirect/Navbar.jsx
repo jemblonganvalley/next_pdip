@@ -6,9 +6,10 @@ import { useMediaQuery } from "react-responsive";
 // import logo from "/img/pdiperjuangan02.svg";
 // import DataNavbar from '../../data/index'
 import "./Navbar.module.scss";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "../dropdownRedirect/Dropdown";
 
 const Navbar = () => {
+  const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id/");
   // const setRefresher = useStoreActions((action) => action.setRefresher);
   // const refresher = useStoreState((state) => state.refresher);
   // const setNavHeight = useStoreActions((action) => action.setNavHeight);
@@ -209,7 +210,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <Link className="navbar-brand" href="/" activeClassName="brand">
+              <a className="navbar-brand" href={webUrl} activeClassName="brand">
                 <img
                   src="/img/pdiperjuangan02.svg"
                   alt=""
@@ -217,7 +218,7 @@ const Navbar = () => {
                   className="d-inline-block align-center active"
                   loading="lazy"
                 />
-              </Link>
+              </a>
               <button
                 name="btn_menu"
                 className="navbar-toggler"
@@ -249,13 +250,13 @@ const Navbar = () => {
                         setShow("");
                       }}
                     >
-                      <Link
+                      <a
                         className="nav-link"
-                        href={"/" + e.replace(/\s/g, "-").toLowerCase()}
+                        href={webUrl + e.replace(/\s/g, "-").toLowerCase()}
                         activeClassName="active"
                       >
                         {e}
-                      </Link>
+                      </a>
                       {console.log(e)}
                       {show === e && (
                         <Dropdown
@@ -285,7 +286,11 @@ const Navbar = () => {
                     // }}
                     type="text"
                   />
-                  <a href={`/search`} name="submit" className="btn-next">
+                  <a
+                    href={`${webUrl}/search`}
+                    name="submit"
+                    className="btn-next"
+                  >
                     <i
                       className="fas fa-search"
                       aria-hidden="true"
