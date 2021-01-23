@@ -104,7 +104,7 @@ export default function Index({ data, name, id }) {
             <div className="containerPage1Article">
               <div className="col1-container-1-beritaPage1">
                 <div className="section1-col1-beritaPage1">
-                  <h2 className="txt-title">{data.title}</h2>
+                  <h4 className="txt-title">{data.title}</h4>
                 </div>
 
                 <div className="section2-col1-beritaPage1">
@@ -119,7 +119,7 @@ export default function Index({ data, name, id }) {
                         title={data.title}
                         url={
                           data.path.includes("uploads")
-                            ? `https://article.pdiperjuangan.id/berita/${id}`
+                            ? `https://article.pdiperjuangan.id/berita/article/${id}`
                             : `https://article.pdiperjuangan.id/video/${id}`
                         }
                       />
@@ -170,7 +170,7 @@ export default function Index({ data, name, id }) {
                       title={data.title}
                       url={
                         data.path.includes("uploads")
-                          ? `https://article.pdiperjuangan.id/berita/${id}`
+                          ? `https://article.pdiperjuangan.id/berita/article/${id}`
                           : `https://article.pdiperjuangan.id/video/${id}`
                       }
                     />
