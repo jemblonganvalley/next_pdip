@@ -46,7 +46,7 @@ export default function Index({ data, name, id }) {
             <meta property="og:image:type" content="image/*" />
             <meta property="og:image:alt" content={data.title} />
             <meta property="og:locale" content="id_ID" />
-            <title>Berita</title>
+            <title>PDI Perjuangan</title>
           </Head>
 
           <link
