@@ -82,6 +82,7 @@ export default function Index({ data, name, id }) {
               <meta property="og:video:width" content="500px" />
             </Head> */}
           {/* <NewNavbar /> */}
+
           <div className="wrapperBeritaPage1" style={{ marginTop: "10vh" }}>
             <div className="linkedBeritaPage1">
               <>
