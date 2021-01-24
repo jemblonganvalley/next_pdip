@@ -39,8 +39,8 @@ export default function Index({ data, name, id }) {
               property="og:image:secure_url"
               content={`https://data.pdiperjuangan.id/public${data.path}`}
             />
-            <meta property="og:image:width" content="200" />
-            <meta property="og:image:height" content="200" />
+            <meta property="og:image:width" content="300" />
+            <meta property="og:image:height" content="300" />
             <meta property="og:image:alt" content={data.title} />
             <meta property="og:type" content="article" />
             <meta property="og:image:type" content="image/*" />
