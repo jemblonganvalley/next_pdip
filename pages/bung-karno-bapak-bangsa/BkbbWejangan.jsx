@@ -4,7 +4,7 @@ import bkbb2 from "../../../img/bkbb2.jpg";
 import bkbb3 from "../../../img/bkbb3.jpg";
 import bkbb4 from "../../../img/bkbb4.jpg";
 
-import "./BkbbWejangan.scss";
+import "../../styles/BkbbWejangan.scss";
 import CardQuotes from "../../cardquotes/CardQuotes";
 import BreadCrumbs from "../../breadcrumbs/BreadCrumbs";
 import MainButton from "../../buttons/MainButton";
