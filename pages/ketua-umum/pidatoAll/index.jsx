@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import "./PidatoAll.scss";
+import "../../../styles/PidatoAll.scss";
 import { NavLink, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 
