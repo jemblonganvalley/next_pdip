@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import "./WejanganBungKarno.scss";
+import "../../../styles/WejanganBungKarno.scss";
 import { useParams } from "react-router-dom";
 import { useStoreState } from "easy-peasy";
 
