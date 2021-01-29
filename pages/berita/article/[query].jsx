@@ -29,15 +29,15 @@ export default function Index({ data, name, id }) {
             <meta
               property="og:image"
               itemProp="image"
-              content={`https://data.pdiperjuangan.id/public${data.path}`}
+              content={`https://data.pdiperjuangan.id/public/${data.path}`}
             />
-            {/* <meta
+            <meta
               property="og:image:url"
-              content={`https://data.pdiperjuangan.id/public${data.path}`}
-            /> */}
+              content={`https://data.pdiperjuangan.id/public/${data.path}`}
+            />
             <meta
               property="og:image:secure_url"
-              content={`https://data.pdiperjuangan.id/public${data.path}`}
+              content={`https://data.pdiperjuangan.id/public/${data.path}`}
             />
             <meta property="og:image:width" content="300" />
             <meta property="og:image:height" content="300" />
