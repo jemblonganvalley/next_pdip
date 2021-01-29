@@ -17,6 +17,8 @@ export default function Index({ data, name, id }) {
       {data && (
         <>
           <Head>
+            <link rel="icon" href="/pdip.jpg" />
+            <link rel="shortcut icon" href="/pdip.ico" />
             <meta name="description" content={data.title} />
             <meta
               property="og:url"
