@@ -22,7 +22,7 @@ const CarouselTataCara = ({ data }) => {
                     : "carousel-item carousel-item-tatacara"
                 }
                 as="div"
-                to={e.link}
+                href={e.link}
               >
                 {/* <img src={`https://data.pdiperjuangan.id/public/${e.image}`} className="imageTC" /> */}
                 <div

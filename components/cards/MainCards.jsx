@@ -1,7 +1,6 @@
-import React from "react";
-import "./MainCards.module.scss";
-import { Link, Redirect } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import "../../styles/MainCards.module.scss";
+import Link from "next/link";
 const Cards = ({
   page,
   author,
@@ -61,43 +60,49 @@ const Cards = ({
   };
 
   return (
-    <>
-      <a
-        component="a"
-        className="col-lg-3 cardCustom"
-        id="cardCustom2"
-        style={{
-          borderRadius: borderRadius,
-          marginTop: marginTop,
-        }}
-        href={`${page}/${id}/${slug ? pageSLug() : null}`}
-      >
-        <a
-          href={`${page}/${id}/${slug ? pageSLug() : null}`}
-          className="imageCard"
-          style={{
-            backgroundImage: imageCard.includes("uploads")
-              ? `url(https://data.pdiperjuangan.id/public/${imageCard})`
-              : `url(https://i.ytimg.com/vi/${imageCard}/hqdefault.jpg)`,
-
-            textDecoration: "none",
-            backgroundPosition: "center",
+    <div
+      component="a"
+      className="col-lg-3 cardCustom"
+      id="cardCustom2"
+      style={{
+        borderRadius: borderRadius,
+        marginTop: marginTop,
+      }}
+    >
+      <>
+        <Link
+          href={{
+            pathname: `${page}/[slug]/[id]`,
+            query: { id: id, slug: pageSLug() },
+            // `${page}/${id}/${slug ? pageSLug() : null}`,
           }}
         >
-          {/* JIKA MAU DIPAKAI CLASS, PAKAI CLASS VBMusic */}
-          <a
-            className={`${classIcon}`}
-            href={href}
-            style={{ textDecoration: "none" }}
+          <div
+            className="imageCard"
+            style={{
+              backgroundImage: imageCard.includes("uploads")
+                ? `url(https://data.pdiperjuangan.id/public/${imageCard})`
+                : `url(https://i.ytimg.com/vi/${imageCard}/hqdefault.jpg)`,
+
+              textDecoration: "none",
+              backgroundPosition: "center",
+            }}
           >
-            <i
-              className={`${icons}`}
-              style={{
-                textDecoration: "none",
-              }}
-            ></i>
-          </a>
-        </a>
+            {/* JIKA MAU DIPAKAI CLASS, PAKAI CLASS VBMusic */}
+            <a
+              className={`${classIcon}`}
+              href={href}
+              style={{ textDecoration: "none" }}
+            >
+              <i
+                className={`${icons}`}
+                style={{
+                  textDecoration: "none",
+                }}
+              ></i>
+            </a>
+          </div>
+        </Link>
         <div className="text">
           <small
             className="title-page-mainCards"
@@ -130,8 +135,8 @@ const Cards = ({
             {add3Dots(title, 70)}
           </p>
         </div>
-      </a>
-    </>
+      </>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./PartaiPage.module.scss";
+import "../../styles/PartaiPage.module.scss";
 import parse from "html-react-parser";
 import { Link } from "react-router-dom";
 // import pdiLogo from "../../../img/logo-tatakelola.png";
@@ -18,44 +18,6 @@ import Wait from "../../components/wait/Wait";
 import { Helmet } from "react-helmet";
 
 const PartaiPage = ({ redirect, config, meta }) => {
-  // const [config, setConfig] = useState([]);
-  // const getConfigHome = async () => {
-  //   const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       app_id: "1555309664580",
-  //       api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
-  //     }),
-  //   });
-  //   const data = await res.json();
-
-  //   const resConfigHome = await fetch(
-  //     "https://data.pdiperjuangan.id/api/web/pages/partai",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: `Bearer ${data.token}`,
-  //       },
-  //     }
-  //   );
-
-  //   const dataConfigHome = await resConfigHome.json();
-  //   // console.log(dataConfigHome.query);
-  //   setConfig(dataConfigHome.query);
-  // };
-
-  // useEffect(() => {
-  //   getConfigHome();
-  //   window.scrollTo(0, 0);
-  //   if (redirect) {
-  //     window.open(redirect);
-  //   }
-  // }, []);
-
   return (
     // START PARTAI
     <>
@@ -165,7 +127,7 @@ const PartaiPage = ({ redirect, config, meta }) => {
                             <a
                               className="mobileRow "
                               as="div"
-                              to={
+                              href={
                                 i == 0
                                   ? `/detail-article/1015/${e.title.replace(
                                       " ",
@@ -271,7 +233,7 @@ const PartaiPage = ({ redirect, config, meta }) => {
                     }}
                   >
                     <h3>{config[6].value.title}</h3>
-                    <a className="btn lihat" to={"/struktur-dpp"}>
+                    <a className="btn lihat" href={"/struktur-dpp"}>
                       <span>lihat</span>
                     </a>
                   </div>
@@ -285,24 +247,7 @@ const PartaiPage = ({ redirect, config, meta }) => {
                   </div>
                   {/* END */}
                   {/* ANGGOTA LEGISLATIF */}
-                  {/* <div className="anggotaLegislatif">
-                <span
-                  dangerouslySetInnerHTML={{ __html: config[7].value }}
-                ></span>
-                <div className="btnGroup">
-                  <div className="btn-dprRi" id="btnGroup">
-                    <MainButton name="DPR RI" margin="0 10px" />
-                  </div>
 
-                  <div className="btn-dprd-provinsi" id="btnGroup">
-                    <MainButton name="DPRD Provinsi" margin="0 10px" />
-                  </div>
-
-                  <div className="btn-dprd-kab" id="btnGroup">
-                    <MainButton name="DPRD Kabupaten Kota" margin="0 10px" />
-                  </div>
-                </div>
-              </div> */}
                   {/* END */}
                 </>
               )}

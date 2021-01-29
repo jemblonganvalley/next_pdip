@@ -5,7 +5,7 @@ import Layouts from "../../components/Layouts";
 // END Import to React
 
 import Link from "next/link";
-import "./BeritaPage.module.scss";
+import "../../styles/BeritaPage.module.scss";
 import { CarouselDuelBerita } from "../../components/carouselDualBerita/CarouselDuelBerita";
 
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
@@ -197,7 +197,7 @@ export default function BeritaPage({ configHome, meta }) {
 
           {/* Column2 */}
           <div className="col2-container-2-beritaPage">
-            <a to={configHome[6].value.link}>
+            <a href={configHome[6].value.link}>
               <a>
                 <MainButton name="LIHAT" />
               </a>

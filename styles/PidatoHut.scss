@@ -1,0 +1,87 @@
+$secondary: #f3f3f3;
+@import ".././variables.scss";
+
+$smallPhoneSatu: 500px;
+$smallPhoneDua: 400px;
+@mixin smallPhone {
+  @media (max-width : #{$smallPhoneSatu}) {
+    @content;
+  }
+}
+@mixin smallPhoneDua {
+  @media (max-width : #{$smallPhoneDua}) {
+    @content;
+  }
+}
+
+.wrapper-pidato-hut {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+
+  .linked-pidato-hut {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 10%;
+
+    @include smallPhone() {
+      width: 100%;
+      padding: 0 2%;
+    }
+  }
+
+  // Container1
+  .container1-pidato-hut {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20% 0 20%;
+
+    @include smallPhone() {
+      height: auto;
+      padding: 0 10px;
+    }
+  }
+  // END Container1
+
+  // Container2
+  .container2-pidato-hut {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 0px 20% 0 20%;
+    margin: 0px 0 0 0;
+
+    @include smallPhone() {
+      padding: 0px;
+    }
+
+    // Column Card
+    .column-card-pidato-hut {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+    }
+    // END Column Card
+
+    // Column Pagination
+    .column-pagination-pidato-hut {
+      display: flex;
+      height: auto;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 0 40px 0;
+    }
+    // END Column Pagination
+  }
+  // END Container2
+}

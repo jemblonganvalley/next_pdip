@@ -1,7 +1,6 @@
 import Head from "next/head";
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
-import Layouts from "../../../components/Layouts";
 import CardSocialMedia from "../../../components/cardsocialmedia/CardSocialMedia";
 import BreadCrumbs from "../../../components/breadcrumbs/BreadCrumbs";
 export default function Index({ data, name, id }) {
@@ -206,7 +205,7 @@ export async function getServerSideProps(context) {
   //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9kYXRhLnBkaXBlcmp1YW5nYW4uaWRcL2FwaVwvYXV0aFwvYXBwIiwiaWF0IjoxNjA5MDYyNzI1LCJleHAiOjE2MDkxNDkxMjUsIm5iZiI6MTYwOTA2MjcyNSwianRpIjoiSzg2aUR4WERrQ2ZuOTF1cCIsInN1YiI6MTQsInBydiI6IjhmZjYzMGEwMGNhNGEzZWFmNmYyNTRmNWFiZTVhYjFiZWVkMjcyNDkifQ.9u8Leq5GboMw8j3VDMT6oUvrqa0maF8Hnmhh14Ssz48";
 
   const res = await fetch(
-    `https://data.pdiperjuangan.id/api/blog/find/?id=${context.params.id}`,
+    `https://data.pdiperjuangan.id/api/blog/find/?id=${context.params.query}`,
     {
       method: "post",
       mode: "cors",

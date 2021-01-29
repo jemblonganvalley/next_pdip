@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./MultimediaPage.module.scss";
+import "../../styles/MultimediaPage.module.scss";
 // import Subscribe from "../../../img/subscribe.png";
 import Head from "next/head";
 import Layouts from "../../components/Layouts";
@@ -14,41 +14,6 @@ import VMedia from "../../components/VMedia/VMedia";
 import CardHeader from "../../components/cardheader/CardHeader";
 
 const MultimediaPage = ({ configHome, meta }) => {
-  // const [configHome, setConfigHome] = useState([]);
-
-  //   const getConfigHome = async () => {
-  //     const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         app_id: "1555309664580",
-  //         api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
-  //       }),
-  //     });
-  //     const data = await res.json();
-
-  //     const resConfigHome = await fetch(
-  //       "https://data.pdiperjuangan.id/api/web/pages/multimedia",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           Authorization: `Bearer ${data.token}`,
-  //         },
-  //       }
-  //     );
-
-  //     const dataConfigHome = await resConfigHome.json();
-  //     setConfigHome(dataConfigHome.query);
-  //   };
-
-  //   useEffect(() => {
-  //     getConfigHome();
-  //     window.scrollTo(0, 0);
-  //   }, []);
-
   return (
     <>
       <Head>

@@ -1,0 +1,53 @@
+import React, { useState, useEffect } from "react";
+import "../../styles/carouselDual.scss";
+
+const CarouselDualKetuaumum = ({
+  cat1 = 45,
+  cat2 = 46,
+  totalPage = 3,
+  data = null,
+  current_page = null,
+}) => {
+  return (
+    <>
+      <div className="mainCarouselDual row">
+        {/* Carousel 1 */}
+        <a
+          as="div"
+          id="carouselone"
+          className="col satyam"
+          href={"/detail-article/622/satyam-eva-jayate"}
+          style={{
+            height: "40vh",
+            // border : '1px solid red',
+            backgroundImage: `url(https://data.pdiperjuangan.id/public/${cat2.image})`,
+            position: "relative",
+            backgroundSize: "cover",
+          }}
+        >
+          <h4
+            style={{
+              color: "white",
+              position: "absolute",
+              bottom: "30px",
+              left: "30px",
+            }}
+          >
+            {cat2.title}
+          </h4>
+        </a>
+
+        {/* CAROUSEL 2 */}
+        <iframe
+          className="col-8 satyamIframe"
+          src={`https://www.youtube.com/embed/${cat1.path}?rel=0`}
+          frameBorder={0}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    </>
+  );
+};
+
+export default CarouselDualKetuaumum;

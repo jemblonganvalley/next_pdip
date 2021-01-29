@@ -54,45 +54,6 @@ const HomePage = ({ configHome, gallery, meta }) => {
     return isMobile ? children : null;
   };
 
-  // const getConfigHome = async () => {
-
-  // };
-
-  // const getGallery = async () => {
-  //   const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       app_id: "1555309664580",
-  //       api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
-  //     }),
-  //   });
-  //   const data = await res.json();
-
-  //   const resGallery = await fetch(
-  //     "https://data.pdiperjuangan.id/api/gallery/data?page=2",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: `Bearer ${data.token}`,
-  //       },
-  //     }
-  //   );
-
-  //   const dataGallery = await resGallery.json();
-  //   // console.log(dataGallery)
-  //   setGallery(dataGallery.query.data);
-  // };
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  //   getConfigHome();
-  //   getGallery();
-  // }, []);
-
   return (
     <div
       className="homepage"
@@ -270,21 +231,6 @@ const HomePage = ({ configHome, gallery, meta }) => {
                   desc={e.description}
                 />
                 {/* end Card VMEDIA */}
-
-                {/* <div className="textYoutube">
-                    <div className="wrapperText">
-                      <ul className="circleYoutube">
-                        <li>
-                            <i className="fa fa-play" style={{color : 'white'}}></i>
-                        </li>
-                      </ul>
-                      <div className="textInfoYT">
-                        <h3 className="videoTerbaru">{e.title}</h3>
-                        <br />
-                        <h6 className="siaranHut">{e.description}</h6>
-                      </div>
-                    </div>
-                  </div> */}
               </div>
             ))}
           {/* ONTAINER CARD VIDEO */}
@@ -293,20 +239,18 @@ const HomePage = ({ configHome, gallery, meta }) => {
             {configHome.length > 0 &&
               configHome[4].value.map((e, i) => {
                 return (
-                  <>
-                    <Cards
-                      imageCard={e.path}
-                      cardType="youtube"
-                      // textSmall={e.title}
-                      title={e.title}
-                      borderRadius="10px"
-                      key={i}
-                      page={`/detail-multimedia`}
-                      id={e.id}
-                      slug={e.title}
-                      category="Multimedia"
-                    />
-                  </>
+                  <Cards
+                    imageCard={e.path}
+                    cardType="youtube"
+                    // textSmall={e.title}
+                    title={e.title}
+                    borderRadius="10px"
+                    key={i}
+                    page={`/detail-multimedia`}
+                    id={e.id}
+                    slug={e.title}
+                    category="Multimedia"
+                  />
                 );
               })}
           </div>
@@ -343,20 +287,18 @@ const HomePage = ({ configHome, gallery, meta }) => {
           <>
             {configHome[7].value.map((e, i) => {
               return (
-                <>
-                  <Cards
-                    page="detail-article"
-                    id={e.id}
-                    imageCard={e.path}
-                    category="Berita"
-                    author={e.author}
-                    title={e.title}
-                    slug={e.title}
-                    dateTime={e.created_at}
-                    borderRadius="10px"
-                    cardType={e.filetype}
-                  />
-                </>
+                <Cards
+                  page="detail-article"
+                  id={e.id}
+                  imageCard={e.path}
+                  category="Berita"
+                  author={e.author}
+                  title={e.title}
+                  slug={e.title}
+                  dateTime={e.created_at}
+                  borderRadius="10px"
+                  cardType={e.filetype}
+                />
               );
             })}
           </>
