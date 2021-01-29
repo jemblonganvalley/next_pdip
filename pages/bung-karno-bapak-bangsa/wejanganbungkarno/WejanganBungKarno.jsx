@@ -1,17 +1,16 @@
 import React, { Fragment, useEffect, useState } from "react";
-import ReactPaginate from "react-paginate";
 import "../../../styles/WejanganBungKarno.scss";
 import { useParams } from "react-router-dom";
 import { useStoreState } from "easy-peasy";
 
-import BreadCrumbs from "../../../breadcrumbs/BreadCrumbs";
-import MainDivider from "../../../divider/MainDivider";
-import AngkaPaginationEvent from "../../../paginationevent/AngkaPaginationEvent";
-import Wait from "../../../wait/Wait";
-import CardQuotes from "../../../cardquotes/CardQuotes";
-import QuotesBkbb from "../../../quotesbkbb/QuotesBkbb";
+import BreadCrumbs from "../../../components/breadcrumbs/BreadCrumbs";
+import MainDivider from "../../../components/divider/MainDivider";
+import AngkaPaginationEvent from "../../../components/paginationevent/AngkaPaginationEvent";
+import Wait from "../../../components/wait/Wait";
+import CardQuotes from "../../../components/cardquotes/CardQuotes";
+import QuotesBkbb from "../../../components/quotesbkbb/QuotesBkbb";
 
-const WejanganBungKarno = () => {
+const WejanganBungKarno = ({ configHome, cardWejanganBk }) => {
   // Create Database Card Item
   const id = useParams("id");
 
@@ -27,61 +26,11 @@ const WejanganBungKarno = () => {
     indexOfFirstPost,
     indexOfLastPost
   );
-  const [configHome, setConfigHome] = useState([]);
   const paginate = (pageNumber) => setCurrentPage2(pageNumber);
 
-  const refresher = useStoreState((state) => state.refresher);
-  const getConfigHome = async () => {
-    const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        app_id: "1555309664580",
-        api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
-      }),
-    });
-    const data = await res.json();
-
-    const resConfigHome = await fetch(
-      "https://data.pdiperjuangan.id/api/quotes/data",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${data.token}`,
-        },
-      }
-    );
-
-    const dataConfigHome = await resConfigHome.json();
-    setCardWejanganBk(dataConfigHome.query.data);
-
-    // FETCH FIND CARD QUOTES
-    const resVcard = await fetch(
-      "https://data.pdiperjuangan.id/api/quotes/find",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${data.token}`,
-        },
-        body: JSON.stringify({
-          id: id,
-        }),
-      }
-    );
-
-    const dataVcard = await resVcard.json();
-    setConfigHome(dataVcard.query);
-    console.log(dataVcard.query);
-  };
-
   useEffect(() => {
-    getConfigHome();
     window.scrollTo(0, 0);
-  }, [refresher]);
+  }, []);
 
   return (
     <>
@@ -163,3 +112,54 @@ const WejanganBungKarno = () => {
 };
 
 export default WejanganBungKarno;
+
+export async function getServerSideProps(ctx) {
+  const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      app_id: "1555309664580",
+      api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
+    }),
+  });
+  const data = await res.json();
+
+  const resConfigHome = await fetch(
+    "https://data.pdiperjuangan.id/api/quotes/data",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${data.token}`,
+      },
+    }
+  );
+
+  const dataConfigHome = await resConfigHome.json();
+
+  // FETCH FIND CARD QUOTES
+  const resVcard = await fetch(
+    "https://data.pdiperjuangan.id/api/quotes/find",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${data.token}`,
+      },
+      body: JSON.stringify({
+        id: id,
+      }),
+    }
+  );
+
+  const dataVcard = await resVcard.json();
+
+  return {
+    props: {
+      configHome: dataVcard.query,
+      cardWejanganBk: dataConfigHome.query.data,
+    },
+  };
+}
