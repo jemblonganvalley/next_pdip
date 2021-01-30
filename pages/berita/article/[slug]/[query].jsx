@@ -1,9 +1,9 @@
 import Head from "next/head";
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
-import Layouts from "../../../components/Layouts";
-import CardSocialMedia from "../../../components/cardsocialmedia/CardSocialMedia";
-import BreadCrumbs from "../../../components/breadcrumbs/BreadCrumbs";
+import Layouts from "../../../../components/Layouts";
+import CardSocialMedia from "../../../../components/cardsocialmedia/CardSocialMedia";
+import BreadCrumbs from "../../../../components/breadcrumbs/BreadCrumbs";
 export default function Index({ data, name, id }) {
   const desc = parse(data.description);
   const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id");
