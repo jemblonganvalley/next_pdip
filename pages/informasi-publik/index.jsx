@@ -43,19 +43,19 @@ const InformasiPage = ({ configHome, meta }) => {
         />
         <meta property="og:title" content={meta.meta_keyword} />
         <meta property="og:description" content={meta.meta_description} />
-        <meta
+        {/* <meta
           property="og:image"
           itemProp="image"
           content={`https://data.pdiperjuangan.id/public/${configHome[0].value[0].image}`}
-        />
-        <meta
+        /> */}
+        {/* <meta
           property="og:image:url"
           content={`https://data.pdiperjuangan.id/public${data.path}`}
-        />
-        <meta
+        /> */}
+        {/* <meta
           property="og:image:secure_url"
           content={`https://data.pdiperjuangan.id/public/${configHome[0].value[0].image}`}
-        />
+        /> */}
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
         {/* <meta
