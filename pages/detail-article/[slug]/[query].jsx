@@ -119,7 +119,7 @@ export default function Index({ data, slug, id }) {
                         title={data.title}
                         url={
                           data.path.includes("uploads")
-                            ? `https://article.pdiperjuangan.id/berita/article/${id}`
+                            ? `https://article.pdiperjuangan.id/detail-article/${slug}/${id}`
                             : `https://article.pdiperjuangan.id/video/${id}`
                         }
                       />
@@ -170,7 +170,7 @@ export default function Index({ data, slug, id }) {
                       title={data.title}
                       url={
                         data.path.includes("uploads")
-                          ? `https://article.pdiperjuangan.id/berita/article/${id}`
+                          ? `https://article.pdiperjuangan.id/detail-article/${slug}/${id}`
                           : `https://article.pdiperjuangan.id/video/${id}`
                       }
                     />
