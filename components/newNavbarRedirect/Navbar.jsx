@@ -9,7 +9,7 @@ import "./Navbar.module.scss";
 import Dropdown from "../dropdownRedirect/Dropdown";
 
 const Navbar = () => {
-  const [webUrl, setWebUrl] = useState("https://perjuangan.id");
+  const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id");
   // const setRefresher = useStoreActions((action) => action.setRefresher);
   // const refresher = useStoreState((state) => state.refresher);
   // const setNavHeight = useStoreActions((action) => action.setNavHeight);

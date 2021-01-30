@@ -37,7 +37,7 @@ export const LighBox = ({ source }) => {
 const HomePage = ({ configHome, gallery, meta }) => {
   // const [configHome, setConfigHome] = useState([]);
   // const [gallery, setGallery] = useState([]);
-  const [webUrl, setWebUrl] = useState("https://perjuangan.id");
+  const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id");
   const [showVid, setShowVid] = useState(false);
 
   const Desktop = ({ children }) => {

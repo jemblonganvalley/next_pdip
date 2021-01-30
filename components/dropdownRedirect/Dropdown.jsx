@@ -3,7 +3,7 @@ import "./Dropdown.module.scss";
 import Link from "next/link";
 
 const Dropdown = ({ menuItem, listIndex }) => {
-  const [webUrl, setWebUrl] = useState("https://perjuangan.id");
+  const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id");
   return (
     <div className="list-group dropdownMenu">
       {/* {console.log(menuItem)}
