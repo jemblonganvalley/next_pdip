@@ -37,22 +37,25 @@ const InformasiPage = ({ configHome, meta }) => {
         <link rel="icon" href="/pdip.jpg" />
         <link rel="shortcut icon" href="/pdip.ico" />
         <meta name="description" content={meta.meta_description} />
-        <meta property="og:url" content={`https://pdiperjuangan.id/berita`} />
+        <meta
+          property="og:url"
+          content={`https://pdiperjuangan.id/informasi`}
+        />
         <meta property="og:title" content={meta.meta_keyword} />
         <meta property="og:description" content={meta.meta_description} />
-        {/* <meta
+        <meta
           property="og:image"
           itemProp="image"
           content={`https://data.pdiperjuangan.id/public/${configHome[0].value[0].image}`}
-        /> */}
-        {/* <meta
+        />
+        <meta
           property="og:image:url"
           content={`https://data.pdiperjuangan.id/public${data.path}`}
-        /> */}
-        {/* <meta
+        />
+        <meta
           property="og:image:secure_url"
           content={`https://data.pdiperjuangan.id/public/${configHome[0].value[0].image}`}
-        /> */}
+        />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
         {/* <meta
@@ -312,7 +315,7 @@ export async function getServerSideProps(context) {
   const dataConfigHome = await resConfigHome.json();
 
   const resMeta = await fetch(
-    "https://data.pdiperjuangan.id/api/web/config/home",
+    "https://data.pdiperjuangan.id/api/web/config/informasi",
     {
       method: "POST",
       headers: {

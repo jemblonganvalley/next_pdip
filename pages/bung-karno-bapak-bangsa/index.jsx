@@ -5,7 +5,7 @@ import { useState } from "react";
 
 // import { parse } from "dotenv/types";
 import parse from "html-react-parser";
-
+import Head from "next/head";
 import Cards from "../../components/cards/MainCards";
 import MainButton from "../../components/buttons/MainButton";
 import MainDivider from "../../components/divider/MainDivider";
@@ -32,7 +32,7 @@ export const LighBox = ({ source }) => {
   );
 };
 
-export default function BkbbPage({ configHome }) {
+export default function BkbbPage({ configHome, meta }) {
   // const [configHome, setConfigHome] = useState([]);
   const [showVid, setShowVid] = useState(false);
 
@@ -43,6 +43,37 @@ export default function BkbbPage({ configHome }) {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/pdip.jpg" />
+        <link rel="shortcut icon" href="/pdip.ico" />
+        <meta name="description" content={meta.meta_description} />
+        <meta property="og:url" content={`https://pdiperjuangan.id/berita`} />
+        <meta property="og:title" content={meta.meta_keyword} />
+        <meta property="og:description" content={meta.meta_description} />
+        <meta
+          property="og:image"
+          itemProp="image"
+          content={`https://data.pdiperjuangan.id/public/${configHome[0].value.image}`}
+        />
+        {/* <meta
+          property="og:image:url"
+          content={`https://data.pdiperjuangan.id/public${data.path}`}
+        /> */}
+        <meta
+          property="og:image:secure_url"
+          content={`https://data.pdiperjuangan.id/public/${configHome[0].value.image}`}
+        />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+        <meta
+          property="og:image:alt"
+          content={`https://data.pdiperjuangan.id/public/${configHome[0].value.image}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta content="og:image:type" property="image/*" />
+        <meta content="og:image:alt" property={meta.meta_description} />
+        <meta property="og:locale" content="id_ID" />
+      </Head>
       {showVid && (
         <>
           <span
