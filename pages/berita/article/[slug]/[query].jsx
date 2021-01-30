@@ -1,10 +1,10 @@
 import Head from "next/head";
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
-import Layouts from "../../../../components/Layouts";
 import CardSocialMedia from "../../../../components/cardsocialmedia/CardSocialMedia";
 import BreadCrumbs from "../../../../components/breadcrumbs/BreadCrumbs";
-export default function Index({ data, name, id }) {
+
+export default function Index({ data, slug, id }) {
   const desc = parse(data.description);
   const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id");
   // useEffect(() => {
@@ -12,6 +12,9 @@ export default function Index({ data, name, id }) {
   //     data.id
   //   }/${data.title.replace(/\s/g, "-")}`;
   // }, []);
+  const pageSLug = () => {
+    return data.title.toString().replace(/ /g, "-").toLowerCase();
+  };
   return (
     <>
       {data && (
@@ -122,7 +125,7 @@ export default function Index({ data, name, id }) {
                         title={data.title}
                         url={
                           data.path.includes("uploads")
-                            ? `https://artikel.perjuangan.id/berita/article/${id}`
+                            ? `https://artikel.perjuangan.id/berita/article/${slug}/${id}`
                             : `https://artikel.perjuangan.id/video/${id}`
                         }
                       />
@@ -173,7 +176,7 @@ export default function Index({ data, name, id }) {
                       title={data.title}
                       url={
                         data.path.includes("uploads")
-                          ? `https://artikel.perjuangan.id/berita/article/${id}`
+                          ? `https://artikel.perjuangan.id/berita/article/${slug}/${id}`
                           : `https://artikel.perjuangan.id/video/${id}`
                       }
                     />
@@ -223,6 +226,7 @@ export async function getServerSideProps(context) {
     props: {
       data: data.query,
       id: context.params.query,
+      slug: context.params.slug,
     },
   };
 }
