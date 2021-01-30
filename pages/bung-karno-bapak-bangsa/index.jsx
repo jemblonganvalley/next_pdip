@@ -53,7 +53,7 @@ export default function BkbbPage({ configHome, meta }) {
         <meta
           property="og:image"
           itemProp="image"
-          content={`https://data.pdiperjuangan.id/public/${configHome[0].value.image}`}
+          content={`https://data.pdiperjuangan.id/public/${configHome[1].value.image}`}
         />
         {/* <meta
           property="og:image:url"
@@ -61,13 +61,13 @@ export default function BkbbPage({ configHome, meta }) {
         /> */}
         <meta
           property="og:image:secure_url"
-          content={`https://data.pdiperjuangan.id/public/${configHome[0].value.image}`}
+          content={`https://data.pdiperjuangan.id/public/${configHome[1].value.image}`}
         />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
         <meta
           property="og:image:alt"
-          content={`https://data.pdiperjuangan.id/public/${configHome[0].value.image}`}
+          content={`https://data.pdiperjuangan.id/public/${configHome[1].value.image}`}
         />
         <meta property="og:type" content="website" />
         <meta content="og:image:type" property="image/*" />
