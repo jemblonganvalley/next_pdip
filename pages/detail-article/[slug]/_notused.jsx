@@ -3,7 +3,7 @@ import parse from "html-react-parser";
 import { useEffect, useState } from "react";
 import CardSocialMedia from "../../../components/cardsocialmedia/CardSocialMedia";
 import BreadCrumbs from "../../../components/breadcrumbs/BreadCrumbs";
-export default function Index({ data, slug, id }) {
+export default function Index({ data, name, id }) {
   const desc = parse(data.description);
   const [webUrl, setWebUrl] = useState("https://pdiperjuangan.id");
   // useEffect(() => {
@@ -220,7 +220,6 @@ export async function getServerSideProps(context) {
     props: {
       data: data.query,
       id: context.params.query,
-      slug: context.params.slug,
     },
   };
 }
