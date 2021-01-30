@@ -37,6 +37,7 @@ export const LighBox = ({ source }) => {
 const HomePage = ({ configHome, gallery, meta }) => {
   // const [configHome, setConfigHome] = useState([]);
   // const [gallery, setGallery] = useState([]);
+  const [webUrl, setWebUrl] = useState("https://perjuangan.id");
   const [showVid, setShowVid] = useState(false);
 
   const Desktop = ({ children }) => {
@@ -53,45 +54,6 @@ const HomePage = ({ configHome, gallery, meta }) => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     return isMobile ? children : null;
   };
-
-  // const getConfigHome = async () => {
-
-  // };
-
-  // const getGallery = async () => {
-  //   const res = await fetch("https://data.pdiperjuangan.id/api/auth/app", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       app_id: "1555309664580",
-  //       api_secret: "4d672ce3-e422-4d8a-86ff-fabb1808a689",
-  //     }),
-  //   });
-  //   const data = await res.json();
-
-  //   const resGallery = await fetch(
-  //     "https://data.pdiperjuangan.id/api/gallery/data?page=2",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Authorization: `Bearer ${data.token}`,
-  //       },
-  //     }
-  //   );
-
-  //   const dataGallery = await resGallery.json();
-  //   // console.log(dataGallery)
-  //   setGallery(dataGallery.query.data);
-  // };
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  //   getConfigHome();
-  //   getGallery();
-  // }, []);
 
   return (
     <div

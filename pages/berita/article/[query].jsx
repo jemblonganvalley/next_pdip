@@ -122,8 +122,8 @@ export default function Index({ data, name, id }) {
                         title={data.title}
                         url={
                           data.path.includes("uploads")
-                            ? `https://article.pdiperjuangan.id/berita/article/${id}`
-                            : `https://article.pdiperjuangan.id/video/${id}`
+                            ? `https://artikel.perjuangan.id/berita/article/${id}`
+                            : `https://artikel.perjuangan.id/video/${id}`
                         }
                       />
                     </div>
@@ -173,8 +173,8 @@ export default function Index({ data, name, id }) {
                       title={data.title}
                       url={
                         data.path.includes("uploads")
-                          ? `https://article.pdiperjuangan.id/berita/article/${id}`
-                          : `https://article.pdiperjuangan.id/video/${id}`
+                          ? `https://artikel.perjuangan.id/berita/article/${id}`
+                          : `https://artikel.perjuangan.id/video/${id}`
                       }
                     />
                   </div>

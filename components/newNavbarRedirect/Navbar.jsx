@@ -174,18 +174,6 @@ const Navbar = () => {
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
   let [collapse1, setCollapse1] = useState(false);
-  // const setSearch = useStoreActions((action) => action.setSearch);
-  // const search = useStoreState((state) => state.search);
-  // const getNavHeight = async () => {
-  // const ht = await document.getElementById("navbar").offsetHeight;
-  // await setNavHeight(ht);
-  // };
-
-  // const handleSubmit = (e) => {
-  // e.preventDefault();
-  // window.location.href = `/search/${search}`;
-  // sessionStorage.setItem("search", search);
-  // };
 
   useEffect(() => {
     // getDataMenu();
@@ -318,7 +306,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <a className="navbar-brand" href="/" activeClassName="brand">
+              <a className="navbar-brand" href={webUrl} activeClassName="brand">
                 <img
                   src="/img/pdimobile.svg"
                   alt=""
