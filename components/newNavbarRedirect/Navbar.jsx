@@ -318,7 +318,7 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <a className="navbar-brand" href="/" activeClassName="brand">
+              <a className="navbar-brand" href={webUrl} activeClassName="brand">
                 <img
                   src="/img/pdimobile.svg"
                   alt=""
@@ -571,7 +571,11 @@ const Navbar = () => {
             }}
           >
             <div className="container-fluid">
-              <Link className="navbar-brand" href="/" activeClassName="brand">
+              <Link
+                className="navbar-brand"
+                href={webUrl}
+                activeClassName="brand"
+              >
                 <img
                   src="/img/pdimobile.svg"
                   alt=""
