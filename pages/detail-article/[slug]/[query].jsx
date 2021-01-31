@@ -28,15 +28,27 @@ export default function Index({ data, slug, id }) {
             <meta
               property="og:image"
               itemProp="image"
-              content={`https://data.pdiperjuangan.id/public/${data.path}`}
+              content={
+                data.path.includes("uploads")
+                  ? `https://data.pdiperjuangan.id/public/${data.path}`
+                  : `https://img.youtube.com/vi/${data.path}/mqdefault.jpg`
+              }
             />
             <meta
               property="og:image:url"
-              content={`https://data.pdiperjuangan.id/public/${data.path}`}
+              content={
+                data.path.includes("uploads")
+                  ? `https://data.pdiperjuangan.id/public/${data.path}`
+                  : `https://img.youtube.com/vi/${data.path}/mqdefault.jpg`
+              }
             />
             <meta
               property="og:image:secure_url"
-              content={`https://data.pdiperjuangan.id/public/${data.path}`}
+              content={
+                data.path.includes("uploads")
+                  ? `https://data.pdiperjuangan.id/public/${data.path}`
+                  : `https://img.youtube.com/vi/${data.path}/mqdefault.jpg`
+              }
             />
             <meta property="og:image:width" content="300" />
             <meta property="og:image:height" content="300" />
