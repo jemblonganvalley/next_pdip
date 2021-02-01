@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps, getToken }) {
           />
           <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
           <meta charset="utf-8" />
-          <link rel="icon" href="/img/pdip192.png" />
+          <link rel="icon" href="pdip192.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#000000" />
           <meta
