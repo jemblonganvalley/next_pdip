@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 // import logo from "/img/pdiperjuangan02.svg";
 // import DataNavbar from '../../data/index'
 import "./Navbar.module.scss";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "../dropdownRedirect/Dropdown";
 
 const Navbar = () => {
   // const setRefresher = useStoreActions((action) => action.setRefresher);
@@ -210,13 +210,15 @@ const Navbar = () => {
           >
             <div className="container-fluid">
               <Link className="navbar-brand" href="/" activeClassName="brand">
-                <img
-                  src="/img/pdiperjuangan02.svg"
-                  alt=""
-                  width="60"
-                  className="d-inline-block align-center active"
-                  loading="lazy"
-                />
+                <a>
+                  <img
+                    src="/img/pdiperjuangan02.svg"
+                    alt=""
+                    width="60"
+                    className="d-inline-block align-center active"
+                    loading="lazy"
+                  />
+                </a>
               </Link>
               <button
                 name="btn_menu"
@@ -430,7 +432,7 @@ const Navbar = () => {
                               transition: "0.5s ease-in-out",
                             }}
                           >
-                            <Link
+                            <a
                               className="page-menu-drop-mobile"
                               style={{
                                 color: "#f3f3f3",
@@ -514,7 +516,7 @@ const Navbar = () => {
                               }
                             >
                               {e.title}
-                            </Link>
+                            </a>
                           </div>
                         ))}
                       </div>

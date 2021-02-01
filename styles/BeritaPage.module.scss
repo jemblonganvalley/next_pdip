@@ -62,7 +62,7 @@ $responMax1440: 1440px;
 // end min width 1361px and max width 1440px
 
 .wrapperBerita {
-  width: 100%;
+  width: 100vw;
   padding: 0 0 40px 0;
 
   // .headers {
@@ -595,6 +595,7 @@ $responMax1440: 1440px;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 20px;
   // margin-top: 15px;
 
   @include respon1360() {

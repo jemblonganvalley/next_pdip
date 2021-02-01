@@ -62,7 +62,7 @@ const Cards = ({
   return (
     <div
       component="a"
-      className="col-lg-3 cardCustom"
+      className="cardCustom"
       id="cardCustom2"
       style={{
         borderRadius: borderRadius,
