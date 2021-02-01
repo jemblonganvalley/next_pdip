@@ -50,8 +50,8 @@ export default function Index({ data, slug, id }) {
                   : `https://img.youtube.com/vi/${data.path}/mqdefault.jpg`
               }
             />
-            <meta property="og:image:width" content="300" />
-            <meta property="og:image:height" content="300" />
+            <meta property="og:image:width" content="100" />
+            <meta property="og:image:height" content="100" />
             <meta property="og:image:alt" content={data.title} />
             <meta property="og:type" content="article" />
             <meta property="og:image:type" content="image/*" />
